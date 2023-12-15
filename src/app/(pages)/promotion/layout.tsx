@@ -14,10 +14,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <div className="relative">
-      <div>광고영역!</div>
-      {children}
-    </div>
-  );
+  return <div className="relative">{children}</div>;
 }
