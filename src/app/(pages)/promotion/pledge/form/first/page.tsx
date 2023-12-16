@@ -23,7 +23,7 @@ export default function FormFirstPage() {
       <div className="">최대 3개까지 중복 선택이 가능합니다.</div>
       <button
         className="w-full bg-[#FFE695] h-[6rem] absolute bottom-0"
-        onClick={() => router.push("/promotion/pledge/result")}
+        onClick={() => router.push("/promotion/pledge/form/second")}
       >
         다음 단계
       </button>

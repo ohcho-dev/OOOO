@@ -9,32 +9,53 @@ const LetterPage: React.FC = () => {
   const [animating, setAnimating] = useState<boolean>(false);
   const [isRendering, setIsRendering] = useState<boolean>(false);
 
+  useEffect(() => {}, []);
+
   useEffect(() => {
+    console.log(captureRef.current, animating);
     const gif = new GIF({
       workers: 2,
       quality: 10,
       width: 500,
       height: 300,
     });
-    gifRef.current = gif;
-
-    let intervalId: NodeJS.Timeout | undefined;
-    if (animating) {
-      intervalId = setInterval(() => {
-        if (captureRef.current) {
-          html2canvas(captureRef.current).then((canvas) => {
-            gif.addFrame(canvas, { copy: true, delay: 200 });
-          });
-        }
-      }, 200);
+    if (captureRef.current && animating) {
+      for (let i = 0; i < 50; i++) {
+        html2canvas(captureRef.current).then((canvas) => {
+          gif.addFrame(canvas, { copy: true, delay: 200 });
+        });
+      }
     }
 
-    return () => {
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
-    };
+    gifRef.current = gif;
   }, [animating]);
+  console.log(gifRef.current);
+  // useEffect(() => {
+  //   const gif = new GIF({
+  //     workers: 2,
+  //     quality: 10,
+  //     width: 500,
+  //     height: 300,
+  //   });
+  //   gifRef.current = gif;
+
+  //   let intervalId: NodeJS.Timeout | undefined;
+  //   if (animating) {
+  //     intervalId = setInterval(() => {
+  //       if (captureRef.current) {
+  //         html2canvas(captureRef.current).then((canvas) => {
+  //           gif.addFrame(canvas, { copy: true, delay: 200 });
+  //         });
+  //       }
+  //     }, 2000);
+  //   }
+
+  //   return () => {
+  //     if (intervalId) {
+  //       clearInterval(intervalId);
+  //     }
+  //   };
+  // }, [animating]);
 
   const handleStartAnimation = () => {
     setAnimating(true);
@@ -57,18 +78,19 @@ const LetterPage: React.FC = () => {
       link.href = url;
       link.download = "animation.gif";
       link.click();
-      console.log(url);
       setIsRendering(false);
     });
-
-    gifRef.current.render();
   };
 
-  console.log(isRendering);
+  console.log(gifRef.current);
   return (
     <div>
       <div ref={captureRef}>
-        <div className={"animate-[wiggle_3s_ease-in-out] border h-32"}>
+        <div
+          className={
+            animating ? "animate-[wiggle_1s_ease-in-out] border h-32" : "h-32"
+          }
+        >
           123123
         </div>
       </div>
