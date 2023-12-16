@@ -9,7 +9,7 @@ export default function FormFirstPage() {
   console.log(todoList);
 
   return (
-    <div className="relative h-[100vh]">
+    <div className="relative h-[100svh]">
       <div className="h-[30rem] bg-[#FFE695]">
         내가 생각하는 배우자의 모습을
         <br />
