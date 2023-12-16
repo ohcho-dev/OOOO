@@ -16,8 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <div className="relative">
-      <Toolbar />
-      {children}
+      <div>
+        <Toolbar />
+        {children}
+      </div>
     </div>
   );
 }
