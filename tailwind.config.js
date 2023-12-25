@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      maxHeight: {
+        calc: "calc(100svh - 44rem)",
+      },
       keyframes: {
         wiggle: {
           "0%, 100%": { transform: "translateX(50px)" },
@@ -142,6 +145,23 @@ module.exports = {
           },
           "100%": {
             opacity: 1,
+            transform: "translate(0, 0);",
+          },
+        },
+        moveTopDown: {
+          "0%": {
+            transform: "translate(0, 0);",
+          },
+          "25%": {
+            transform: "translate(0, 4%);",
+          },
+          "50%": {
+            transform: "translate(0, 0);",
+          },
+          "75%": {
+            transform: "translate(0, -4%);",
+          },
+          "100%": {
             transform: "translate(0, 0);",
           },
         },

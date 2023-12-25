@@ -1,7 +1,9 @@
 "use client";
 import BottomButton from "@/components/BottomButton";
+import { AnswerUser1State, formStepState } from "@/store/atom";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useSetRecoilState } from "recoil";
 
 export default function PledgeMainPage() {
   const router = useRouter();
