@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       maxHeight: {
         calc: "calc(100svh - 44rem)",
+        calcResultPage: "calc(100svh - 8rem)",
       },
       keyframes: {
         wiggle: {
