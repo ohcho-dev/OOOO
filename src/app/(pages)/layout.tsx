@@ -4,8 +4,7 @@ import { Noto_Sans_KR } from "next/font/google";
 import SWRConfigContext from "@/context/SWRConfigContext";
 import { Metadata } from "next";
 import RecoilRootWrapper from "@/context/RecoilContext";
-import Script from "next/script";
-import KakaoAdfit from "@/util/KakaoAdfit";
+// import KakaoAdfit from "@/util/KakaoAdfit";
 
 const NotoSansKR = Noto_Sans_KR({ subsets: ["latin"] });
 
@@ -25,12 +24,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={NotoSansKR.className}>
       <body>
-        <KakaoAdfit />
+        {/* <KakaoAdfit /> */}
         <RecoilRootWrapper>
           <SWRConfigContext>
             <div className="responsive_layout">
               <main>{children}</main>
-              <div id="bottom_portal" />
+              <div id="bottom_por tal" />
             </div>
           </SWRConfigContext>
           <div id="portal" />
