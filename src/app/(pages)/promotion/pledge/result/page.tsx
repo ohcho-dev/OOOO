@@ -12,7 +12,6 @@ const LetterPage: React.FC = () => {
   useEffect(() => {}, []);
 
   useEffect(() => {
-    console.log(captureRef.current, animating);
     const gif = new GIF({
       workers: 2,
       quality: 10,
@@ -29,7 +28,6 @@ const LetterPage: React.FC = () => {
 
     gifRef.current = gif;
   }, [animating]);
-  console.log(gifRef.current);
   // useEffect(() => {
   //   const gif = new GIF({
   //     workers: 2,
@@ -82,7 +80,6 @@ const LetterPage: React.FC = () => {
     });
   };
 
-  console.log(gifRef.current);
   return (
     <div>
       <div ref={captureRef}>

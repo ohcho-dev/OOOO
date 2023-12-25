@@ -64,10 +64,6 @@ export default function FormLayout(survey: SurveyType) {
           <Question label={surveyItems.choiceQuestion} />
           <GridLayout grid={surveyItems.grid}>
             {surveyItems.choiceAnswer.map((answerItem) => {
-              console.log(
-                answerUser1[formStep + 1]?.choice_id,
-                answerItem.answer_id
-              );
               return (
                 <>
                   <FormButton
