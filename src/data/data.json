@@ -1,0 +1,139 @@
+{
+  "survey": [
+    {
+      "id": 1,
+      "reuse": true,
+      "type": "choice",
+      "choiceQuestion": "당신의 배우자는 육아를 하는\n부모로서 OOO한 사람입니다.",
+      "choiceAnswer": [
+        {
+          "answer_id": 1,
+          "answer_value": "따뜻한"
+        },
+        {
+          "answer_id": 2,
+          "answer_value": "헌신적인"
+        },
+        {
+          "answer_id": 3,
+          "answer_value": "든든한"
+        },
+        {
+          "answer_id": 4,
+          "answer_value": "이해심 많은"
+        },
+        {
+          "answer_id": 5,
+          "answer_value": "강인한"
+        },
+        {
+          "answer_id": 6,
+          "answer_value": "성실한"
+        }
+      ],
+      "grid": 2
+    },
+    {
+      "id": 2,
+      "reuse": true,
+      "type": "choice",
+      "choiceQuestion": "아이가 당신의 배우자의\nOOO한 부분을 닮았으면 좋겠다.",
+      "choiceAnswer": [
+        {
+          "answer_id": 1,
+          "answer_value": "미소"
+        },
+        {
+          "answer_id": 2,
+          "answer_value": "눈매"
+        },
+        {
+          "answer_id": 3,
+          "answer_value": "입모양"
+        },
+        {
+          "answer_id": 4,
+          "answer_value": "차분함"
+        },
+        {
+          "answer_id": 5,
+          "answer_value": "활달함"
+        },
+        {
+          "answer_id": 6,
+          "answer_value": "총명함"
+        }
+      ],
+      "grid": 2
+    },
+    {
+      "id": 3,
+      "reuse": true,
+      "type": "choice",
+      "choiceQuestion": "당신이 미래에 꿈꾸는\n가정의 모습을 선택하세요.",
+      "choiceAnswer": [
+        {
+          "answer_id": 1,
+          "answer_value": "신뢰"
+        },
+        {
+          "answer_id": 2,
+          "answer_value": "헌신"
+        },
+        {
+          "answer_id": 3,
+          "answer_value": "소통"
+        },
+        {
+          "answer_id": 4,
+          "answer_value": "행복"
+        },
+        {
+          "answer_id": 5,
+          "answer_value": "존중"
+        },
+        {
+          "answer_id": 6,
+          "answer_value": "위로"
+        }
+      ],
+      "grid": 2
+    },
+    {
+      "id": 4,
+      "reuse": true,
+      "type": "mix",
+      "choiceQuestion": "당신은\n누구인가요?",
+      "choiceAnswer": [
+        {
+          "answer_id": 1,
+          "answer_value": "엄마"
+        },
+        {
+          "answer_id": 2,
+          "answer_value": "아빠"
+        }
+      ],
+      "subjectQuestion": "이름을 입력해주세요.",
+      "grid": 2
+    },
+    {
+      "id": 5,
+      "reuse": false,
+      "type": "mix",
+      "choiceQuestion": "우리 아이에 관한 정보를 입력해주세요.",
+      "choiceAnswer": [
+        {
+          "answer_id": 1,
+          "answer_value": "딸"
+        },
+        {
+          "answer_id": 2,
+          "answer_value": "아들"
+        }
+      ],
+      "subjectQuestion": "아이의 별명(또는 이름)을 알려주세요.",
+      "grid": 1
+    }
+  ]
+}

@@ -24,7 +24,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={NotoSansKR.className}>
       <body>
-        {/* <KakaoAdfit /> */}
         <RecoilRootWrapper>
           <SWRConfigContext>
             <div className="responsive_layout">

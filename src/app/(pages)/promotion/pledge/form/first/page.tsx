@@ -1,32 +1,16 @@
-"use client";
-import { todoListState } from "@/store/atom";
-import { useRouter } from "next/navigation";
-import { useRecoilValue } from "recoil";
+import FormLayout from "@/components/FormLayout";
+import { SurveyType } from "@/model/survey";
+import { promises as fs } from "fs";
+// import { todoListState } from "@/store/atom";
+// import { useRecoilValue } from "recoil";
 
-export default function FormFirstPage() {
-  const router = useRouter();
-  const todoList = useRecoilValue(todoListState);
-  console.log(todoList);
+export default async function FormFirstPage() {
+  const file = await fs.readFile(process.cwd() + "/src/data/data.json", "utf8");
+  const { survey }: SurveyType = JSON.parse(file);
 
   return (
-    <div className="relative h-[100svh]">
-      <div className="h-[30rem] bg-[#FFE695]">
-        내가 생각하는 배우자의 모습을
-        <br />
-        아래에서 골라주세요.
-      </div>
-      <div className="w-[88%] h-[8rem] bg-white shadow-lg rounded-[3.5rem] p-[1rem] absolute top-[25rem] left-[50%] translate-x-[-50%]">
-        <div>진행단계</div>
-        <div>1 2 3 4 5 6 7</div>
-      </div>
-      <div className="mt-[8rem]">배우자 외모</div>
-      <div className="">최대 3개까지 중복 선택이 가능합니다.</div>
-      <button
-        className="w-full bg-[#FFE695] h-[6rem] absolute bottom-0"
-        onClick={() => router.push("/promotion/pledge/form/second")}
-      >
-        다음 단계
-      </button>
+    <div className="relative h-[100svh] bg-[url('/bg.png')] bg-no-repeat bg-contain">
+      <FormLayout survey={survey} />
     </div>
   );
 }
