@@ -9,7 +9,7 @@ export default async function FormFirstPage() {
   const { survey }: SurveyType = JSON.parse(file);
 
   return (
-    <div className="relative h-[100svh] bg-[url('/bg.png')] bg-no-repeat bg-contain">
+    <div className="w-full relative h-[100svh] bg-[url('/bg.png')] bg-no-repeat bg-contain">
       <FormLayout survey={survey} />
     </div>
   );

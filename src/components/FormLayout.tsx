@@ -10,17 +10,19 @@ import { useRecoilState } from "recoil";
 import { AnswerUser1State, formStepState } from "@/store/atom";
 import { useEffect, useRef } from "react";
 import BottomButton from "./BottomButton";
+import useWindowDimensions from "@/util/getWindowDimensions";
 
 export default function FormLayout(survey: SurveyType) {
   const pageRef = useRef<HTMLInputElement | null>(null);
+  const { width, height } = useWindowDimensions();
   const [formStep, setFormStep] = useRecoilState(formStepState);
   const [answerUser1, setAnswerUser1] = useRecoilState(AnswerUser1State);
 
   useEffect(() => {
-    console.log(pageRef.current);
-    const translateXValue = formStep * 100;
+    const translateXValue =
+      width && width <= 520 ? `${formStep * 100}vw` : `${formStep * 520}px`;
     if (pageRef.current) {
-      pageRef.current.style.transform = `translateX(-${translateXValue}vw)`;
+      pageRef.current.style.transform = `translateX(-${translateXValue})`;
     }
   }, [formStep]);
 
@@ -48,14 +50,14 @@ export default function FormLayout(survey: SurveyType) {
 
   return (
     <div
-      className={`flex w-[${
+      className={`flex max-[520px]:w-[${
         100 * survey.survey.length
       }vw] h-[100svh] absolute left-0 top-0 transition-all`}
       ref={pageRef}
     >
       {survey.survey.map((surveyItems: SurveyListType) => (
         <div
-          className="w-[100vw]"
+          className={`max-[520px]:w-[100vw] min-[521px]: w-[520px]`}
           key={surveyItems.id + surveyItems.choiceQuestion}
         >
           <StepTitle number={surveyItems.id} />
