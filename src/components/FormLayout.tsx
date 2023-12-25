@@ -165,7 +165,7 @@ export default function FormLayout(survey: SurveyType) {
         >
           <StepTitle number={surveyItems.id} />
           <Question label={surveyItems.choiceQuestion} />
-          <GridLayout grid={surveyItems.grid} height={height}>
+          <GridLayout grid={surveyItems.grid} width={width} height={height}>
             {surveyItems.choiceAnswer.map((answerItem) => {
               return (
                 <div key={answerItem.answer_id + answerItem.answer_value}>

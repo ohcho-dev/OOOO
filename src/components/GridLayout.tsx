@@ -3,11 +3,13 @@ import { useEffect, useRef, useState } from "react";
 
 interface GridLayoutProps {
   grid: number;
+  width: number | null;
   height: number | null;
   children: React.ReactNode;
 }
 export default function GridLayout({
   grid,
+  width,
   height,
   children,
 }: GridLayoutProps) {
@@ -16,10 +18,9 @@ export default function GridLayout({
   const grid1 = "grid-cols-1";
   const grid2 = "grid-cols-2";
 
-  console.log(heightRef.current?.scrollHeight, height);
   useEffect(() => {
     if (heightRef.current?.scrollHeight && height) {
-      heightRef.current.scrollHeight > (height * 4) / 7
+      heightRef.current.scrollHeight > (height * 6) / 11
         ? setScroll(true)
         : setScroll(false);
     }
@@ -29,14 +30,14 @@ export default function GridLayout({
     <>
       <section
         ref={heightRef}
-        className={`border-b-slate-200 relative max-h-calc overflow-scroll mt-[5.4rem] mb-[6rem] px-[6rem] gap-[2rem] grid ${
+        className={`border-b-slate-200 relative max-h-calc overflow-auto scroll-m-0 mt-[5.4rem] mb-[6rem] px-[6rem] gap-[2rem] grid ${
           grid === 1 ? grid1 : grid2
         }`}
       >
         {children}
       </section>
 
-      {scroll && (
+      {width && width < 521 && scroll && (
         <div className="relative left-[88vw] bottom-[8rem] text-[3rem] animate-[moveTopDown_1s_infinite]">
           ↕️
         </div>
