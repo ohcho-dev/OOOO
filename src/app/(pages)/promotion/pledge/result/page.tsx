@@ -21,7 +21,7 @@ export default function Page() {
       setUrl(url);
     }
   }, [answerUser1]);
-  console.log(`url: ${url}`);
+
   return (
     <div>
       <Toolbar />

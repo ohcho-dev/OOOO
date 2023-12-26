@@ -15,8 +15,6 @@ export default function Page() {
   const [answerUser1, setAnswerUser1] = useRecoilState(AnswerUser1State);
   const [answerUser2, setAnswerUser2] = useRecoilState(AnswerUser2State);
 
-  console.log(answerUser1, answerUser2);
-
   useEffect(() => {
     if (searchParams) {
       const data = DecompressedString(searchParams);

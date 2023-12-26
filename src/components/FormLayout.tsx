@@ -82,7 +82,7 @@ export default function FormLayout(survey: SurveyType) {
     setMixData(DEFAULT_MIX_DATA);
     // 스텝이 설문 총 개수와 같을 경우(마지막 설문일 때) 버튼 클릭 시 결과페이지로 이동하고 아니면 다음 스텝으로 이동
     if (formStep === survey.survey.length - 1) {
-      return router.push("/promotion/pledge/result");
+      return router.push("/promotion/pledge/check");
     } else {
       setFormStep(formStep + 1);
     }
