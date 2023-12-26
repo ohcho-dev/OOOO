@@ -40,7 +40,11 @@ export default function Toolbar() {
     router.push("/");
   };
   return (
-    <header className="w-full flex justify-between p-4 absolute top-0 left-0 z-10 bg-white">
+    <header
+      className={`w-full flex justify-between p-4 absolute top-0 left-0 z-10 ${
+        pathname.indexOf("first") === -1 ? "bg-white" : ""
+      }`}
+    >
       <div onClick={handleBackButton} className="px-[1.8rem] py-[1.6rem]">
         <Image src="/back.png" alt="뒤로가기" width={27} height={15} />
       </div>
