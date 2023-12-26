@@ -1,4 +1,4 @@
-import { AnswerUser1, AnswerUser2, UserAnswerType } from "@/model/survey";
+import { AnswerUser1, AnswerUser2Type, UserAnswerType } from "@/model/survey";
 import { atom } from "recoil";
 
 export const formStepState = atom({
@@ -13,5 +13,5 @@ export const AnswerUser1State = atom({
 
 export const AnswerUser2State = atom({
   key: "AnswerUser2State",
-  default: [] as AnswerUser2[],
+  default: [] as AnswerUser2Type[],
 });

@@ -1,20 +1,66 @@
 "use client";
+import AnimationLogo from "@/components/AnimationLogo";
 import BottomButton from "@/components/BottomButton";
-import { AnswerUser1State, formStepState } from "@/store/atom";
+import { AnswerUser1State } from "@/store/atom";
+import DecompressedString from "@/util/decompressedString";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { useSetRecoilState } from "recoil";
+import { useRecoilState } from "recoil";
 
 export default function PledgeMainPage() {
   const router = useRouter();
+  const searchParams = window.location.search.substring(1);
   const [status, setStatus] = useState<boolean>(false);
+  const [answerUser1, setAnswerUser1] = useRecoilState(AnswerUser1State);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setStatus((prevStatus) => !prevStatus);
-    }, 4000);
-    return () => clearTimeout(timer);
-  }, []);
+    if (searchParams) {
+      const data = DecompressedString(searchParams);
+      setAnswerUser1(data);
+
+      const timer = setTimeout(() => {
+        setStatus((prevStatus) => !prevStatus);
+      }, 2600);
+      return () => clearTimeout(timer);
+    } else {
+      const timer = setTimeout(() => {
+        setStatus((prevStatus) => !prevStatus);
+      }, 4000);
+      return () => clearTimeout(timer);
+    }
+  }, [searchParams]);
+
+  if (searchParams)
+    return (
+      <section className="w-full absolute left-[0] top-[9.4rem]">
+        {!status && (
+          <div className="h-[70svh]">
+            <AnimationLogo />
+          </div>
+        )}
+        {status && (
+          <>
+            <h1 className="text-[2.6rem] text-center animate-[pledge1_3s_ease-in-out] ">
+              사랑하는 나의 배우자가
+              <br />
+              육아 서약서 캠페인 참여를 요청하셨습니다.
+            </h1>
+            <div className="mt-[9.3rem] w-[46.2rem] h-[34.5rem] mx-auto">
+              <Image src="/receiver_bg.png" alt="bg" width={462} height={345} />
+            </div>
+
+            <BottomButton
+              label="서약서 만들기"
+              onClick={() => {
+                router.push(`/promotion/pledge/form2?${searchParams}`);
+              }}
+              status={true}
+            />
+          </>
+        )}
+      </section>
+    );
 
   return (
     <section className="w-full absolute left-[0] top-[9.4rem]">

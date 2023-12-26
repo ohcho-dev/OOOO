@@ -3,14 +3,19 @@ import Image from "next/image";
 import { redirect, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default function AnimationLogo() {
+interface Props {
+  link?: string;
+}
+export default function AnimationLogo({ link }: Props) {
   const router = useRouter();
   useEffect(() => {
-    const timer = setTimeout(() => {
-      router.push("/promotion/pledge");
-    }, 2600);
-    return () => clearTimeout(timer);
-  });
+    if (link) {
+      const timer = setTimeout(() => {
+        router.push(link);
+      }, 2600);
+      return () => clearTimeout(timer);
+    }
+  }, [link]);
 
   return (
     <section>

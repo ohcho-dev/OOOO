@@ -3,7 +3,25 @@ import BottomButton from "@/components/BottomButton";
 import Toolbar from "@/components/toolbar";
 import Image from "next/image";
 
+import LZString from "lz-string";
+import { useRecoilValue } from "recoil";
+import { AnswerUser1State } from "@/store/atom";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { AnswerUser1 } from "@/model/survey";
+import CompressedString from "@/util/compressedString";
+
 export default function Page() {
+  const answerUser1 = useRecoilValue(AnswerUser1State);
+  const [url, setUrl] = useState("");
+  useEffect(() => {
+    if (answerUser1) {
+      const compress = CompressedString(answerUser1);
+      const url = window.location.host + "/promotion/pledge?" + compress;
+      setUrl(url);
+    }
+  }, [answerUser1]);
+  console.log(`url: ${url}`);
   return (
     <div>
       <Toolbar />

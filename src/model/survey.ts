@@ -18,17 +18,17 @@ export interface AnswerItemTypes {
 
 export interface UserAnswerType {
   user_1: AnswerUser1[];
-  user_2: AnswerUser2[];
+  user_2: AnswerUser2Type[];
 }
 export interface AnswerUser1 {
-  survey_id: number;
-  choice_id: number;
-  subject_value?: string;
+  s_id: number;
+  c_id: number;
+  sv?: string;
 }
 export interface SelectButtonType extends AnswerUser1 {
-  survey_id: number;
-  choice_id: number;
+  s_id: number;
+  c_id: number;
   type: string;
-  subject_value?: string;
+  sv?: string;
 }
-export interface AnswerUser2 extends AnswerUser1 {}
+export interface AnswerUser2Type extends AnswerUser1 {}

@@ -1,7 +1,7 @@
 "use client";
 
 import {
-  AnswerUser1,
+  AnswerUser2Type,
   SelectButtonType,
   SurveyListType,
   SurveyType,
@@ -12,7 +12,7 @@ import FormButton from "./FormButton";
 import SubjectForm from "./SubjectForm";
 import StepTitle from "./StepTitle";
 import { useRecoilState } from "recoil";
-import { AnswerUser1State, formStepState } from "@/store/atom";
+import { AnswerUser2State, formStepState } from "@/store/atom";
 import { useEffect, useRef, useState } from "react";
 import BottomButton from "./BottomButton";
 import useWindowDimensions from "@/util/getWindowDimensions";
@@ -24,16 +24,17 @@ const DEFAULT_MIX_DATA = {
   sv: "",
 };
 export default function FormLayout(survey: SurveyType) {
+  const searchParams = window.location.search.substring(1);
   const router = useRouter();
   const pageRef = useRef<HTMLInputElement | null>(null);
   const { width, height } = useWindowDimensions();
   const [formStep, setFormStep] = useRecoilState(formStepState);
-  const [answerUser1, setAnswerUser1] = useRecoilState(AnswerUser1State);
-  const [mixData, setMixData] = useState<AnswerUser1>(DEFAULT_MIX_DATA);
+  const [answerUser2, setAnswerUser2] = useRecoilState(AnswerUser2State);
+  const [mixData, setMixData] = useState<AnswerUser2Type>(DEFAULT_MIX_DATA);
   const [selectValue, setSelectValue] = useState(0);
 
   useEffect(() => {
-    setAnswerUser1([]);
+    setAnswerUser2([]);
     setFormStep(0);
   }, []);
 
@@ -43,7 +44,10 @@ export default function FormLayout(survey: SurveyType) {
     if (pageRef.current) {
       pageRef.current.style.transform = `translateX(-${translateXValue})`;
     }
-    const filterAnswer = answerUser1.filter((x) => x.s_id === formStep + 1);
+    const filterAnswer = answerUser2.filter((x) => x.s_id === formStep + 1);
+    if (formStep === survey.survey.length) {
+      return router.push(`/promotion/pledge/result2?${searchParams}`);
+    }
     if (filterAnswer[0]?.sv) {
       setMixData(filterAnswer[0]);
       setSelectValue(filterAnswer[0].c_id);
@@ -62,44 +66,43 @@ export default function FormLayout(survey: SurveyType) {
   };
 
   const HandleNextStepBtn = () => {
-    if (answerUser1[formStep]) {
-      const newAnswerUser1 = answerUser1.filter(
+    if (answerUser2[formStep]) {
+      const newAnswerUser2 = answerUser2.filter(
         (item) => item.s_id !== formStep + 1
       );
-      newAnswerUser1.push({
+      newAnswerUser2.push({
         s_id: mixData.s_id,
         c_id: mixData.c_id,
         sv: mixData.sv,
       });
-      setAnswerUser1(newAnswerUser1);
+      setAnswerUser2(newAnswerUser2);
 
       return setTimeout(() => {
         setFormStep(formStep + 1);
         setMixData(DEFAULT_MIX_DATA);
       }, 200);
     }
-    setAnswerUser1([...answerUser1, mixData]);
+    setAnswerUser2([...answerUser2, mixData]);
     setMixData(DEFAULT_MIX_DATA);
     // 스텝이 설문 총 개수와 같을 경우(마지막 설문일 때) 버튼 클릭 시 결과페이지로 이동하고 아니면 다음 스텝으로 이동
     if (formStep === survey.survey.length - 1) {
-      return router.push("/promotion/pledge/result");
+      return router.push(`/promotion/pledge/result2?${searchParams}`);
     } else {
       setFormStep(formStep + 1);
     }
   };
-
   const HandleData = ({ s_id, c_id, type, sv = "" }: SelectButtonType) => {
-    if (answerUser1[formStep]) {
+    if (answerUser2[formStep]) {
       if (type === "choice") {
-        const newAnswerUser1 = answerUser1.filter(
+        const newAnswerUser2 = answerUser2.filter(
           (item) => item.s_id !== formStep + 1
         );
-        newAnswerUser1.push({
+        newAnswerUser2.push({
           s_id: s_id,
           c_id: c_id,
           sv: sv,
         });
-        setAnswerUser1(newAnswerUser1);
+        setAnswerUser2(newAnswerUser2);
         setSelectValue(c_id);
 
         return setTimeout(() => {
@@ -125,9 +128,9 @@ export default function FormLayout(survey: SurveyType) {
     }
   };
 
-  const SelectButton = ({ s_id, c_id, sv = "" }: AnswerUser1) => {
-    setAnswerUser1([
-      ...answerUser1,
+  const SelectButton = ({ s_id, c_id, sv = "" }: AnswerUser2Type) => {
+    setAnswerUser2([
+      ...answerUser2,
       {
         s_id: s_id,
         c_id: c_id,

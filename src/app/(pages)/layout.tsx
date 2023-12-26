@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={NotoSansKR.className}>
+    <html lang="ko-KR" className={NotoSansKR.className}>
       <body>
         <RecoilRootWrapper>
           <SWRConfigContext>
