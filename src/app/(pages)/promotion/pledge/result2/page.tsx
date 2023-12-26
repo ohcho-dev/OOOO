@@ -10,10 +10,14 @@ import { useRouter } from "next/navigation";
 
 export default function Page() {
   const router = useRouter();
-  const searchParams = window.location.search.substring(1);
+
   const [status, setStatus] = useState<boolean>(false);
   const [answerUser1, setAnswerUser1] = useRecoilState(AnswerUser1State);
   const [answerUser2, setAnswerUser2] = useRecoilState(AnswerUser2State);
+  const [searchParams, setSearchParams] = useState("");
+  useEffect(() => {
+    setSearchParams(window.location.search.substring(1));
+  }, []);
 
   useEffect(() => {
     if (searchParams) {
@@ -52,7 +56,7 @@ export default function Page() {
           <BottomButton
             label="서약서 확인하기"
             onClick={() => {
-              router.push(`/promotion/pledge/form2?${searchParams}`);
+              router.push(`/promotion/pledge/paper`);
             }}
             status={true}
           />

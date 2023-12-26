@@ -8,7 +8,7 @@ interface SubjectFormProps {
   value?: string;
   useResetButton: boolean;
   mixData: AnswerUser1;
-  handleMixData: (subject_value: string) => void;
+  handleMixData: (sv: string) => void;
 }
 export default function SubjectForm({
   question,
@@ -23,7 +23,7 @@ export default function SubjectForm({
       <input
         className="w-full border-b-[0.1rem] border-black h-[6rem] mt-[1.5rem] text-[3.5rem]"
         type="text"
-        value={mixData.subject_value}
+        value={mixData.sv}
         onChange={(e: ChangeEvent<HTMLInputElement>) => {
           handleMixData(e.target.value);
         }}

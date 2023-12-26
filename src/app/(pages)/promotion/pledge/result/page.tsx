@@ -3,13 +3,11 @@ import BottomButton from "@/components/BottomButton";
 import Toolbar from "@/components/toolbar";
 import Image from "next/image";
 
-import LZString from "lz-string";
 import { useRecoilValue } from "recoil";
 import { AnswerUser1State } from "@/store/atom";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
-import { AnswerUser1 } from "@/model/survey";
 import CompressedString from "@/util/compressedString";
+import Link from "next/link";
 
 export default function Page() {
   const answerUser1 = useRecoilValue(AnswerUser1State);
@@ -17,7 +15,7 @@ export default function Page() {
   useEffect(() => {
     if (answerUser1) {
       const compress = CompressedString(answerUser1);
-      const url = window.location.host + "/promotion/pledge?" + compress;
+      const url = window?.location.host + "/promotion/pledge?" + compress;
       setUrl(url);
     }
   }, [answerUser1]);
@@ -25,7 +23,7 @@ export default function Page() {
   return (
     <div>
       <Toolbar />
-      <div className="mb-[10rem] max-h-calcResultPage overflow-auto scroll-m-0">
+      <div className="w-full h-[100svh] mb-[10rem] overflow-auto scroll-m-0">
         <Image
           className="pt-[8rem] mx-auto absolute"
           src="/paper.png"
@@ -40,6 +38,12 @@ export default function Page() {
           width={600}
           height={600}
         />
+        <Link
+          className="text-[2rem] relative left-[0] top-[80svh]"
+          href={`http://${url}`}
+        >
+          {url}
+        </Link>
       </div>
       <BottomButton
         label="배우자에게 공유하기"

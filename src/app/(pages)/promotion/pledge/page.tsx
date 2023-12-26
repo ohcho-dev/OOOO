@@ -10,9 +10,12 @@ import { useRecoilState } from "recoil";
 
 export default function PledgeMainPage() {
   const router = useRouter();
-  const searchParams = window.location.search.substring(1);
   const [status, setStatus] = useState<boolean>(false);
   const [answerUser1, setAnswerUser1] = useRecoilState(AnswerUser1State);
+  const [searchParams, setSearchParams] = useState("");
+  useEffect(() => {
+    setSearchParams(window.location.search.substring(1));
+  }, []);
 
   useEffect(() => {
     if (searchParams) {

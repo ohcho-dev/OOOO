@@ -24,7 +24,6 @@ const DEFAULT_MIX_DATA = {
   sv: "",
 };
 export default function FormLayout(survey: SurveyType) {
-  const searchParams = window.location.search.substring(1);
   const router = useRouter();
   const pageRef = useRef<HTMLInputElement | null>(null);
   const { width, height } = useWindowDimensions();
@@ -32,8 +31,10 @@ export default function FormLayout(survey: SurveyType) {
   const [answerUser2, setAnswerUser2] = useRecoilState(AnswerUser2State);
   const [mixData, setMixData] = useState<AnswerUser2Type>(DEFAULT_MIX_DATA);
   const [selectValue, setSelectValue] = useState(0);
+  const [searchParams, setSearchParams] = useState("");
 
   useEffect(() => {
+    setSearchParams(window.location.search.substring(1));
     setAnswerUser2([]);
     setFormStep(0);
   }, []);
@@ -45,9 +46,7 @@ export default function FormLayout(survey: SurveyType) {
       pageRef.current.style.transform = `translateX(-${translateXValue})`;
     }
     const filterAnswer = answerUser2.filter((x) => x.s_id === formStep + 1);
-    if (formStep === survey.survey.length) {
-      return router.push(`/promotion/pledge/check2?${searchParams}`);
-    }
+
     if (filterAnswer[0]?.sv) {
       setMixData(filterAnswer[0]);
       setSelectValue(filterAnswer[0].c_id);
@@ -55,6 +54,9 @@ export default function FormLayout(survey: SurveyType) {
       setSelectValue(filterAnswer[0].c_id);
     } else {
       setSelectValue(0);
+    }
+    if (formStep > 0 && formStep === survey.survey.length && searchParams) {
+      return router.push(`/promotion/pledge/check2?${searchParams}`);
     }
   }, [formStep]);
 

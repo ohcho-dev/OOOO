@@ -3,7 +3,7 @@
 import { AnswerUser1State, formStepState } from "@/store/atom";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 import { useRecoilState, useSetRecoilState } from "recoil";
 
@@ -42,7 +42,7 @@ export default function Toolbar() {
   return (
     <header
       className={`w-full flex justify-between p-4 absolute top-0 left-0 z-10 ${
-        pathname.indexOf("first") !== -1 ? "bg-white" : ""
+        pathname.indexOf("first") === -1 ? "bg-white" : ""
       }`}
     >
       <div onClick={handleBackButton} className="px-[1.8rem] py-[1.6rem]">

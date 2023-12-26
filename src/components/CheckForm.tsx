@@ -11,20 +11,26 @@ interface CheckFormProps {
 export default function CheckForm({ survey1 }: CheckFormProps) {
   const router = useRouter();
   const answerUser1 = useRecoilValue(AnswerUser1State);
-  const getAnswerValue = (survey: SurveyListType) => {
+
+  const getAnswer = (survey: SurveyListType) => {
     const getAnswerData = answerUser1.filter(
       (answer) => answer.s_id === survey.id
     )[0];
-    const getAnswerValue = survey.choiceAnswer.filter(
-      (answerItem) => answerItem.answer_id === getAnswerData.c_id
-    )[0].answer_value;
-
-    return getAnswerValue;
+    if (getAnswerData) {
+      const getAnswerValue = survey.choiceAnswer.filter(
+        (answerItem) => answerItem.answer_id === getAnswerData.c_id
+      )[0].answer_value;
+      return getAnswerValue;
+    }
   };
 
   const getSubjectValue = (id: number) => {
-    return answerUser1.filter((answer) => answer.s_id === id)[0].sv;
+    const getSubjectAnswer = answerUser1.filter(
+      (answer) => answer.s_id === id
+    )[0];
+    if (getSubjectAnswer && getSubjectAnswer.sv) return getSubjectAnswer.sv;
   };
+
   return (
     <div className="w-full h-[100svh]">
       <div className="pt-[8rem]">
@@ -37,11 +43,11 @@ export default function CheckForm({ survey1 }: CheckFormProps) {
               <div>
                 <div>step {survey.id}</div>
                 <div>{survey.choiceQuestion}</div>
-                <div>{getAnswerValue(survey)}</div>
+                <div>{getAnswer(survey)}</div>
                 {survey.type === "mix" && (
                   <>
                     <div>{survey.subjectQuestion}</div>
-                    <div>{getSubjectValue(survey.id)}</div>
+                    <div>{answerUser1 && getSubjectValue(survey.id)}</div>
                   </>
                 )}
               </div>

@@ -1,9 +1,13 @@
 "use client";
 import BottomButton from "@/components/BottomButton";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Page() {
-  const searchParams = window.location.search.substring(1);
+  const [searchParams, setSearchParams] = useState("");
+  useEffect(() => {
+    setSearchParams(window.location.search.substring(1));
+  }, []);
   return (
     <div>
       <h1 className="pt-[11.6rem] text-center text-[2.8rem]">
