@@ -1,21 +1,30 @@
 "use client";
 
 import { SurveyListType } from "@/model/survey";
-import { AnswerUser2State } from "@/store/atom";
-import { useRecoilValue } from "recoil";
+import { AnswerUser1State, AnswerUser2State } from "@/store/atom";
+import { useRecoilValue, useSetRecoilState } from "recoil";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import DecompressedString from "@/util/decompressedString";
 
 interface CheckFormProps {
   survey2: SurveyListType[];
 }
 export default function CheckForm({ survey2 }: CheckFormProps) {
   const router = useRouter();
+  const setAnswerUser1 = useSetRecoilState(AnswerUser1State);
   const answerUser2 = useRecoilValue(AnswerUser2State);
   const [searchParams, setSearchParams] = useState("");
   useEffect(() => {
     setSearchParams(window.location.search.substring(1));
   }, []);
+
+  useEffect(() => {
+    if (searchParams) {
+      const data = DecompressedString(searchParams);
+      setAnswerUser1(data);
+    }
+  }, [searchParams]);
 
   const getAnswer = (survey: SurveyListType) => {
     const getAnswerData = answerUser2.filter(
@@ -108,9 +117,7 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
         </button>
         <button
           className="w-[26rem] max-w-[518px] h-[8rem] text-[2.4rem] bg-[#FFEBAA] text-black"
-          onClick={() =>
-            router.push(`/promotion/pledge/result2?${searchParams}`)
-          }
+          onClick={() => router.push(`/promotion/pledge/paper`)}
         >
           최종 완료
         </button>

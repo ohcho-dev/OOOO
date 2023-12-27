@@ -23,6 +23,7 @@ export interface UserAnswerType {
 export interface AnswerUser1 {
   s_id: number;
   c_id: number;
+  c_value?: string;
   sv?: string;
 }
 export interface SelectButtonType extends AnswerUser1 {
