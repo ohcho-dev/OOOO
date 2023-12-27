@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "info-bg": "url('/info_bg.png')",
+      },
       maxHeight: {
         calc: "calc(100svh - 44rem)",
         calcResultPage: "calc(100svh - 8rem)",

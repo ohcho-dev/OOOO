@@ -16,7 +16,7 @@ export default function FormButton({
 }: FormButtonProps) {
   return (
     <button
-      className={`w-full border flex items-stretch gap-5 px-7 py-11 border-solid transition-all
+      className={`w-full border flex items-stretch gap-5 px-7 py-[2.9rem] border-solid transition-all
       ${
         status
           ? "shadow-sm bg-red-100 rounded-[3rem] border-solid border-red-300"

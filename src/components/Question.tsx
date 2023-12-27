@@ -7,7 +7,7 @@ interface QuestionProps {
 }
 export default function Question({ label }: QuestionProps) {
   return (
-    <div className="text-center text-[2.8rem] text-bold mt-[3.4rem]">
+    <div className="text-center text-[2.8rem] font-bold mt-[3.4rem]">
       {SplitText(label)}
     </div>
   );
