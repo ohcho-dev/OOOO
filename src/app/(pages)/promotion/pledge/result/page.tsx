@@ -35,7 +35,7 @@ export default function Page() {
           height={699}
         />
         <Image
-          className="pt-[8rem] px-[4rem] mx-auto absolute top-[4rem]"
+          className="pt-[8rem] px-[4rem] mx-auto absolute top-[4rem] blur-md"
           src="/test.svg"
           alt="서약서 내용"
           width={600}

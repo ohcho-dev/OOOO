@@ -48,11 +48,11 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
               key={survey.id + survey.choiceQuestion}
             >
               <div>
-                <div className="text-[2.1rem] leading-[2.8rem] font-bold">
+                <div className="text-[2.1rem] leading-[2.8rem] font-bold text-center">
                   step {survey.id}
                 </div>
                 <div className="my-[1.8rem]">
-                  <div className="text-[2rem] leading-[2.4rem] text-[#FF5C00]">
+                  <div className="text-[2rem] leading-[2.4rem] text-[#999]">
                     {survey.choiceQuestion}
                   </div>
                   <div
@@ -61,9 +61,8 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
                     }`}
                   >
                     <span
-                      className={`w-[4rem] min-w-[4rem] h-[4rem] rounded-[2rem] bg-white flex justify-center items-center
-                  ${survey.id % 2 === 0 ? "bg-[#f6f7f9]" : "bg-white"}
-                  `}
+                      className={`w-[4rem] min-w-[4rem] h-[4rem] rounded-[2rem] flex justify-center items-center
+                        ${survey.id % 2 === 0 ? "bg-[#f6f7f9]" : "bg-white"}`}
                     >
                       <span className="block ml-[-0.2rem]">A</span>
                     </span>
@@ -75,12 +74,23 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
                 {survey.type === "mix" && (
                   <>
                     <div className="w-full h-[0.1rem] bg-black my-[2rem]" />
-                    <div className="text-[1.8rem] leading-[2.4rem] text-[#FF5C00]">
+                    <div className="text-[1.8rem] leading-[2.4rem] text-[#999]">
                       {survey.subjectQuestion}
                     </div>
-
-                    <div className="text-[2.1rem] leading-[2.8rem] font-bold h-[3rem] mt-[0.8rem]">
-                      A : {answerUser2 && getSubjectValue(survey.id)}
+                    <div
+                      className={`w-full flex text-[2.1rem] leading-[2.8rem] font-bold p-[1.5rem] mt-[1.2rem] rounded-[2rem] ${
+                        survey.id % 2 === 1 ? "bg-[#f6f7f9]" : "bg-white"
+                      }`}
+                    >
+                      <span
+                        className={`w-[4rem] min-w-[4rem] h-[4rem] rounded-[2rem] flex justify-center items-center
+                        ${survey.id % 2 === 0 ? "bg-[#f6f7f9]" : "bg-white"}`}
+                      >
+                        <span className="block ml-[-0.2rem]">A</span>
+                      </span>
+                      <span className="block ml-[1rem] mt-[0.4rem]">
+                        {answerUser2 && getSubjectValue(survey.id)}
+                      </span>
                     </div>
                   </>
                 )}
@@ -94,7 +104,7 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
           className="w-[26rem] max-w-[518px] h-[8rem] text-[2.4rem] bg-[#cccccc] text-white"
           onClick={() => router.push(`/promotion/pledge/form2?${searchParams}`)}
         >
-          처음으로
+          다시 선택하기
         </button>
         <button
           className="w-[26rem] max-w-[518px] h-[8rem] text-[2.4rem] bg-[#FFEBAA] text-black"
@@ -102,7 +112,7 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
             router.push(`/promotion/pledge/result2?${searchParams}`)
           }
         >
-          다음 단계
+          최종 완료
         </button>
       </div>
     </div>

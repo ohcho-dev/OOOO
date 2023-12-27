@@ -38,7 +38,7 @@ export default function GridLayout({
       </section>
 
       {width && width < 521 && scroll && (
-        <div className="relative left-[88vw] bottom-[8rem] text-[3rem] animate-[moveTopDown_1s_infinite]">
+        <div className="relative left-[88vw] bottom-[8rem] text-[3rem] animate-bounce">
           ↕️
         </div>
       )}
