@@ -7,9 +7,9 @@ import { useRecoilValue } from "recoil";
 import { AnswerUser1State } from "@/store/atom";
 import { useEffect, useState } from "react";
 import CompressedString from "@/util/compressedString";
-import Link from "next/link";
 import CustomBottomModal from "@/components/CustomBottomModal";
 import KakaoShareButton from "@/components/KakaoShareButton";
+import { copyURL } from "@/util/CopyUrl";
 
 export default function Page() {
   const answerUser1 = useRecoilValue(AnswerUser1State);
@@ -46,9 +46,12 @@ export default function Page() {
         toggle={toggle}
         handleToggle={() => setToggle(!toggle)}
       >
-        <div className="flex justify-around text-[1.6rem] p-[3rem]">
+        <div className="flex justify-around text-[1.6rem] p-[3rem] cursor-pointer">
           <KakaoShareButton description="설명" url={`https://${url}`} />
-          <div className="text-center">
+          <div
+            className="text-center"
+            onClick={() => copyURL(`https://${url}`)}
+          >
             <div className="bg-[#f6f7f9] rounded-[8rem] w-[8rem] h-[8rem] text-[4rem] flex justify-center items-center">
               🔗
             </div>
