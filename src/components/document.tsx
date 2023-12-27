@@ -66,7 +66,7 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
     return <div>Loading...</div>;
 
   return (
-    <div className="text-[1.4rem] leading-[2rem] px-[6.5rem]">
+    <div className="text-[1.4rem] leading-[2rem] px-[5rem]">
       <div className="text-[1.8rem] leading-[4rem] font-bold text-center mb-[0.7rem] h-[4rem]">
         {/* {newAnswerUser1[7].sv || ""}네 서약서 */}
         {typeWords1[0]}
@@ -103,23 +103,21 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
 
           {/* 우리 가족은 서약합니다 */}
           <div className="mb-[1.1rem]">
-            우리 가족은 서로를 이해하고 도우며
-            <br />
+            우리 가족은 서로를 이해하고 도우며{" "}
             <b>
-              {newAnswerUser2[2].c_value === newAnswerUser1[2].c_value
+              {newAnswerUser2[2].c_value !== newAnswerUser1[2].c_value
                 ? `${newAnswerUser2[2].c_value}과 ${newAnswerUser1[2].c_value}`
                 : `${newAnswerUser1[2].c_value}`}
             </b>
             이 넘치는
-            <br /> 화목한 가정을 만들기 위해 아래와 같이 서약합니다.
+            <br />
+            화목한 가정을 만들기 위해 아래와 같이 서약합니다.
           </div>
 
           {/* user1 약속 */}
           <div className="mb-[2rem]">
             <div className="leading-[3rem]">
-              <b>
-                {newAnswerUser1[6].c_value}는, 엄마에게 이렇게 약속해주세요!
-              </b>
+              <b>{newAnswerUser1[6].c_value}는 엄마에게 이렇게 약속해주세요!</b>
             </div>
             <div className="leading-[2rem]">
               <div>
@@ -143,7 +141,8 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
           <div className="mb-[2rem]">
             <div className="leading-[3rem]">
               <b>
-                {newAnswerUser2[6].c_value}는, 엄마에게 이렇게 약속해주세요!
+                {newAnswerUser2[6].c_value}는 {newAnswerUser1[7].c_value}에게
+                이렇게 약속해주세요!
               </b>
             </div>
             <div className="leading-[2rem]">
@@ -170,7 +169,7 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
           <div className="mb-[4.4rem]">
             <div className="leading-[3rem]">
               <b>
-                나 {newAnswerUser1[7].sv || ""}는, 엄마♥️아빠에게 이렇게
+                나 {newAnswerUser1[7].sv || ""}는 엄마♥️아빠랑 이렇게
                 약속할게요!
               </b>
             </div>
