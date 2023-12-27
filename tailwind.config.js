@@ -18,6 +18,24 @@ module.exports = {
         calcResultPage: "calc(100svh - 8rem)",
       },
       keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 0.7 },
+        },
+        fadeOut: {
+          "0%": { opacity: 1 },
+          "100%": { opacity: 0 },
+        },
+        moveTop: {
+          "0%": {
+            opacity: 0.5,
+            bottom: "-10rem",
+          },
+          "100%": {
+            opacity: 1,
+            bottom: 0,
+          },
+        },
         wiggle: {
           "0%, 100%": { transform: "translateX(50px)" },
           "50%": { transform: "translateX(100px)" },
