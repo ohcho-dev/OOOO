@@ -8,10 +8,14 @@ import { AnswerUser1State } from "@/store/atom";
 import { useEffect, useState } from "react";
 import CompressedString from "@/util/compressedString";
 import Link from "next/link";
+import CustomBottomModal from "@/components/CustomBottomModal";
+import KakaoShareButton from "@/components/KakaoShareButton";
 
 export default function Page() {
   const answerUser1 = useRecoilValue(AnswerUser1State);
   const [url, setUrl] = useState("");
+  const [toggle, setToggle] = useState(false);
+
   useEffect(() => {
     if (answerUser1) {
       const compress = CompressedString(answerUser1);
@@ -19,7 +23,6 @@ export default function Page() {
       setUrl(url);
     }
   }, [answerUser1]);
-
   return (
     <div>
       <Toolbar />
@@ -38,17 +41,29 @@ export default function Page() {
           width={600}
           height={600}
         />
-        <Link
-          className="text-[2rem] relative left-[0] top-[80svh]"
-          href={`http://${url}`}
-        >
-          {url}
-        </Link>
       </div>
+      <CustomBottomModal
+        toggle={toggle}
+        handleToggle={() => setToggle(!toggle)}
+      >
+        <div className="flex justify-around text-[1.6rem] p-[3rem]">
+          <KakaoShareButton description="설명" url={`https://${url}`} />
+          <div className="text-center">
+            <div className="bg-[#f6f7f9] rounded-[8rem] w-[8rem] h-[8rem] text-[4rem] flex justify-center items-center">
+              🔗
+            </div>
+            <span className="block mt-[0.8rem]">
+              URL
+              <br />
+              복사
+            </span>
+          </div>
+        </div>
+      </CustomBottomModal>
       <BottomButton
         label="배우자에게 공유하기"
         status={true}
-        onClick={() => {}}
+        onClick={() => setToggle(!toggle)}
       />
     </div>
   );

@@ -4,6 +4,7 @@ import { Noto_Sans_KR } from "next/font/google";
 import SWRConfigContext from "@/context/SWRConfigContext";
 import { Metadata } from "next";
 import RecoilRootWrapper from "@/context/RecoilContext";
+import Script from "next/script";
 // import KakaoAdfit from "@/util/KakaoAdfit";
 
 const NotoSansKR = Noto_Sans_KR({ subsets: ["latin"] });
@@ -16,6 +17,12 @@ export const metadata: Metadata = {
   description: "Instantgram Photos",
 };
 
+declare global {
+  interface Window {
+    Kakao: any;
+  }
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -24,6 +31,10 @@ export default function RootLayout({
   return (
     <html lang="ko-KR" className={NotoSansKR.className}>
       <body>
+        <Script
+          src="https://developers.kakao.com/sdk/js/kakao.js"
+          strategy="afterInteractive"
+        />
         <RecoilRootWrapper>
           <SWRConfigContext>
             <div className="responsive_layout">
