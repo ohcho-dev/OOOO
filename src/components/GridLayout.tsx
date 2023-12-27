@@ -30,7 +30,7 @@ export default function GridLayout({
     <>
       <section
         ref={heightRef}
-        className={`border-b-slate-200 relative max-h-calc overflow-auto scroll-m-0 mt-[5.4rem] mb-[6rem] px-[6rem] gap-[2rem] grid ${
+        className={`border-b-slate-200 relative max-h-calc overflow-auto scroll-m-0 mt-[5.4rem] px-[6rem] pb-[2rem] gap-[2rem] grid ${
           grid === 1 ? grid1 : grid2
         }`}
       >

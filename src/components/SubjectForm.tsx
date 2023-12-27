@@ -18,7 +18,7 @@ export default function SubjectForm({
   handleMixData,
 }: SubjectFormProps) {
   return (
-    <section className="mx-[3.7rem] mt-[8rem] relative">
+    <section className="mx-[3.7rem] mt-[6rem] relative">
       <div className="text-[2.4rem]">{question}</div>
       <input
         className="w-full border-b-[0.1rem] border-black h-[6rem] mt-[1.5rem] text-[3.5rem]"

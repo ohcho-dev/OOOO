@@ -19,7 +19,7 @@ export default function FormButton({
       className={`w-full border flex items-stretch gap-5 px-7 py-[2.9rem] border-solid transition-all
       ${
         status
-          ? "shadow-sm bg-red-100 rounded-[3rem] border-solid border-red-300"
+          ? "bg-red-100 rounded-[3rem] border-solid border-red-300 shadow-md shadow-[#b6b6b6]"
           : "bg-neutral-100"
       }
     `}
