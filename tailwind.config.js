@@ -14,7 +14,7 @@ module.exports = {
         "info-bg": "url('/info_bg.png')",
       },
       maxHeight: {
-        calc: "calc(100svh - 44rem)",
+        calc: "calc(100svh - 32.1rem)",
         calcResultPage: "calc(100svh - 8rem)",
       },
       keyframes: {
