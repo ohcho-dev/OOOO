@@ -21,9 +21,9 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
   const typedWords2 = useTypingWords("엄마! 아빠! 함께 약속해요!", 200);
 
   const today = new Date();
-  const formattedDate = `${today.getFullYear()}년 ${
+  const formattedDate = `${today.getFullYear()}. ${
     today.getMonth() + 1
-  }월 ${today.getDate()}일`;
+  }. ${today.getDate()}`;
 
   useEffect(() => {
     if (answerUser1) {
@@ -66,21 +66,20 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
     return <div>Loading...</div>;
 
   return (
-    <div className="text-[1.4rem] leading-[2rem] px-[5rem]">
+    <div className="text-[2rem] leading-[2.8rem] px-[5rem] py-[5rem] text-center bg-[url(/paper_bg.png)] bg-cover">
       <div className="text-[1.8rem] leading-[4rem] font-bold text-center mb-[0.7rem] h-[4rem]">
         {/* {newAnswerUser1[7].sv || ""}네 서약서 */}
         {typeWords1[0]}
       </div>
-      <div className="text-[3rem] leading-[4rem] font-bold align-text-top text-center mb-[2.7rem] h-[4rem]">
+      <div className="text-[3rem] leading-[4rem] font-bold align-text-top text-center mb-[4.4rem] h-[4rem]">
         {typeWords1[1] && typedWords2[0]}
       </div>
 
       {typedWords2[1] && (
         <div className="animate-[paperText_1s_ease-in-out]">
           {/* 세상에서 가장 ~~한 우리 ~~ */}
-          <div className="mb-[2.4rem]">
+          <div className="mb-[4.6rem]">
             <div>
-              세상에서 가장{" "}
               <b>
                 {newAnswerUser1[0].c_value} 우리 {newAnswerUser2[6].c_value}
               </b>{" "}
@@ -88,7 +87,6 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
             </div>
 
             <div>
-              세상에서 가장{" "}
               <b>
                 {newAnswerUser2[0].c_value} 우리 {newAnswerUser1[6].c_value}
               </b>{" "}
@@ -102,93 +100,109 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
           </div>
 
           {/* 우리 가족은 서약합니다 */}
-          <div className="mb-[1.1rem]">
-            우리 가족은 서로를 이해하고 도우며{" "}
+          <div className="mb-[5.8rem]">
+            우리 가족은{" "}
             <b>
               {newAnswerUser2[2].c_value !== newAnswerUser1[2].c_value
                 ? `${newAnswerUser2[2].c_value}과 ${newAnswerUser1[2].c_value}`
                 : `${newAnswerUser1[2].c_value}`}
             </b>
-            이 넘치는
+            이 넘치는 화목한 가정을
             <br />
-            화목한 가정을 만들기 위해 아래와 같이 서약합니다.
+            만들기 위해 아래와 같이 서약합니다.
           </div>
 
           {/* user1 약속 */}
-          <div className="mb-[2rem]">
-            <div className="leading-[3rem] text-[#FF5C00]">
+          <div className="mb-[4.8rem]">
+            <div className="relative z-20 text-[2.2rem] mb-[2rem] after:content-[' asdasd'] after:w-full after:block after:absolute after:bottom-[-0.4rem] after:border-[0.6rem] after:border-[#FF5C00] after:opacity-20 after:z-10">
               <b>
-                {newAnswerUser1[6].c_value}는 {newAnswerUser2[6].c_value}에게
-                이렇게 약속해주세요!
+                <span className="text-[#FF5C00]">
+                  {newAnswerUser1[6].c_value}!
+                </span>
+                <br />
+                {newAnswerUser2[6].c_value}에게 이렇게 약속해줘요!
               </b>
             </div>
-            <div className="leading-[2rem]">
+            <div className="leading-[3rem]">
               <div>
-                <b>첫째</b>, 아내가 <b>{newAnswerUser2[3].c_value}</b>에면 늘
-                곁에서
-                <br />
-                도우며 함께 하겠습니다.
+                첫째, {newAnswerUser1[6].c_id === 1 ? "남편이" : "아내가"}{" "}
+                <b>{newAnswerUser2[3].c_value}</b>에면
+                <br />늘 곁에서 도우며 함께 하겠습니다.
               </div>
+              <br />
               <div>
-                <b>둘째</b>, <b>{newAnswerUser2[4].c_value}</b>으로 고민하는
-                아내의 마음을 이해하고
+                둘째, <b>{newAnswerUser2[4].c_value}</b>으로 고민하는
                 <br />
+                {newAnswerUser1[6].c_id === 1 ? "남편" : "아내"} 마음을 이해하고
                 함께 풀어가겠습니다.
               </div>
+              <br />
               <div>
-                <b>셋째</b>, 언제나 아이에게 <b>{newAnswerUser2[5].c_value}</b>{" "}
-                아빠가 되겠습니다.
+                셋째, 언제나 아이에게 <b>{newAnswerUser2[5].c_value}</b>
+                <br />
+                {newAnswerUser1[6].c_id === 1 ? "엄마" : "아빠"}가 되겠습니다.
               </div>
             </div>
           </div>
 
           {/* user2 약속 */}
-          <div className="mb-[2rem]">
-            <div className="leading-[3rem] text-[#FF5C00]">
+          <div className="mb-[4.8rem]">
+            <div className="relative z-20 text-[2.2rem] mb-[2rem] after:content-[' asdasd'] after:w-full after:block after:absolute after:bottom-[-0.4rem] after:border-[0.6rem] after:border-[#FF5C00] after:opacity-20 after:z-10">
               <b>
-                {newAnswerUser2[6].c_value}는 {newAnswerUser1[6].c_value}에게
-                이렇게 약속해주세요!
+                <span className="text-[#FF5C00]">
+                  {newAnswerUser2[6].c_value}!
+                </span>
+                <br />
+                {newAnswerUser1[6].c_value}에게 이렇게 약속해줘요!
               </b>
             </div>
-            <div className="leading-[2rem]">
+            <div className="leading-[3rem]">
               <div>
-                <b>첫째</b>, 남편이 <b>{newAnswerUser1[3].c_value}</b>에면 늘
-                곁에서
-                <br />
-                도우며 함께 하겠습니다.
+                첫째, {newAnswerUser2[6].c_id === 1 ? "남편이" : "아내가"}{" "}
+                <b>{newAnswerUser1[3].c_value}</b>에면
+                <br />늘 곁에서 도우며 함께 하겠습니다.
               </div>
+              <br />
               <div>
-                <b>둘째</b>, <b>{newAnswerUser1[4].c_value}</b>으로 고민하는
-                남편의 마음을 이해하고
+                둘째, <b>{newAnswerUser1[4].c_value}</b>으로 고민하는
                 <br />
+                {newAnswerUser2[6].c_id === 1 ? "남편" : "아내"} 마음을 이해하고
                 함께 풀어가겠습니다.
               </div>
+              <br />
               <div>
-                <b>셋째</b>, 언제나 아이에게 <b>{newAnswerUser1[5].c_value}</b>{" "}
-                엄마가 되겠습니다.
+                셋째, 언제나 아이에게 <b>{newAnswerUser1[5].c_value}</b>
+                <br />
+                {newAnswerUser2[6].c_id === 1 ? "엄마" : "아빠"}가 되겠습니다.
               </div>
             </div>
           </div>
 
           {/* 아이 약속 */}
-          <div className="mb-[4.4rem]">
-            <div className="leading-[3rem] text-[#FF5C00]">
+          <div className="mb-[7.8rem]">
+            <div className="relative z-20 text-[2.2rem] mb-[2rem] after:content-[' asdasd'] after:w-full after:block after:absolute after:bottom-[-0.4rem] after:border-[0.6rem] after:border-[#FF5C00] after:opacity-20 after:z-10 ">
               <b>
-                나 {newAnswerUser1[7].sv || ""}는 엄마♥️아빠랑 이렇게
-                약속할게요!
+                <span className="text-[#FF5C00]">
+                  나 {newAnswerUser1[7].sv || ""}!
+                </span>
+                <br />
+                엄마♥️아빠랑 이렇게 약속할게요!
               </b>
             </div>
             <div className="leading-[3rem]">
               <div>
-                <b>하나</b>, 엄마의 <b>{newAnswerUser1[1].c_value}</b>과 아빠의{" "}
-                <b>{newAnswerUser2[1].c_value}</b>을 배우고 닮아갈게요!
+                하나, {newAnswerUser1[6].c_value}의{" "}
+                <b>{newAnswerUser1[1].c_value}</b>과 {newAnswerUser2[6].c_value}
+                의 <b>{newAnswerUser2[1].c_value}</b>을<br />
+                배우고 닮아갈게요!
               </div>
+              <br />
               <div>
-                <b>둘</b>,{" "}
+                둘,{" "}
                 <b>
                   {newAnswerUser2[2].c_value}과 {newAnswerUser1[2].c_value}
                 </b>{" "}
-                안에서 누구보다 행복한 아이로 자랄게요!
+                안에서 행복한 아이로 자랄게요!
               </div>
             </div>
           </div>
