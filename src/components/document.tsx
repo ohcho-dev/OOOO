@@ -117,12 +117,17 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
           {/* user1 약속 */}
           <div className="mb-[2rem]">
             <div className="leading-[3rem]">
-              <b>{newAnswerUser1[6].c_value}는 엄마에게 이렇게 약속해주세요!</b>
+              <b>
+                {newAnswerUser1[6].c_value}는 {newAnswerUser2[6].c_value}에게
+                이렇게 약속해주세요!
+              </b>
             </div>
             <div className="leading-[2rem]">
               <div>
                 <b>첫째</b>, 아내가 <b>{newAnswerUser2[3].c_value}</b>에면 늘
-                곁에서 도우며 함께 하겠습니다.
+                곁에서
+                <br />
+                도우며 함께 하겠습니다.
               </div>
               <div>
                 <b>둘째</b>, <b>{newAnswerUser2[4].c_value}</b>으로 고민하는
@@ -141,7 +146,7 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
           <div className="mb-[2rem]">
             <div className="leading-[3rem]">
               <b>
-                {newAnswerUser2[6].c_value}는 {newAnswerUser1[7].c_value}에게
+                {newAnswerUser2[6].c_value}는 {newAnswerUser1[6].c_value}에게
                 이렇게 약속해주세요!
               </b>
             </div>
