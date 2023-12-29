@@ -11,6 +11,7 @@ import CustomBottomModal from "@/components/CustomBottomModal";
 import KakaoShareButton from "@/components/KakaoShareButton";
 import { copyURL } from "@/util/CopyUrl";
 import PledgeCard from "@/components/PledgeCard";
+import PledgeCardWrap from "@/components/PledgeCardWrap";
 
 export default function Page() {
   const answerUser1 = useRecoilValue(AnswerUser1State);
@@ -24,20 +25,13 @@ export default function Page() {
       setUrl(url);
     }
   }, [answerUser1]);
+
   if (!answerUser1[7]?.sv) return <div>Loading...</div>;
 
   return (
     <div>
       <Toolbar />
-      <div className="w-full h-[100svh] mb-[10rem] overflow-auto scroll-m-0">
-        <div className="py-[5rem]">
-          {!answerUser1[7].sv ? (
-            <div>Loding...</div>
-          ) : (
-            <PledgeCard name={answerUser1[7].sv} />
-          )}
-        </div>
-      </div>
+      <PledgeCardWrap name={answerUser1[7].sv} />
       <CustomBottomModal
         toggle={toggle}
         handleToggle={() => setToggle(!toggle)}

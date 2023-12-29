@@ -33,3 +33,11 @@ export interface SelectButtonType extends AnswerUser1 {
   sv?: string;
 }
 export interface AnswerUser2Type extends AnswerUser1 {}
+
+export interface ResultDataType {
+  user1_name: string;
+  user1_gender: number;
+  baby_name: string;
+  user1_data: string;
+  user2_data: string;
+}

@@ -2,17 +2,18 @@
 
 import { SurveyListType } from "@/model/survey";
 import { AnswerUser1State, AnswerUser2State } from "@/store/atom";
-import { useRecoilValue, useSetRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import DecompressedString from "@/util/decompressedString";
+import { addResultPage } from "@/app/api/pages";
 
 interface CheckFormProps {
   survey2: SurveyListType[];
 }
 export default function CheckForm({ survey2 }: CheckFormProps) {
   const router = useRouter();
-  const setAnswerUser1 = useSetRecoilState(AnswerUser1State);
+  const [answerUser1, setAnswerUser1] = useRecoilState(AnswerUser1State);
   const answerUser2 = useRecoilValue(AnswerUser2State);
   const [searchParams, setSearchParams] = useState("");
   useEffect(() => {
@@ -43,6 +44,24 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
       (answer) => answer.s_id === id
     )[0];
     if (getSubjectAnswer && getSubjectAnswer.sv) return getSubjectAnswer.sv;
+  };
+
+  const handleSaveData = async () => {
+    console.log(answerUser1, answerUser2);
+    if (answerUser1[6].sv && answerUser1[7].sv) {
+      const params = {
+        user1_name: answerUser1[6].sv,
+        user1_gender: answerUser1[6].c_id,
+        baby_name: answerUser1[7].sv,
+        user1_data: JSON.stringify(answerUser1),
+        user2_data: JSON.stringify(answerUser2),
+      };
+      const data = await addResultPage(params).then((res) => {
+        if (res) {
+          router.push(`/promotion/pledge/result2/${res}`);
+        }
+      });
+    }
   };
 
   return (
@@ -117,7 +136,7 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
         </button>
         <button
           className="w-[26rem] max-w-[518px] h-[8rem] text-[2.4rem] bg-[#FFEBAA] text-black"
-          onClick={() => router.push(`/promotion/pledge/paper`)}
+          onClick={handleSaveData}
         >
           최종 완료
         </button>

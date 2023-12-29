@@ -14,9 +14,12 @@ export default function PledgeCard({ name }: PledgeCardProps) {
   return (
     <div
       className="card-wrap relative"
-      onClick={() => setCard((prev) => !prev)}
+      onClick={(e) => {
+        e.preventDefault();
+        setCard((prev) => !prev);
+      }}
     >
-      <div className="absolute z-50 top-[50rem] left-[50%] translate-x-[-50%] animate-[click_5s_ease-in-out_infinite]">
+      <div className="absolute z-10 top-[30rem] left-[50%] translate-x-[-50%] animate-[click_5s_ease-in-out_infinite]">
         <Click />
       </div>
       <div className={`card ${card ? "rotate" : ""}`}>

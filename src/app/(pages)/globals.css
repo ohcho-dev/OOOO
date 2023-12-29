@@ -51,7 +51,8 @@ body {
   width: 39rem;
   height: 39rem;
   margin: 20rem auto;
-  transition: all 0.5s;
+  transition-property: transform(rotateX);
+  transition-duration: 0.5s;
   transform-style: preserve-3d;
 }
 
