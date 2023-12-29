@@ -32,6 +32,58 @@ body {
   display: none; /* Chrome, Safari, Opera*/
 }
 
+.drop_shadow {
+  filter: drop-shadow(0 8mm 2mm rgba(255, 255, 255, 0.3));
+}
+
+.card-wrap {
+  position: relative;
+  width: 100%;
+  height: 80rem;
+  margin: 0 auto;
+  border-radius: 2rem;
+  perspective: 50rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card-wrap .card {
+  width: 39rem;
+  height: 39rem;
+  margin: 20rem auto;
+  transition: all 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card-wrap .card.rotate {
+  transform: rotateY(180deg);
+}
+
+.card-wrap .card > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  border-radius: 20px;
+  backface-visibility: hidden;
+}
+
+.card-wrap .card .card-front {
+  background-color: #f54;
+  z-index: 10;
+}
+
+.card-wrap .card .card-back {
+  background-color: #ccc;
+  z-index: 5;
+  transform: rotateY(180deg);
+}
+
 @media screen and (max-width: 520px) {
   html,
   body {

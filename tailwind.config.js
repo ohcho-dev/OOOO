@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}", // Note the addition of the `app` directory.
@@ -197,8 +198,24 @@ module.exports = {
             transform: "translate(0, 0);",
           },
         },
+        click: {
+          "0%": {
+            opacity: 0,
+          },
+          "25%": {
+            opacity: 0,
+          },
+          "50%": {
+            opacity: 0,
+          },
+          "75%": {
+            opacity: 1,
+          },
+          "100%": {
+            opacity: 0,
+          },
+        },
       },
     },
   },
-  plugins: [],
 };

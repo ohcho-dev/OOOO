@@ -7,7 +7,6 @@ import { getDate } from "@/util/getDateTime";
 import useTypingWords from "@/util/useTypingWords";
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
-
 interface DocumentProps {
   survey1: SurveyListType[];
   survey2: SurveyListType[];
@@ -65,14 +64,13 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
   if (
     newAnswerUser1.length < 7 ||
     newAnswerUser2.length < 6 ||
-    !newAnswerUser1[7]?.sv
+    !newAnswerUser1[7].sv
   )
     return <div>Loading...</div>;
 
   return (
     <div className="text-[2rem] leading-[2.8rem] px-[5rem] py-[5rem] text-center bg-[url(/paper_bg.png)] bg-cover">
       <div className="text-[1.8rem] leading-[4rem] font-bold text-center mb-[0.7rem] h-[4rem]">
-        {/* {newAnswerUser1[7].sv || ""}네 서약서 */}
         {typeWords1[0]}
       </div>
       <div className="text-[3rem] leading-[4rem] font-bold align-text-top text-center mb-[4.4rem] h-[4rem]">
