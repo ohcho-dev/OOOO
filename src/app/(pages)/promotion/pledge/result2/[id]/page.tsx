@@ -1,5 +1,6 @@
 import { getResultPage } from "@/app/api/pages";
 import PaperPage from "@/components/Paper";
+import { getUserSurvey } from "@/service/posts";
 import { supabase } from "@/util/supabase";
 import { Metadata } from "next";
 import { cache } from "react";
@@ -12,8 +13,15 @@ const getPage = cache(async (id: string) => getResultPage(id));
 
 export default async function Page({ params: { id } }: Props) {
   const data = await getPage(id);
-  console.log(data);
-  return <PaperPage data={data.data} />;
+  const survey1 = await getUserSurvey(1);
+  const survey2 = await getUserSurvey(2);
+  return (
+    <PaperPage
+      data={data.data}
+      survey1={survey1.survey}
+      survey2={survey2.survey}
+    />
+  );
 }
 
 export async function generateMetadata({

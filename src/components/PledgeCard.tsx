@@ -4,13 +4,16 @@ import Letter from "./ui/Lottie/Letter";
 import Click from "./ui/Lottie/Click";
 import PledgeCardBack from "./PledgeCardBack";
 import { useState } from "react";
+import { useRecoilState } from "recoil";
+import { OpenModalState } from "@/store/atom";
 
 interface PledgeCardProps {
   name: string;
 }
 export default function PledgeCard({ name }: PledgeCardProps) {
   const [card, setCard] = useState(false);
-
+  const [openModal, setOpenModal] = useRecoilState(OpenModalState);
+  console.log(openModal);
   return (
     <div
       className="card-wrap relative"

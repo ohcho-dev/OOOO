@@ -59,8 +59,7 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
                 <button
                   className="animate-[pledge4_2s_ease-in-out] z-100 absolute top-[46rem] left-[6rem] w-[26rem] h-[7rem] bg-[#FF5C00] text-white font-bold text-[2rem]"
                   onClick={(e) => {
-                    e.preventDefault();
-                    setOpenModal((prev) => !prev);
+                    setOpenModal(true);
                   }}
                 >
                   최종 서약서 확인하기!
