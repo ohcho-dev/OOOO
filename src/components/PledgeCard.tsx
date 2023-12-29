@@ -13,7 +13,7 @@ interface PledgeCardProps {
 export default function PledgeCard({ name }: PledgeCardProps) {
   const [card, setCard] = useState(false);
   const [openModal, setOpenModal] = useRecoilState(OpenModalState);
-  console.log(openModal);
+
   return (
     <div
       className="card-wrap relative"
@@ -32,17 +32,19 @@ export default function PledgeCard({ name }: PledgeCardProps) {
               loading="lazy"
               src="/logo_white.png"
               alt="육아응원"
-              className="pt-[2rem] w-[8.1rem] mx-auto"
+              className="pt-[2rem] w-[6rem] mx-auto mt-[2.4rem]"
               width={162}
               height={56}
             />
-            <Letter />
-            <div className="text-white text-center text-[2.6rem] leading-[3.4rem]">
+            <div className="mt-[-3rem]">
+              <Letter />
+            </div>
+            <div className="text-white text-center text-[2.6rem] leading-[3.4rem] mt-[-3rem]">
               {name}네 서약서가
               <br />
               도착했습니다
             </div>
-            <div className="mt-[15.4rem] text-[2rem] text-center">
+            <div className="mt-[21.4rem] text-[2rem] text-center">
               엄마♥️아빠 함께 약속해요!
             </div>
             <div className="mt-[1.5rem] text-[1.6rem] text-center">

@@ -54,6 +54,7 @@ export default function PledgeMainPage() {
             </h1>
             <div className="mt-[9.3rem] w-[46.2rem] h-[34.5rem] mx-auto">
               <Image src="/receiver_bg.png" alt="bg" width={462} height={345} />
+              {/* <a href="https://kr.freepik.com/free-vector/illustration-of-a-man-giving-a-love-letter_3132804.htm#query=%EB%B6%80%EB%B6%80%20%EC%84%9C%EC%95%BD%EC%84%9C&position=0&from_view=search&track=ais&uuid=118961a1-c45b-4f79-9523-3d83063aa74f">작가 rawpixel.com</a> 출처 Freepik */}
             </div>
 
             <CustomBottomModal
@@ -124,7 +125,9 @@ export default function PledgeMainPage() {
     );
 
   return (
-    <section className="w-full max-w-[52rem] h-[100svh] bg-[url('/info_bg.png')] bg-contain bg-center bg-origin-contain">
+    <section className="w-full max-w-[52rem] h-[100svh] bg-[url('/info_bg.png')] bg-no-repeat bg-contain bg-center bg-origin-contain bg-[#E8DDD7]">
+      {/* <a href="https://kr.freepik.com/free-vector/blank-rectangle-gold-frame-on-pink-background-template-vector_
+18240847.htm#query=letter&position=3&from_view=search&track=sph&uuid=2f4708ef-3266-42af-ad0f-3c476aa5de94">작가 rawpixel.com</a> 출처 Freepik */}
       <div className="w-full absolute left-[0] top-[50%] translate-y-[-50%]">
         <h1 className="text-[2.6rem] leading-[4.5rem] text-center font-bold">
           나의 반쪽인 사람과 만드는

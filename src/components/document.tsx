@@ -76,6 +76,8 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
 
   return (
     <div className="w-[52rem] h-[95svh] overflow-x-scroll text-[2rem] leading-[2.8rem] text-center bg-[url(/flower_img.png)] bg-cover bg-center px-[3rem]">
+      {/* <a href="https://kr.freepik.com/free-vector/hand-painted-watercolor-floral-background_17437651.htm#query=%EA%BD%83&position=23&from_view=search&track=sph&uuid=d1a3578f-7621-42d0-83a1-6369c306975a">작가 coolvector</a> 출처 Freepik
+       */}
       <div
         className="absolute top-[3rem] right-[3rem]"
         onClick={() => setOpenModal(false)}

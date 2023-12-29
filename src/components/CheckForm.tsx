@@ -1,9 +1,10 @@
 "use client";
 
 import { SurveyListType } from "@/model/survey";
-import { AnswerUser1State } from "@/store/atom";
-import { useRecoilValue } from "recoil";
+import { AnswerUser1State, formStepState } from "@/store/atom";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 interface CheckFormProps {
   survey1: SurveyListType[];
@@ -11,6 +12,11 @@ interface CheckFormProps {
 export default function CheckForm({ survey1 }: CheckFormProps) {
   const router = useRouter();
   const answerUser1 = useRecoilValue(AnswerUser1State);
+  const [formStep, setFormStep] = useRecoilState(formStepState);
+
+  useEffect(() => {
+    setFormStep(0);
+  }, [formStep]);
 
   const getAnswer = (survey: SurveyListType) => {
     const getAnswerData = answerUser1.filter(

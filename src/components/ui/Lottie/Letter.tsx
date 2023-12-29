@@ -1,6 +1,6 @@
 "use client";
 import Lottie from "react-lottie-player";
-import LottieLetterJson from "@/data/lottie_letter.json";
+import LottieLetterJson from "@/data/lottie_letter2.json";
 
 export default function Letter() {
   return (

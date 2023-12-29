@@ -31,7 +31,9 @@ export default function Page() {
   return (
     <div>
       <Toolbar />
-      <PledgeCardWrap name={answerUser1[7].sv} />
+      <div className="pt-[10rem]">
+        <PledgeCardWrap name={answerUser1[7].sv} />
+      </div>
       <CustomBottomModal
         toggle={toggle}
         handleToggle={() => setToggle(!toggle)}

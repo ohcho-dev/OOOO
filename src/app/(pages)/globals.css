@@ -50,7 +50,8 @@ body {
 .card-wrap .card {
   width: 39rem;
   height: 39rem;
-  margin: 20rem auto;
+  margin: 15rem auto;
+  z-index: 50;
   transition-property: transform(rotateX);
   transition-duration: 0.5s;
   transform-style: preserve-3d;

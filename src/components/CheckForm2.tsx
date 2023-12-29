@@ -70,9 +70,7 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
         <div className="overflow-y-auto max-h-calcResultPage pb-[10rem]">
           {survey2.map((survey) => (
             <div
-              className={`text-[5rem] mx-[3.5rem] mt-[4rem] px-[3rem] py-[2rem] border rounded-2xl ${
-                survey.id % 2 === 0 ? "bg-[#f6f7f9] border-none" : "bg-white"
-              }`}
+              className={`text-[5rem] mx-[3.5rem] mb-[3rem] px-[3rem] py-[2rem] border rounded-2xl`}
               key={survey.id + survey.choiceQuestion}
             >
               <div>
@@ -80,19 +78,16 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
                   step {survey.id}
                 </div>
                 <div className="my-[1.8rem]">
-                  <div className="text-[2rem] leading-[2.4rem] text-[#999]">
-                    {survey.choiceQuestion}
+                  <div className="text-[1.8rem] leading-[2.6rem] text-[#999]">
+                    Q. {survey.choiceQuestion}
                   </div>
                   <div
-                    className={`w-full flex text-[2.1rem] leading-[2.8rem] font-bold p-[1.5rem] mt-[1.2rem] rounded-[2rem] ${
-                      survey.id % 2 === 1 ? "bg-[#f6f7f9]" : "bg-white"
-                    }`}
+                    className={`w-full flex text-[2.1rem] leading-[2.8rem] font-bold py-[1.5rem] mt-[1.2rem] rounded-[2rem] bg-white justify-start`}
                   >
                     <span
-                      className={`w-[4rem] min-w-[4rem] h-[4rem] rounded-[2rem] flex justify-center items-center
-                        ${survey.id % 2 === 0 ? "bg-[#f6f7f9]" : "bg-white"}`}
+                      className={`w-[4rem] min-w-[4rem] h-[4rem] rounded-[2rem] flex justify-center items-center bg-[#FFA89F] text-white`}
                     >
-                      <span className="block ml-[-0.2rem]">A</span>
+                      A
                     </span>
                     <span className="block ml-[1rem] mt-[0.4rem]">
                       {getAnswer(survey)}
@@ -101,20 +96,17 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
                 </div>
                 {survey.type === "mix" && (
                   <>
-                    <div className="w-full h-[0.1rem] bg-black my-[2rem]" />
-                    <div className="text-[1.8rem] leading-[2.4rem] text-[#999]">
-                      {survey.subjectQuestion}
+                    <div className="w-full h-[0.1rem] bg-[#ccc] my-[2rem] " />
+                    <div className="text-[1.8rem] leading-[2.6rem] text-[#999]">
+                      Q. {survey.subjectQuestion}
                     </div>
                     <div
-                      className={`w-full flex text-[2.1rem] leading-[2.8rem] font-bold p-[1.5rem] mt-[1.2rem] rounded-[2rem] ${
-                        survey.id % 2 === 1 ? "bg-[#f6f7f9]" : "bg-white"
-                      }`}
+                      className={`w-full flex text-[2.1rem] leading-[2.8rem] font-bold py-[1.5rem] mt-[1.2rem] rounded-[2rem] bg-white justify-start`}
                     >
                       <span
-                        className={`w-[4rem] min-w-[4rem] h-[4rem] rounded-[2rem] flex justify-center items-center
-                        ${survey.id % 2 === 0 ? "bg-[#f6f7f9]" : "bg-white"}`}
+                        className={`w-[4rem] min-w-[4rem] h-[4rem] rounded-[2rem] flex justify-center items-center bg-[#FFA89F] text-white`}
                       >
-                        <span className="block ml-[-0.2rem]">A</span>
+                        A
                       </span>
                       <span className="block ml-[1rem] mt-[0.4rem]">
                         {answerUser2 && getSubjectValue(survey.id)}

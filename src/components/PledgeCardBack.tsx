@@ -31,6 +31,8 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
       <div
         className={`relative w-[39rem] h-[62.4rem] mx-auto bg-[url(/flower_img.png)] bg-cover shadow-md rounded-[2rem]`}
       >
+        {/* <a href="https://kr.freepik.com/free-vector/hand-painted-watercolor-floral-background_17437651.htm#query=%EA%BD%83&position=23&from_view=search&track=sph&uuid=d1a3578f-7621-42d0-83a1-6369c306975a">작가 coolvector</a> 출처 Freepik
+         */}
         {card && !finish && (
           <div
             className={`relative w-[39rem] h-[62.4rem] ${
@@ -78,8 +80,8 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
                   <br />
                   아래와 같이 서약합니다.
                 </div>
-                <div className="animate-[pledge4_2s_ease-in-out] mt-[6.4rem] text-[2rem]">
-                  배우자에게 공유하고
+                <div className="font-bold animate-[pledge4_2s_ease-in-out] mt-[6.4rem] text-[2.2rem]">
+                  <span className="text-[#FF5C00]">배우자에게 공유</span>하고
                   <br />
                   배우자의 서약서 작성이 완료되면
                   <br />
