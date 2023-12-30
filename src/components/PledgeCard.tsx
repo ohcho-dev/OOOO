@@ -23,7 +23,7 @@ export default function PledgeCard({ name }: PledgeCardProps) {
       }}
     >
       <div className="absolute z-10 top-[30rem] left-[50%] translate-x-[-50%] animate-[click_5s_ease-in-out_infinite]">
-        <Click />
+        {!card && <Click />}
       </div>
       <div className={`card ${card ? "rotate" : ""}`}>
         <div className="card-front">

@@ -49,7 +49,6 @@ export default function PaperPage({ data, survey1, survey2 }: PaperPageProps) {
       setAnswerUser2(JSON.parse(data.user2_data));
     }
   }, [data]);
-
   return (
     <div>
       <div className="bg-[#FFF8E0] py-[1rem]">
@@ -78,7 +77,12 @@ export default function PaperPage({ data, survey1, survey2 }: PaperPageProps) {
           <br />
           카카오 프로필에 배경과 URL을 남겨보세요
         </div>
-        <button className="mb-[2.6rem] bg-[#FFE695] text-[1.8rem] w-[30rem] h-[6rem] block mx-auto">
+        <button
+          onClick={() => {
+            copyURL(url), setOpenToast(true);
+          }}
+          className="mb-[2.6rem] bg-[#FFE695] text-[1.8rem] w-[30rem] h-[6rem] block mx-auto"
+        >
           서약서 URL 받기
         </button>
         <button className="mb-[5.5rem] bg-[#FFE695] text-[1.8rem] w-[30rem] h-[6rem] block mx-auto">
@@ -123,7 +127,7 @@ export default function PaperPage({ data, survey1, survey2 }: PaperPageProps) {
           <div
             className="text-center"
             onClick={() => {
-              copyURL(url), setOpenToast(true);
+              copyURL(window?.location.origin), setOpenToast(true);
             }}
           >
             <div className="bg-[#f6f7f9] rounded-[8rem] w-[8rem] h-[8rem] text-[4rem] flex justify-center items-center">
