@@ -1,20 +1,20 @@
 "use client";
 import BottomButton from "@/components/BottomButton";
 import Toolbar from "@/components/toolbar";
-import Image from "next/image";
 
-import { useRecoilValue } from "recoil";
-import { AnswerUser1State } from "@/store/atom";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { AnswerUser1State, OpenToastState } from "@/store/atom";
 import { useEffect, useState } from "react";
 import CompressedString from "@/util/compressedString";
 import CustomBottomModal from "@/components/CustomBottomModal";
 import KakaoShareButton from "@/components/KakaoShareButton";
 import { copyURL } from "@/util/CopyUrl";
-import PledgeCard from "@/components/PledgeCard";
 import PledgeCardWrap from "@/components/PledgeCardWrap";
+import Toast from "@/components/Toast";
 
 export default function Page() {
   const answerUser1 = useRecoilValue(AnswerUser1State);
+  const [openToast, setOpenToast] = useRecoilState(OpenToastState);
   const [url, setUrl] = useState("");
   const [toggle, setToggle] = useState(false);
 
@@ -40,9 +40,13 @@ export default function Page() {
       >
         <div className="flex justify-around text-[1.6rem] p-[3rem] cursor-pointer">
           <KakaoShareButton description="설명" url={`https://${url}`} />
+          {openToast && <Toast text="클립보드에 저장되었습니다." />}
           <div
             className="text-center"
-            onClick={() => copyURL(`https://${url}`)}
+            onClick={() => {
+              copyURL(`https://${url}`);
+              setOpenToast(true);
+            }}
           >
             <div className="bg-[#f6f7f9] rounded-[8rem] w-[8rem] h-[8rem] text-[4rem] flex justify-center items-center">
               🔗

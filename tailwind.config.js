@@ -27,6 +27,12 @@ module.exports = {
           "0%": { opacity: 1 },
           "100%": { opacity: 0 },
         },
+        fadeInOut: {
+          "0%": { opacity: 0 },
+          "33%": { opacity: 0.7 },
+          "66%": { opacity: 0.7 },
+          "100%": { opacity: 0 },
+        },
         moveTop: {
           "0%": {
             opacity: 0.5,

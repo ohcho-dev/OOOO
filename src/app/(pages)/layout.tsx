@@ -5,6 +5,7 @@ import SWRConfigContext from "@/context/SWRConfigContext";
 import { Metadata } from "next";
 import RecoilRootWrapper from "@/context/RecoilContext";
 import Script from "next/script";
+import Toast from "@/components/Toast";
 // import KakaoAdfit from "@/util/KakaoAdfit";
 
 const NotoSansKR = Noto_Sans_KR({ subsets: ["latin"] });

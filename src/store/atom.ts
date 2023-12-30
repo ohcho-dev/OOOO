@@ -20,3 +20,8 @@ export const OpenModalState = atom({
   key: "OpenModalState",
   default: false as boolean,
 });
+
+export const OpenToastState = atom({
+  key: "OpenToastState",
+  default: false as boolean,
+});
