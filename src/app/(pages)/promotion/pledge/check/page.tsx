@@ -1,5 +1,5 @@
 import CheckForm from "@/components/CheckForm";
-import Toolbar from "@/components/toolbar";
+import InfoToolbar from "@/components/InfoToolbar";
 import { getUserSurvey } from "@/service/posts";
 
 export default async function CheckPage() {
@@ -7,7 +7,7 @@ export default async function CheckPage() {
 
   return (
     <div>
-      <Toolbar />
+      <InfoToolbar title="최종 확인" />
       <CheckForm survey1={survey1.survey} />
     </div>
   );

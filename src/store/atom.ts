@@ -1,6 +1,10 @@
 import { AnswerUser1, AnswerUser2Type } from "@/model/survey";
 import { atom } from "recoil";
 
+export const infoStepState = atom({
+  key: "infoStepState",
+  default: 0 as number,
+});
 export const formStepState = atom({
   key: "formStepState",
   default: 0,

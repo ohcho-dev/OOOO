@@ -35,7 +35,6 @@ export default function FormLayout(survey: SurveyType) {
 
   useEffect(() => {
     setSearchParams(window.location.search.substring(1));
-    setAnswerUser2([]);
     setFormStep(0);
   }, []);
 
@@ -78,8 +77,12 @@ export default function FormLayout(survey: SurveyType) {
         sv: mixData.sv,
       });
       setAnswerUser2(newAnswerUser2);
+      setMixData(newAnswerUser2[0]);
 
       return setTimeout(() => {
+        if (formStep === survey.survey.length - 1) {
+          return router.push(`/promotion/pledge/check2?${searchParams}`);
+        }
         setFormStep(formStep + 1);
         setMixData(DEFAULT_MIX_DATA);
       }, 200);

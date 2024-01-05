@@ -10,35 +10,31 @@ import { OpenModalState } from "@/store/atom";
 interface PledgeCardProps {
   name: string;
 }
-export default function PledgeCard({ name }: PledgeCardProps) {
+export default function PledgeCardMain({ name }: PledgeCardProps) {
   const [card, setCard] = useState(false);
-  const [openModal, setOpenModal] = useRecoilState(OpenModalState);
 
   return (
     <div
-      className="card-wrap relative"
+      className="card-wrap-main relative"
       onClick={(e) => {
         e.preventDefault();
         setCard((prev) => !prev);
       }}
     >
-      <div className="absolute z-10 top-[30rem] left-[50%] translate-x-[-50%] animate-[click_5s_ease-in-out_infinite]">
-        {!card && <Click />}
-      </div>
       <div className={`card ${card ? "rotate" : ""}`}>
         <div className="card-front">
-          <div className="relative w-[39rem] h-[62.4rem] mx-auto bg-[url(/letter_bg.png)] bg-cover shadow-md rounded-[2rem]">
+          <div className="relative w-full h-full mx-auto bg-[url(/letter_bg.png)] bg-contain bg-no-repeat shadow-md rounded-[0.2rem]">
             <Image
               loading="lazy"
               src="/logo_white.png"
               alt="육아응원"
-              className="pt-[2rem] w-[6rem] mx-auto mt-[2.4rem]"
-              width={162}
-              height={56}
+              className="pt-[0.2rem] w-[6rem] mx-auto mt-[2.4rem]"
+              width={25}
+              height={5}
             />
-            <div className="mt-[-3rem]">
+            <div className="">
               <Letter
-                style={{ width: "24rem", height: "24rem", margin: " 0 auto" }}
+                style={{ width: "5rem", height: "5rem", margin: " 0 auto" }}
               />
             </div>
             <div className="text-white text-center text-[2.6rem] leading-[3.4rem] mt-[-3rem]">

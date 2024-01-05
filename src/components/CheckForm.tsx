@@ -1,10 +1,9 @@
 "use client";
 
 import { SurveyListType } from "@/model/survey";
-import { AnswerUser1State, formStepState } from "@/store/atom";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { AnswerUser1State } from "@/store/atom";
+import { useRecoilValue } from "recoil";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 interface CheckFormProps {
   survey1: SurveyListType[];
@@ -12,11 +11,6 @@ interface CheckFormProps {
 export default function CheckForm({ survey1 }: CheckFormProps) {
   const router = useRouter();
   const answerUser1 = useRecoilValue(AnswerUser1State);
-  const [formStep, setFormStep] = useRecoilState(formStepState);
-
-  useEffect(() => {
-    setFormStep(0);
-  }, [formStep]);
 
   const getAnswer = (survey: SurveyListType) => {
     const getAnswerData = answerUser1.filter(
@@ -95,15 +89,15 @@ export default function CheckForm({ survey1 }: CheckFormProps) {
       <div className="absolute bottom-0 flex">
         <button
           className="w-[26rem] max-w-[518px] h-[8rem] text-[2.4rem] bg-[#cccccc] text-white"
-          onClick={() => router.push("/promotion/pledge/form")}
+          onClick={() => router.push("/promotion/pledge/form/first")}
         >
-          다시 선택하기
+          다시 하기
         </button>
         <button
           className="w-[26rem] max-w-[518px] h-[8rem] text-[2.4rem] bg-[#FFEBAA] text-black"
           onClick={() => router.push("/promotion/pledge/result")}
         >
-          최종 완료
+          서약서 생성
         </button>
       </div>
     </div>

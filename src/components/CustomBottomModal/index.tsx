@@ -42,7 +42,7 @@ const CustomBottomModal: React.FC<CustomBottomModalProps> = ({
   return (
     <>
       {toggle && (
-        <div className="fixed top-0 left-0 w-full h-[100svh] z-10">
+        <div className="fixed z-50 top-0 left-0 w-full h-[100svh]">
           <div
             className="w-full h-[100svh] bg-black opacity-70 transition-all animate-[fadeIn_0.2s_ease-in-out]"
             onClick={() => handleToggle()}

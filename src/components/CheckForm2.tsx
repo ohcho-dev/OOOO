@@ -16,6 +16,7 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
   const [answerUser1, setAnswerUser1] = useRecoilState(AnswerUser1State);
   const answerUser2 = useRecoilValue(AnswerUser2State);
   const [searchParams, setSearchParams] = useState("");
+
   useEffect(() => {
     setSearchParams(window.location.search.substring(1));
   }, []);
@@ -124,13 +125,13 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
           className="w-[26rem] max-w-[518px] h-[8rem] text-[2.4rem] bg-[#cccccc] text-white"
           onClick={() => router.push(`/promotion/pledge/form2?${searchParams}`)}
         >
-          다시 선택하기
+          다시 하기
         </button>
         <button
           className="w-[26rem] max-w-[518px] h-[8rem] text-[2.4rem] bg-[#FFEBAA] text-black"
           onClick={handleSaveData}
         >
-          최종 완료
+          서약서 생성
         </button>
       </div>
     </div>

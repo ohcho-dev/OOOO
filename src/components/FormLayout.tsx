@@ -17,6 +17,7 @@ import { useEffect, useRef, useState } from "react";
 import BottomButton from "./BottomButton";
 import useWindowDimensions from "@/util/getWindowDimensions";
 import { useRouter } from "next/navigation";
+import CheckInput from "@/util/checkInput";
 
 const DEFAULT_MIX_DATA = {
   s_id: 0,
@@ -31,9 +32,18 @@ export default function FormLayout(survey: SurveyType) {
   const [answerUser1, setAnswerUser1] = useRecoilState(AnswerUser1State);
   const [mixData, setMixData] = useState<AnswerUser1>(DEFAULT_MIX_DATA);
   const [selectValue, setSelectValue] = useState(0);
+  const [searchParams, setSearchParams] = useState("");
 
+  console.log(formStep);
   useEffect(() => {
-    setAnswerUser1([]);
+    if (searchParams?.indexOf("reset=false") !== -1) {
+      // setAnswerUser1([]);
+      console.log(searchParams?.indexOf("reset=false") !== -1);
+    }
+  }, [searchParams]);
+  useEffect(() => {
+    setSearchParams(window.location.search.substring(1));
+
     setFormStep(0);
   }, []);
 
@@ -62,6 +72,9 @@ export default function FormLayout(survey: SurveyType) {
   };
 
   const HandleNextStepBtn = () => {
+    if (CheckInput(mixData.sv)) {
+      return alert(CheckInput(mixData.sv));
+    }
     if (answerUser1[formStep]) {
       const newAnswerUser1 = answerUser1.filter(
         (item) => item.s_id !== formStep + 1
@@ -72,8 +85,12 @@ export default function FormLayout(survey: SurveyType) {
         sv: mixData.sv,
       });
       setAnswerUser1(newAnswerUser1);
+      setMixData(newAnswerUser1[0]);
 
       return setTimeout(() => {
+        if (formStep === survey.survey.length - 1) {
+          return router.push("/promotion/pledge/check");
+        }
         setFormStep(formStep + 1);
         setMixData(DEFAULT_MIX_DATA);
       }, 200);

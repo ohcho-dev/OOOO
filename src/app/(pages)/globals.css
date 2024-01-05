@@ -86,6 +86,42 @@ body {
   transform: rotateY(180deg);
 }
 
+.card-wrap-main {
+  position: relative;
+  border-radius: 2rem;
+  perspective: 50rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card-wrap-main .card {
+  margin-top: 3rem;
+  z-index: 50;
+  transition-property: transform(rotateX);
+  transition-duration: 1.8s;
+  transform-style: preserve-3d;
+}
+
+.card-wrap-main .card.rotate {
+  transform: rotateY(180deg);
+}
+
+.card-wrap-main .card > div {
+  backface-visibility: hidden;
+  position: absolute;
+  border-radius: 3rem;
+}
+
+.card-wrap-main .card .card-front {
+  background-color: #f54;
+  z-index: 10;
+}
+
+.card-wrap-main .card .card-back {
+  z-index: 5;
+  transform: rotateY(180deg);
+}
+
 @media screen and (max-width: 520px) {
   html,
   body {
