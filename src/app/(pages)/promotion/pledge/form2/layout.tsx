@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <div className="relative h-[99svh]">
       <div>
-        <Toolbar />
+        <Toolbar title="" />
         {children}
       </div>
     </div>

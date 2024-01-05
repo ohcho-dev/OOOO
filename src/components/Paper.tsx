@@ -1,7 +1,6 @@
 "use client";
 import PledgeCardWrap from "@/components/PledgeCardWrap";
 import Document from "@/components/document";
-import Toolbar from "@/components/toolbar";
 import { ResultDataType, SurveyListType } from "@/model/survey";
 import {
   AnswerUser1State,

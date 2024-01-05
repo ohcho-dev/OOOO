@@ -3,7 +3,7 @@ import Toolbar from "@/components/toolbar";
 export default function Page() {
   return (
     <section className="pt-[10rem] px-[5rem]">
-      <Toolbar />
+      <Toolbar title="" />
       <div className="text-[2.1rem] font-bold">개인정보 수집 및 이용 동의</div>
 
       <div className="text-[1.5rem] mt-[1.5rem]">

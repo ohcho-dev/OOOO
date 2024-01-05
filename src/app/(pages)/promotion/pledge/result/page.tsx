@@ -30,7 +30,7 @@ export default function Page() {
 
   return (
     <div>
-      <Toolbar />
+      <Toolbar title="" />
       <div className="pt-[10rem]">
         <PledgeCardWrap name={answerUser1[7].sv} />
       </div>
