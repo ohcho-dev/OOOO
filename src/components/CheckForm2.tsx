@@ -7,6 +7,8 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import DecompressedString from "@/util/decompressedString";
 import { addResultPage } from "@/app/api/pages";
+import CustomBottomModal from "./CustomBottomModal";
+import Loading from "./Loading";
 
 interface CheckFormProps {
   survey2: SurveyListType[];
@@ -16,6 +18,8 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
   const [answerUser1, setAnswerUser1] = useRecoilState(AnswerUser1State);
   const answerUser2 = useRecoilValue(AnswerUser2State);
   const [searchParams, setSearchParams] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [id, setId] = useState(0);
 
   useEffect(() => {
     setSearchParams(window.location.search.substring(1));
@@ -48,7 +52,6 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
   };
 
   const handleSaveData = async () => {
-    console.log(answerUser1, answerUser2);
     if (answerUser1[6].sv && answerUser1[7].sv) {
       const params = {
         user1_name: answerUser1[6].sv,
@@ -59,7 +62,8 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
       };
       const data = await addResultPage(params).then((res) => {
         if (res) {
-          router.push(`/promotion/pledge/result2/${res}`);
+          setId(res);
+          setLoading(true);
         }
       });
     }
@@ -134,6 +138,12 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
           서약서 생성
         </button>
       </div>
+      <CustomBottomModal
+        toggle={loading}
+        handleToggle={() => setLoading((prev) => !prev)}
+      >
+        <Loading url={`/promotion/pledge/result2/${id}`} />
+      </CustomBottomModal>
     </div>
   );
 }

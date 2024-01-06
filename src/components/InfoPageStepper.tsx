@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import CustomBottomModal from "./CustomBottomModal";
 import { useRouter } from "next/navigation";
+import InfoPledgeCard from "./InfoPledgeCard";
 
 const STEPS_1 = [
   {
@@ -48,17 +49,35 @@ const STEPS_1 = [
 const STEPS_2 = [
   {
     id: 0,
-    title: "우리 가족을 생각하면 가장 먼저 떠오르는 단어를 골라주세요!",
+    title: (
+      <h1>
+        우리 가족을 생각하면
+        <br />
+        <b>가장 먼저 떠오르는 단어</b>를 골라주세요!
+      </h1>
+    ),
     image: "/info1.png",
   },
   {
     id: 1,
-    title: "아이의 목소리로 변환된 따뜻한 가족 서약서가 탄생합니다!",
+    title: (
+      <h1>
+        <b>아이의 목소리</b>로 변환된
+        <br />
+        따뜻한 <b>가족 서약서</b>가 탄생합니다!
+      </h1>
+    ),
     image: "",
   },
   {
     id: 2,
-    title: "완성된 서약서를 배우자에게 공유하고 함께 서약서를 확인하세요",
+    title: (
+      <h1>
+        완성된 서약서를 <b>배우자에게 공유</b>하고
+        <br />
+        함께 서약서를 확인하세요.
+      </h1>
+    ),
     image: "/info3.png",
   },
 ];
@@ -82,27 +101,62 @@ export default function InfoPageStepper() {
   return (
     <div className="h-[100svh] flex flex-col justify-between items-center">
       <div className="w-full h-full ">
-        {STEPS_1.map((contents) => {
-          return (
-            <div
-              className={`w-full h-[90svh] bg-white mx-auto flex flex-col justify-center items-center absolute ${
-                infoStep === contents.id ? "z-10" : ""
-              }`}
-              key={contents.id}
-            >
-              <div className="text-[2.4rem] text-center">{contents.title}</div>
-              {contents.image && (
-                <Image
-                  className="mt-[7rem] max-w-[42.5rem]"
-                  src={contents.image}
-                  alt="참여방법"
-                  width={403}
-                  height={403}
-                />
-              )}
-            </div>
-          );
-        })}
+        {searchParams && (
+          <>
+            {STEPS_2.map((contents) => {
+              return (
+                <div
+                  className={`w-full h-[90svh] bg-white mx-auto flex flex-col justify-center items-center absolute ${
+                    infoStep === contents.id ? "z-10" : ""
+                  }`}
+                  key={contents.id}
+                >
+                  <div className="text-[2.4rem] text-center">
+                    {contents.title}
+                  </div>
+                  {contents.image && (
+                    <Image
+                      className="mt-[7rem] max-w-[42.5rem]"
+                      src={contents.image}
+                      alt="참여방법"
+                      width={403}
+                      height={403}
+                    />
+                  )}
+                  {!contents.image && <InfoPledgeCard />}
+                </div>
+              );
+            })}
+          </>
+        )}
+        {!searchParams && (
+          <>
+            {STEPS_1.map((contents) => {
+              return (
+                <div
+                  className={`w-full h-[90svh] bg-white mx-auto flex flex-col justify-center items-center absolute ${
+                    infoStep === contents.id ? "z-10" : ""
+                  }`}
+                  key={contents.id}
+                >
+                  <div className="text-[2.4rem] text-center">
+                    {contents.title}
+                  </div>
+                  {contents.image && (
+                    <Image
+                      className="mt-[7rem] max-w-[42.5rem]"
+                      src={contents.image}
+                      alt="참여방법"
+                      width={403}
+                      height={403}
+                    />
+                  )}
+                  {!contents.image && <InfoPledgeCard />}
+                </div>
+              );
+            })}
+          </>
+        )}
       </div>
       <div className="absolute z-10 w-[30rem] h-[1rem] left-[50%] translate-x-[-50%] bottom-[13rem] mx-auto">
         <div className="absolute w-[30rem] h-[1rem] rounded-[1rem] bg-[#D9D9D9]" />

@@ -4,12 +4,16 @@ import { SurveyListType } from "@/model/survey";
 import { AnswerUser1State } from "@/store/atom";
 import { useRecoilValue } from "recoil";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import Loading from "./Loading";
+import CustomBottomModal from "./CustomBottomModal";
 
 interface CheckFormProps {
   survey1: SurveyListType[];
 }
 export default function CheckForm({ survey1 }: CheckFormProps) {
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
   const answerUser1 = useRecoilValue(AnswerUser1State);
 
   const getAnswer = (survey: SurveyListType) => {
@@ -95,11 +99,17 @@ export default function CheckForm({ survey1 }: CheckFormProps) {
         </button>
         <button
           className="w-[26rem] max-w-[518px] h-[8rem] text-[2.4rem] bg-[#FFEBAA] text-black"
-          onClick={() => router.push("/promotion/pledge/result")}
+          onClick={() => setLoading(true)}
         >
           서약서 생성
         </button>
       </div>
+      <CustomBottomModal
+        toggle={loading}
+        handleToggle={() => setLoading((prev) => !prev)}
+      >
+        <Loading url="/promotion/pledge/result" />
+      </CustomBottomModal>
     </div>
   );
 }
