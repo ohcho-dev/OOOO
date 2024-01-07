@@ -144,7 +144,7 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
         toggle={loading}
         handleToggle={() => setLoading((prev) => !prev)}
       >
-        <Loading url={`/promotion/pledge/result2/${id}`} />
+        <Loading url={`/promotion/pledge/result2/${id}/share`} />
       </CustomBottomModal>
     </div>
   );
