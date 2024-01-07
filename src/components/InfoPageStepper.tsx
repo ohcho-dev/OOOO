@@ -183,7 +183,7 @@ export default function InfoPageStepper() {
       >
         <div className="p-[3rem] cursor-pointer">
           <div className="w-full text-[2.8rem] font-bold">
-            서비스 이용 약관에 동의해주세요.
+            잠깐! 서비스 약관에 동의해주세요.
           </div>
           <div className="flex justify-between mt-[3.4rem] align-top">
             <div className="flex" onClick={() => setAgree(!agree)}>

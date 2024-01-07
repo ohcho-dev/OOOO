@@ -11,8 +11,10 @@ import KakaoShareButton from "@/components/KakaoShareButton";
 import { copyURL } from "@/util/CopyUrl";
 import PledgeCardWrap from "@/components/PledgeCardWrap";
 import Toast from "@/components/Toast";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
+  const router = useRouter();
   const answerUser1 = useRecoilValue(AnswerUser1State);
   const [openToast, setOpenToast] = useRecoilState(OpenToastState);
   const [url, setUrl] = useState("");
@@ -30,9 +32,14 @@ export default function Page() {
 
   return (
     <div>
-      <Toolbar title="" />
       <div className="pt-[10rem]">
         <PledgeCardWrap name={answerUser1[7].sv} />
+      </div>
+      <div
+        className="absolute w-full text-center bottom-0 text-[1.8rem] underline"
+        onClick={() => router.push("/promotion/pledge/form/first")}
+      >
+        다시 만들고 싶으세요?
       </div>
       <CustomBottomModal
         toggle={toggle}

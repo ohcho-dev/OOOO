@@ -29,7 +29,10 @@ export default function SubjectForm({
         }}
       />
       {useResetButton && (
-        <div className="absolute bottom-[2rem] right-0" onClick={() => {}}>
+        <div
+          className="absolute bottom-[2rem] right-0"
+          onClick={() => handleMixData("")}
+        >
           <Image src="/reset.png" alt="초기화" width={20} height={20} />
         </div>
       )}

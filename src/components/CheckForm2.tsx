@@ -127,7 +127,9 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
       <div className="absolute bottom-0 flex">
         <button
           className="w-[26rem] max-w-[518px] h-[8rem] text-[2.4rem] bg-[#cccccc] text-white"
-          onClick={() => router.push(`/promotion/pledge/form2?${searchParams}`)}
+          onClick={() =>
+            router.push(`/promotion/pledge/form2/first?${searchParams}`)
+          }
         >
           다시 하기
         </button>

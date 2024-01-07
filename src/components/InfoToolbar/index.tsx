@@ -59,17 +59,8 @@ export default function InfoToolbar({ title }: InfoToolbarProps) {
         />
       </div>
       <h1 className="text-[2.1rem] flex items-center font-bold">{title}</h1>
-      <div onClick={handleCloseButton}>
-        <div className="text-[2.4rem] px-[1.8rem] pt-[1rem] pb-[1rem]">
-          <Image
-            src="/close.png"
-            alt="닫기"
-            width={24}
-            height={24}
-            className="w-[2.4rem] h-[2.4rem]"
-          />
-        </div>
-      </div>
+
+      <div className="w-[2.4rem]"></div>
     </header>
   );
 }
