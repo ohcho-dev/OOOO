@@ -3,16 +3,35 @@ import Image from "next/image";
 import Letter from "./ui/Lottie/Letter";
 import Click from "./ui/Lottie/Click";
 import PledgeCardBack from "./PledgeCardBack";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRecoilState } from "recoil";
-import { OpenModalState } from "@/store/atom";
+import { CapturedCardState } from "@/store/atom";
+import html2canvas from "html2canvas";
 
 interface PledgeCardProps {
   name: string;
 }
 export default function PledgeCard({ name }: PledgeCardProps) {
   const [card, setCard] = useState(false);
-  const [openModal, setOpenModal] = useRecoilState(OpenModalState);
+  const [capturedCard, setCapturedCard] = useRecoilState(CapturedCardState);
+  const elementRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (elementRef) {
+      console.log(elementRef);
+      captureElement();
+    }
+  }, [elementRef]);
+
+  const captureElement = async () => {
+    const element = elementRef.current;
+
+    if (element) {
+      const canvas = await html2canvas(element);
+      const imageDataUrl = canvas.toDataURL("image/png");
+      setCapturedCard(imageDataUrl);
+    }
+  };
 
   return (
     <div
@@ -27,7 +46,10 @@ export default function PledgeCard({ name }: PledgeCardProps) {
       </div>
       <div className={`card ${card ? "rotate" : ""}`}>
         <div className="card-front">
-          <div className="relative w-[39rem] h-[62.4rem] mx-auto bg-[url(/letter_bg.png)] bg-cover shadow-md rounded-[2rem]">
+          <div
+            ref={elementRef}
+            className="pb-[2rem] relative w-[39rem] h-[62.4rem] mx-auto bg-[url(/letter_bg.png)] bg-cover shadow-md rounded-[2rem]"
+          >
             <Image
               loading="lazy"
               src="/logo_white.png"

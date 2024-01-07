@@ -11,7 +11,6 @@ type Props = {
 const getPage = cache(async (id: string) => getResultPage(id));
 
 export default async function Page({ params: { id } }: Props) {
-  const data = await getPage(id);
   const survey1 = await getUserSurvey(1);
   const survey2 = await getUserSurvey(2);
   return (

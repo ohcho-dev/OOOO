@@ -4,10 +4,11 @@ import { AnswerUser1, SurveyListType } from "@/model/survey";
 import {
   AnswerUser1State,
   AnswerUser2State,
-  OpenModalState,
+  CapturedDocumentState,
 } from "@/store/atom";
 import useTypingWords from "@/util/useTypingWords";
-import { useEffect, useState } from "react";
+import html2canvas from "html2canvas";
+import { useEffect, useRef, useState } from "react";
 import { useRecoilState } from "recoil";
 interface DocumentProps {
   survey1: SurveyListType[];
@@ -20,12 +21,32 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
   const [newAnswerUser2, setNewAnswerUser2] = useState<AnswerUser1[]>([]);
   const typeWords1 = useTypingWords(`${newAnswerUser1[7]?.sv}네 서약서`, 200);
   const typedWords2 = useTypingWords("엄마! 아빠! 함께 약속해요!", 200);
-  const [openModal, setOpenModal] = useRecoilState(OpenModalState);
 
+  const elementRef = useRef<HTMLDivElement>(null);
   const today = new Date();
   const formattedDate = `${today.getFullYear()}. ${
     today.getMonth() + 1
   }. ${today.getDate()}`;
+  const [capturedDocument, setCapturedDocument] = useRecoilState(
+    CapturedDocumentState
+  );
+
+  useEffect(() => {
+    if (elementRef.current && newAnswerUser1 && newAnswerUser2) {
+      console.log("ccc", elementRef.current);
+      captureElement();
+    }
+  }, [elementRef, newAnswerUser1, newAnswerUser2]);
+
+  const captureElement = async () => {
+    const element = elementRef.current;
+
+    if (element) {
+      const canvas = await html2canvas(element);
+      const imageDataUrl = canvas.toDataURL("image/png");
+      setCapturedDocument(imageDataUrl);
+    }
+  };
 
   useEffect(() => {
     if (answerUser1) {
@@ -71,19 +92,23 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
     return <div>Loading...</div>;
 
   return (
-    <div className="overflow-y-scroll w-[52rem] h-[95svh] text-[2rem] leading-[2.8rem] text-center bg-[url(/flower_img.png)] bg-cover bg-center px-[3rem] pt-[8rem] pb-[8rem]">
+    <div className="overflow-y-scroll w-[52rem] h-[95svh] text-[2rem] leading-[2.8rem] text-center">
       {/* <a href="https://kr.freepik.com/free-vector/hand-painted-watercolor-floral-background_17437651.htm#query=%EA%BD%83&position=23&from_view=search&track=sph&uuid=d1a3578f-7621-42d0-83a1-6369c306975a">작가 coolvector</a> 출처 Freepik
        */}
-      <div className="px-[3rem]">
-        <div className="text-[1.8rem] leading-[4rem] font-bold text-center mb-[0.7rem] h-[4rem]">
-          {typeWords1[0]}
-        </div>
-        <div className="text-[3rem] leading-[4rem] font-bold align-text-top text-center mb-[4.4rem] h-[4rem]">
-          {typeWords1[1] && typedWords2[0]}
-        </div>
-
-        {typedWords2[1] && (
-          <div className="animate-[paperText_1s_ease-in-out]">
+      <div
+        ref={elementRef}
+        className="bg-[url(/flower_img.png)] bg-cover bg-center px-[3rem] pt-[8rem] pb-[8rem]"
+      >
+        <div className="px-[3rem]">
+          <div className="text-[1.8rem] leading-[4rem] font-bold text-center mb-[0.7rem] h-[4rem]">
+            {/* {typeWords1[0]} */}
+            {newAnswerUser1[7]?.sv}네 서약서
+          </div>
+          <div className="text-[3rem] leading-[4rem] font-bold align-text-top text-center mb-[4.4rem] h-[4rem]">
+            {/* {typeWords1[1] && typedWords2[0]} */}
+            엄마 ♥️ 아빠! 함께 약속해요!
+          </div>
+          <div>
             {/* 세상에서 가장 ~~한 우리 ~~ */}
             <div className="mb-[4.6rem]">
               <div>
@@ -219,7 +244,7 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
 
             <div className="text-center">{formattedDate}</div>
           </div>
-        )}
+        </div>
       </div>
     </div>
   );

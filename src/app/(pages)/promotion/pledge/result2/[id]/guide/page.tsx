@@ -2,7 +2,12 @@
 import InfoToolbar from "@/components/InfoToolbar";
 import KakaoShareButton from "@/components/KakaoShareButton";
 import Toast from "@/components/Toast";
-import { OpenModalState, OpenToastState } from "@/store/atom";
+import {
+  CapturedCardState,
+  CapturedDocumentState,
+  OpenModalState,
+  OpenToastState,
+} from "@/store/atom";
 import { copyURL } from "@/util/CopyUrl";
 import Image from "next/image";
 import { useParams } from "next/navigation";
@@ -15,6 +20,10 @@ export default function Page() {
   const [url, setUrl] = useState("");
   const [count, setCount] = useState(0);
   const [OpenToast, setOpenToast] = useRecoilState(OpenToastState);
+  const [capturedCard, setCapturedCard] = useRecoilState(CapturedCardState);
+  const [capturedDocument, setCapturedDocument] = useRecoilState(
+    CapturedDocumentState
+  );
 
   useEffect(() => {
     const id = params.id;
@@ -32,6 +41,24 @@ export default function Page() {
     };
   }, [params]);
 
+  const downloadCardImage = () => {
+    const link = document.createElement("a");
+    // 이미지 데이터 URL을 href 속성에 할당합니다.
+    link.href = capturedCard;
+    // 다운로드할 파일의 이름을 설정합니다.
+    link.download = "card.png";
+    // a 태그를 클릭 이벤트를 발생시켜 파일 다운로드를 시작합니다.
+    link.click();
+  };
+  const downloadDocumentImage = () => {
+    const link = document.createElement("a");
+    // 이미지 데이터 URL을 href 속성에 할당합니다.
+    link.href = capturedDocument;
+    // 다운로드할 파일의 이름을 설정합니다.
+    link.download = "document.png";
+    // a 태그를 클릭 이벤트를 발생시켜 파일 다운로드를 시작합니다.
+    link.click();
+  };
   return (
     <div className="">
       <InfoToolbar title="서약서 활용하기" />
@@ -44,9 +71,7 @@ export default function Page() {
             앨범에 저장하기
           </div>
           <button
-            onClick={() => {
-              copyURL(url), setOpenToast(true);
-            }}
+            onClick={downloadDocumentImage}
             className="mt-[3rem] mb-[4.6rem] bg-[#FFE695] text-[1.8rem] w-[30rem] h-[6rem] block mx-auto rounded-[2rem]"
           >
             서약서 이미지 저장하기
@@ -78,9 +103,7 @@ export default function Page() {
             서약서 URL 복사하기
           </button>
           <button
-            onClick={() => {
-              copyURL(url), setOpenToast(true);
-            }}
+            onClick={downloadCardImage}
             className="mt-[1.4rem] mb-[4.6rem] bg-[#FFE695] text-[1.8rem] w-[30rem] h-[6rem] block mx-auto rounded-[2rem]"
           >
             프로필 배경화면 저장하기

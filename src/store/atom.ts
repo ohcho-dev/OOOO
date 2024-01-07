@@ -29,3 +29,13 @@ export const OpenToastState = atom({
   key: "OpenToastState",
   default: false as boolean,
 });
+
+export const CapturedCardState = atom({
+  key: "CapturedCardState",
+  default: "",
+});
+
+export const CapturedDocumentState = atom({
+  key: "CapturedDocumentState",
+  default: "",
+});
