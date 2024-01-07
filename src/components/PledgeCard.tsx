@@ -18,7 +18,6 @@ export default function PledgeCard({ name }: PledgeCardProps) {
 
   useEffect(() => {
     if (elementRef) {
-      console.log(elementRef);
       captureElement();
     }
   }, [elementRef]);
@@ -48,10 +47,9 @@ export default function PledgeCard({ name }: PledgeCardProps) {
         <div className="card-front">
           <div
             ref={elementRef}
-            className="pb-[2rem] relative w-[39rem] h-[62.4rem] mx-auto bg-[url(/letter_bg.png)] bg-cover shadow-md rounded-[2rem]"
+            className="pb-[2rem] relative w-[39rem] h-[62.4rem] mx-auto bg-[url(/letter_bg.png)] bg-cover shadow-md rounded-[2rem] z-30"
           >
             <Image
-              loading="lazy"
               src="/logo_white.png"
               alt="육아응원"
               className="pt-[2rem] w-[6rem] mx-auto mt-[2.4rem]"

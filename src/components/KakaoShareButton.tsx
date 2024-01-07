@@ -20,12 +20,31 @@ const KakaoShareButton = ({ url, description }: KakaoShareButtonProps) => {
     const { Kakao } = window;
 
     Kakao.Share.sendDefault({
-      objectType: "text",
-      text: description,
-      link: {
-        mobileWebUrl: url,
-        webUrl: url,
+      objectType: "commerce",
+      content: {
+        title: description,
+        imageUrl: "",
+        link: {
+          mobileWebUrl: url,
+          webUrl: url,
+        },
       },
+      button: [
+        {
+          title: "서약서 보기",
+          link: {
+            mobileWebUrl: url,
+            webUrl: url,
+          },
+        },
+        {
+          title: "처음부터 진행하기",
+          link: {
+            mobileWebUrl: url,
+            webUrl: url,
+          },
+        },
+      ],
     });
   };
 

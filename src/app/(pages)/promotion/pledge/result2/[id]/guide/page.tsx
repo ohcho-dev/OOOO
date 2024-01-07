@@ -67,7 +67,6 @@ export default function Page() {
     };
     const data = await addReview(param).then((res) => {
       if (res) {
-        console.log(res);
         setContent("");
         alert("제출이 완료됐습니다.");
       }

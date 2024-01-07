@@ -33,7 +33,6 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
 
   useEffect(() => {
     if (elementRef.current && newAnswerUser1 && newAnswerUser2) {
-      console.log("ccc", elementRef.current);
       captureElement();
     }
   }, [elementRef, newAnswerUser1, newAnswerUser2]);
