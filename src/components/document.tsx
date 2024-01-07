@@ -63,7 +63,6 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
     }
   }, [answerUser2]);
 
-  console.log(newAnswerUser1, newAnswerUser2);
   if (
     newAnswerUser1.length < 7 ||
     newAnswerUser2.length < 6 ||

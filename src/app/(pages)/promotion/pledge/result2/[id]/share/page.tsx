@@ -25,7 +25,6 @@ export default function Page() {
       setUrl(url);
     }
   }, [params]);
-  console.log(url);
 
   return (
     <div>

@@ -34,11 +34,9 @@ export default function FormLayout(survey: SurveyType) {
   const [selectValue, setSelectValue] = useState(0);
   const [searchParams, setSearchParams] = useState("");
 
-  console.log(formStep);
   useEffect(() => {
     if (searchParams?.indexOf("reset=false") !== -1) {
       // setAnswerUser1([]);
-      console.log(searchParams?.indexOf("reset=false") !== -1);
     }
   }, [searchParams]);
   useEffect(() => {
