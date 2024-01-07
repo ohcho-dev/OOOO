@@ -161,7 +161,7 @@ export default function Page() {
           <div className="mt-[3.8rem] flex justify-evenly">
             {count > 0 && (
               <KakaoShareButton
-                description="설명"
+                description="육아응원 서비스를 소개합니다."
                 url={window?.location.origin}
               />
             )}
