@@ -41,3 +41,8 @@ export interface ResultDataType {
   user1_data: string;
   user2_data: string;
 }
+
+export interface ReviewDataType {
+  page_id: number;
+  contents: string;
+}

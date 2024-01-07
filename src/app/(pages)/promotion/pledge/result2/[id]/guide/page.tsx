@@ -1,11 +1,11 @@
 "use client";
+import { addReview } from "@/app/api/reviews";
 import InfoToolbar from "@/components/InfoToolbar";
 import KakaoShareButton from "@/components/KakaoShareButton";
 import Toast from "@/components/Toast";
 import {
   CapturedCardState,
   CapturedDocumentState,
-  OpenModalState,
   OpenToastState,
 } from "@/store/atom";
 import { copyURL } from "@/util/CopyUrl";
@@ -16,7 +16,7 @@ import { useRecoilState } from "recoil";
 
 export default function Page() {
   const params = useParams();
-
+  const [content, setContent] = useState("");
   const [url, setUrl] = useState("");
   const [count, setCount] = useState(0);
   const [OpenToast, setOpenToast] = useRecoilState(OpenToastState);
@@ -58,6 +58,20 @@ export default function Page() {
     link.download = "document.png";
     // a 태그를 클릭 이벤트를 발생시켜 파일 다운로드를 시작합니다.
     link.click();
+  };
+
+  const postReview = async () => {
+    const param = {
+      page_id: Number(params.id),
+      contents: content,
+    };
+    const data = await addReview(param).then((res) => {
+      if (res) {
+        console.log(res);
+        setContent("");
+        alert("제출이 완료됐습니다.");
+      }
+    });
   };
   return (
     <div className="">
@@ -119,12 +133,16 @@ export default function Page() {
           </div>
           <textarea
             placeholder="텍스트를 입력해주세요."
-            className="block mx-auto w-[44rem] border h-[20rem] mt-[5rem] text-[1.6rem] p-[2rem]"
+            rows={6}
+            value={content}
+            onChange={(evt) => {
+              const { value } = evt.target;
+              setContent(value);
+            }}
+            className="block mx-auto w-[44rem] border mt-[5rem] text-[1.6rem] p-[2rem]"
           ></textarea>
           <button
-            onClick={() => {
-              copyURL(url), setOpenToast(true);
-            }}
+            onClick={postReview}
             className="mt-[2rem] mb-[4.6rem] bg-[#FFE695] text-[1.8rem] w-[14rem] h-[6rem] block mx-auto rounded-[2rem]"
           >
             제출하기
