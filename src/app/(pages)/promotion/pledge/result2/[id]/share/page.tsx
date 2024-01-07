@@ -60,7 +60,7 @@ export default function Page() {
       >
         <div className="flex justify-around text-[1.6rem] p-[3rem] cursor-pointer">
           <KakaoShareButton
-            description="우리 가족 셔약서가 도착했어요!"
+            description="우리 가족 서약서가 도착했어요!"
             url={`https://${url}`}
           />
           {openToast && <Toast text="클립보드에 저장되었습니다." />}
