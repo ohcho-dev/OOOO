@@ -6,10 +6,7 @@ import {
   AnswerUser2State,
   OpenModalState,
 } from "@/store/atom";
-import parseDate from "@/util/date";
-import { getDate } from "@/util/getDateTime";
 import useTypingWords from "@/util/useTypingWords";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 interface DocumentProps {
@@ -75,16 +72,10 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
     return <div>Loading...</div>;
 
   return (
-    <div className="w-[52rem] h-[95svh] overflow-x-scroll text-[2rem] leading-[2.8rem] text-center bg-[url(/flower_img.png)] bg-cover bg-center px-[3rem]">
+    <div className="overflow-y-scroll w-[52rem] h-[95svh] text-[2rem] leading-[2.8rem] text-center bg-[url(/flower_img.png)] bg-cover bg-center px-[3rem] pt-[8rem] pb-[8rem]">
       {/* <a href="https://kr.freepik.com/free-vector/hand-painted-watercolor-floral-background_17437651.htm#query=%EA%BD%83&position=23&from_view=search&track=sph&uuid=d1a3578f-7621-42d0-83a1-6369c306975a">작가 coolvector</a> 출처 Freepik
        */}
-      <div
-        className="absolute top-[3rem] right-[3rem]"
-        onClick={() => setOpenModal(false)}
-      >
-        <Image src="/close.png" width={27} height={27} alt="닫기" />
-      </div>
-      <div className="px-[3rem] my-[5rem] overflow-x-scroll">
+      <div className="px-[3rem]">
         <div className="text-[1.8rem] leading-[4rem] font-bold text-center mb-[0.7rem] h-[4rem]">
           {typeWords1[0]}
         </div>
@@ -131,7 +122,7 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
 
             {/* user1 약속 */}
             <div className="mb-[4.8rem]">
-              <div className="relative z-20 text-[2.2rem] mb-[2rem] after:content-[' asdasd'] after:w-full after:block after:absolute after:bottom-[-0.4rem] after:border-[0.6rem] after:border-[#FF5C00] after:opacity-20 after:z-10">
+              <div className="relative z-5 text-[2.2rem] mb-[2rem] after:content-[' asdasd'] after:w-full after:block after:absolute after:bottom-[-0.4rem] after:border-[0.6rem] after:border-[#FF5C00] after:opacity-20 after:z-3">
                 <b>
                   <span className="text-[#FF5C00]">
                     {newAnswerUser1[6].c_value}!
@@ -164,7 +155,7 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
 
             {/* user2 약속 */}
             <div className="mb-[4.8rem]">
-              <div className="relative z-20 text-[2.2rem] mb-[2rem] after:content-[' asdasd'] after:w-full after:block after:absolute after:bottom-[-0.4rem] after:border-[0.6rem] after:border-[#FF5C00] after:opacity-20 after:z-10">
+              <div className="relative z-5 text-[2.2rem] mb-[2rem] after:content-[' asdasd'] after:w-full after:block after:absolute after:bottom-[-0.4rem] after:border-[0.6rem] after:border-[#FF5C00] after:opacity-20 after:z-3">
                 <b>
                   <span className="text-[#FF5C00]">
                     {newAnswerUser2[6].c_value}!
@@ -197,7 +188,7 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
 
             {/* 아이 약속 */}
             <div className="mb-[7.8rem]">
-              <div className="relative z-20 text-[2.2rem] mb-[2rem] after:content-[' asdasd'] after:w-full after:block after:absolute after:bottom-[-0.4rem] after:border-[0.6rem] after:border-[#FF5C00] after:opacity-20 after:z-10 ">
+              <div className="relative z-5 text-[2.2rem] mb-[2rem] after:content-[' asdasd'] after:w-full after:block after:absolute after:bottom-[-0.4rem] after:border-[0.6rem] after:border-[#FF5C00] after:opacity-20 after:z-3">
                 <b>
                   <span className="text-[#FF5C00]">
                     나 {newAnswerUser1[7].sv || ""}!
@@ -218,7 +209,9 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
                 <div>
                   둘,{" "}
                   <b>
-                    {newAnswerUser2[2].c_value}과 {newAnswerUser1[2].c_value}
+                    {newAnswerUser1[2].c_value !== newAnswerUser2[2].c_value
+                      ? `${newAnswerUser2[2].c_value}과 ${newAnswerUser1[2].c_value}`
+                      : newAnswerUser2[2].c_value}
                   </b>{" "}
                   안에서 행복한 아이로 자랄게요!
                 </div>
