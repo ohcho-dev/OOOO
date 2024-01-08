@@ -39,3 +39,20 @@ export const CapturedDocumentState = atom({
   key: "CapturedDocumentState",
   default: "",
 });
+
+export const AnswerMood1State = atom({
+  key: "AnswerMood1State",
+  default: "" as string,
+});
+export const AnswerMood2State = atom({
+  key: "AnswerMood2State",
+  default: "" as string,
+});
+export const AnswerUser1MoodState = atom({
+  key: "AnswerUser1MoodState",
+  default: "" as string,
+});
+export const AnswerUser2MoodState = atom({
+  key: "AnswerUser2MoodState",
+  default: "" as string,
+});

@@ -3,10 +3,7 @@ import Image from "next/image";
 import Letter from "./ui/Lottie/Letter";
 import Click from "./ui/Lottie/Click";
 import PledgeCardBack from "./PledgeCardBack";
-import { useEffect, useRef, useState } from "react";
-import { useRecoilState } from "recoil";
-import { CapturedCardState } from "@/store/atom";
-import html2canvas from "html2canvas";
+import { useState } from "react";
 import { useParams } from "next/navigation";
 
 interface PledgeCardProps {
@@ -15,24 +12,6 @@ interface PledgeCardProps {
 export default function PledgeCard({ name }: PledgeCardProps) {
   const params = useParams();
   const [card, setCard] = useState(false);
-  const [capturedCard, setCapturedCard] = useRecoilState(CapturedCardState);
-  const elementRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (elementRef) {
-      captureElement();
-    }
-  }, [elementRef]);
-
-  const captureElement = async () => {
-    const element = elementRef.current;
-
-    if (element) {
-      const canvas = await html2canvas(element);
-      const imageDataUrl = canvas.toDataURL("image/png");
-      setCapturedCard(imageDataUrl);
-    }
-  };
 
   return (
     <div
@@ -98,7 +77,7 @@ export default function PledgeCard({ name }: PledgeCardProps) {
           </div>
         </div>
         <div className="card-back">
-          <PledgeCardBack ref={elementRef} name={name} card={card} />
+          <PledgeCardBack name={name} card={card} />
         </div>
       </div>
     </div>

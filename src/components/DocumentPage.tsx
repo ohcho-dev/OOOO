@@ -19,6 +19,7 @@ export default function DocumentPage({
   return (
     <div>
       <InfoToolbar title="서약서" />
+      <div className="w-full h-[6.7rem] " />
       <Document survey1={survey1} survey2={survey2} />
       <BottomButton
         label="서약서를 소장하고 싶다면?"
