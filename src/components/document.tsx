@@ -145,9 +145,9 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
 
             {/* user1 약속 */}
             <div className="mb-[4.8rem]">
-              <div className="relative z-5 text-[2.2rem] mb-[2rem] after:content-[' asdasd'] after:w-full after:block after:absolute after:bottom-[-0.4rem] after:border-[0.6rem] after:border-[#FF5C00] after:opacity-20 after:z-3">
+              <div className="relative z-5 text-[2.2rem] mb-[2rem] after:content-[' asdasd'] after:w-full after:block after:absolute after:bottom-[-0.4rem] after:border-[0.6rem] after:border-[#F25D24] after:opacity-20 after:z-3">
                 <b>
-                  <span className="text-[#FF5C00]">
+                  <span className="text-[#F25D24]">
                     {newAnswerUser1[6].c_value}!
                   </span>
                   <br />
@@ -178,9 +178,9 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
 
             {/* user2 약속 */}
             <div className="mb-[4.8rem]">
-              <div className="relative z-5 text-[2.2rem] mb-[2rem] after:content-[' asdasd'] after:w-full after:block after:absolute after:bottom-[-0.4rem] after:border-[0.6rem] after:border-[#FF5C00] after:opacity-20 after:z-3">
+              <div className="relative z-5 text-[2.2rem] mb-[2rem] after:content-[' asdasd'] after:w-full after:block after:absolute after:bottom-[-0.4rem] after:border-[0.6rem] after:border-[#F25D24] after:opacity-20 after:z-3">
                 <b>
-                  <span className="text-[#FF5C00]">
+                  <span className="text-[#F25D24]">
                     {newAnswerUser2[6].c_value}!
                   </span>
                   <br />
@@ -211,9 +211,9 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
 
             {/* 아이 약속 */}
             <div className="mb-[7.8rem]">
-              <div className="relative z-5 text-[2.2rem] mb-[2rem] after:content-[' asdasd'] after:w-full after:block after:absolute after:bottom-[-0.4rem] after:border-[0.6rem] after:border-[#FF5C00] after:opacity-20 after:z-3">
+              <div className="relative z-5 text-[2.2rem] mb-[2rem] after:content-[' asdasd'] after:w-full after:block after:absolute after:bottom-[-0.4rem] after:border-[0.6rem] after:border-[#F25D24] after:opacity-20 after:z-3">
                 <b>
-                  <span className="text-[#FF5C00]">
+                  <span className="text-[#F25D24]">
                     나 {newAnswerUser1[7].sv || ""}!
                   </span>
                   <br />

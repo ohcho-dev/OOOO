@@ -77,7 +77,7 @@ export default function Page() {
       <InfoToolbar title="서약서 활용하기" />
       <div className="overflow-x-hidden overflow-y-scroll h-[100svh]">
         <div className=" bg-white mt-[10rem] ">
-          <div className="w-full text-[#FF5C00] text-center text-[2.4rem] font-bold">
+          <div className="w-full text-[#F25D24] text-center text-[2.4rem] font-bold">
             Step 1
           </div>
           <div className="text-center text-[2.8rem] font-bold mt-[2rem]">
@@ -85,14 +85,14 @@ export default function Page() {
           </div>
           <button
             onClick={downloadDocumentImage}
-            className="mt-[3rem] mb-[4.6rem] bg-[#FFE695] text-[1.8rem] w-[30rem] h-[6rem] block mx-auto rounded-[2rem]"
+            className="mt-[3rem] mb-[4.6rem] bg-[#F9E9B3] text-[1.8rem] w-[30rem] h-[6rem] block mx-auto rounded-[2rem]"
           >
             서약서 이미지 저장하기
           </button>
         </div>
 
         <div className="bg-[#FFF8E0] pt-[4.3rem] pb-[5.9rem]">
-          <div className="w-full text-[#FF5C00] text-center text-[2.4rem] font-bold">
+          <div className="w-full text-[#F25D24] text-center text-[2.4rem] font-bold">
             Step 2
           </div>
           <div className="text-center text-[2.8rem] font-bold mt-[2rem]">
@@ -100,7 +100,7 @@ export default function Page() {
           </div>
           <div className="mt-[5rem] mb-[5.5rem]">
             <Image
-              className="mx-auto"
+              className="mx-auto w-[35rem] h-[45.1rem]"
               src="/profile_guide.png"
               alt="프로필 가이드"
               width={350}
@@ -111,20 +111,20 @@ export default function Page() {
             onClick={() => {
               copyURL(url), setOpenToast(true);
             }}
-            className="mt-[3rem] bg-[#FFE695] text-[1.8rem] w-[30rem] h-[6rem] block mx-auto rounded-[2rem]"
+            className="mt-[3rem] bg-[#F9E9B3] text-[1.8rem] w-[30rem] h-[6rem] block mx-auto rounded-[2rem]"
           >
             서약서 URL 복사하기
           </button>
           <button
             onClick={downloadCardImage}
-            className="mt-[1.4rem] mb-[4.6rem] bg-[#FFE695] text-[1.8rem] w-[30rem] h-[6rem] block mx-auto rounded-[2rem]"
+            className="mt-[1.4rem] mb-[4.6rem] bg-[#F9E9B3] text-[1.8rem] w-[30rem] h-[6rem] block mx-auto rounded-[2rem]"
           >
             프로필 배경화면 저장하기
           </button>
         </div>
 
         <div className="bg-white pt-[4.3rem] pb-[5.9rem]">
-          <div className="w-full text-[#FF5C00] text-center text-[2.4rem] font-bold">
+          <div className="w-full text-[#F25D24] text-center text-[2.4rem] font-bold">
             Step 3
           </div>
           <div className="text-center text-[2.8rem] font-bold mt-[2rem]">
@@ -142,14 +142,14 @@ export default function Page() {
           ></textarea>
           <button
             onClick={postReview}
-            className="mt-[2rem] mb-[4.6rem] bg-[#FFE695] text-[1.8rem] w-[14rem] h-[6rem] block mx-auto rounded-[2rem]"
+            className="mt-[2rem] mb-[4.6rem] bg-[#F9E9B3] text-[1.8rem] w-[14rem] h-[6rem] block mx-auto rounded-[2rem]"
           >
             제출하기
           </button>
         </div>
 
         <div className="bg-[#FFF8E0] pt-[4.3rem] pb-[5.9rem]">
-          <div className="w-full text-[#FF5C00] text-center text-[2.4rem] font-bold">
+          <div className="w-full text-[#F25D24] text-center text-[2.4rem] font-bold">
             Step 4
           </div>
           <div className="text-center text-[2.8rem] font-bold mt-[2rem]">

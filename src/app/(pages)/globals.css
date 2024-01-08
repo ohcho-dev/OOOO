@@ -13,6 +13,7 @@ body {
   overflow-x: hidden;
   background: #f6f7f9;
   color: #555;
+  letter-spacing: -0.05rem;
 }
 
 .responsive_layout {
@@ -76,7 +77,7 @@ body {
 }
 
 .card-wrap .card .card-front {
-  background-color: #f54;
+  background-color: #f25d24;
   z-index: 10;
 }
 

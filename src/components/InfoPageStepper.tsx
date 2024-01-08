@@ -161,7 +161,7 @@ export default function InfoPageStepper() {
       <div className="absolute z-10 w-[30rem] h-[1rem] left-[50%] translate-x-[-50%] bottom-[13rem] mx-auto">
         <div className="absolute w-[30rem] h-[1rem] rounded-[1rem] bg-[#D9D9D9]" />
         <div
-          className={`absolute w-[10rem] h-[1rem] rounded-[1rem] bg-[#F26328] transition-all duration-300 ${
+          className={`absolute w-[10rem] h-[1rem] rounded-[1rem] bg-[#F25D24] transition-all duration-300 ${
             infoStep === 0
               ? "left-0"
               : infoStep === 1
@@ -172,7 +172,7 @@ export default function InfoPageStepper() {
       </div>
       <button
         onClick={() => (infoStep === 2 ? setToggle(true) : handleNext())}
-        className="bg-[#FFE695] min-h-[8rem] w-full text-[2.1rem]"
+        className="bg-[#F9E9B3] min-h-[8rem] w-full text-[2.1rem]"
       >
         {infoStep === 2 ? "시작하기" : "다음으로"}
       </button>
@@ -221,7 +221,7 @@ export default function InfoPageStepper() {
 
         <button
           className={`w-full h-[8rem] text-[2.4rem] ${
-            !agree ? "bg-[#cccccc] text-white" : "bg-[#FFEBAA] text-black"
+            !agree ? "bg-[#cccccc] text-white" : "bg-[#F9E9B3] text-black"
           }`}
           onClick={() =>
             agree &&

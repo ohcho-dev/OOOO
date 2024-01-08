@@ -31,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko-KR" className={NotoSansKR.className}>
-      <body>
+      <body suppressHydrationWarning={true}>
         <Script
           src="https://developers.kakao.com/sdk/js/kakao.js"
           strategy="afterInteractive"

@@ -49,7 +49,7 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
                 {getDate(formattedDate)}
               </div>
               <button
-                className="z-100 absolute top-[46rem] left-[50%] translate-x-[-50%] w-[30.2rem] h-[6rem] bg-[#FFE695] text-[1.8rem]"
+                className="z-100 absolute top-[46rem] left-[50%] translate-x-[-50%] w-[30.2rem] h-[6rem] bg-[#F9E9B3] text-[1.8rem]"
                 onClick={() =>
                   router.push(
                     `/promotion/pledge/result2/${pathname.id}/document`
@@ -73,7 +73,7 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
                 아래와 같이 서약합니다.
               </div>
               <div className="font-bold mt-[6.4rem] text-[2.2rem]">
-                <span className="text-[#FF5C00]">배우자에게 공유</span>하고
+                <span className="text-[#F25D24]">배우자에게 공유</span>하고
                 <br />
                 배우자의 서약서 작성이 완료되면
                 <br />

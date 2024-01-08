@@ -90,7 +90,7 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
                     className={`w-full flex text-[2.1rem] leading-[2.8rem] font-bold py-[1.5rem] mt-[1.2rem] rounded-[2rem] bg-white justify-start`}
                   >
                     <span
-                      className={`w-[4rem] min-w-[4rem] h-[4rem] rounded-[2rem] flex justify-center items-center bg-[#FFA89F] text-white`}
+                      className={`w-[4rem] min-w-[4rem] h-[4rem] rounded-[2rem] flex justify-center items-center bg-[#FFD3D0] text-white`}
                     >
                       A
                     </span>
@@ -109,7 +109,7 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
                       className={`w-full flex text-[2.1rem] leading-[2.8rem] font-bold py-[1.5rem] mt-[1.2rem] rounded-[2rem] bg-white justify-start`}
                     >
                       <span
-                        className={`w-[4rem] min-w-[4rem] h-[4rem] rounded-[2rem] flex justify-center items-center bg-[#FFA89F] text-white`}
+                        className={`w-[4rem] min-w-[4rem] h-[4rem] rounded-[2rem] flex justify-center items-center bg-[#FFD3D0] text-white`}
                       >
                         A
                       </span>
@@ -134,7 +134,7 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
           다시 하기
         </button>
         <button
-          className="w-[26rem] max-w-[518px] h-[8rem] text-[2.4rem] bg-[#FFEBAA] text-black"
+          className="w-[26rem] max-w-[518px] h-[8rem] text-[2.4rem] bg-[#F9E9B3] text-black"
           onClick={handleSaveData}
         >
           서약서 생성

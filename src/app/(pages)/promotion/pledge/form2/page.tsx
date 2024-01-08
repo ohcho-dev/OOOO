@@ -12,7 +12,7 @@ export default function Page() {
     <div>
       <h1 className="pt-[11.6rem] text-center text-[2.8rem]">
         <b>
-          내가 생각하는 <span className="text-[#FD9D91]">배우자의 모습</span>을
+          내가 생각하는 <span className="text-[#FFD3D0]">배우자의 모습</span>을
         </b>
         <br /> 아래 선택지에서 골라주세요.
       </h1>
