@@ -2,6 +2,7 @@
 import { addReview } from "@/app/api/reviews";
 import InfoToolbar from "@/components/InfoToolbar";
 import KakaoShareButton from "@/components/KakaoShareButton";
+import ProfileCarousel from "@/components/ProfileCarousel";
 import Toast from "@/components/Toast";
 import {
   CapturedCardState,
@@ -10,6 +11,7 @@ import {
 } from "@/store/atom";
 import { copyURL } from "@/util/CopyUrl";
 import Image from "next/image";
+import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
@@ -91,21 +93,94 @@ export default function Page() {
           </button>
         </div>
 
-        <div className="bg-[#FFF8E0] pt-[4.3rem] pb-[5.9rem]">
-          <div className="w-full text-[#F25D24] text-center text-[2.4rem] font-bold">
+        <div className="bg-[#FFF8E0] pt-[4.3rem] pb-[5.9rem] relative">
+          <div className="w-[5.7rem] h-[5.1rem] bg-[url(/star.png)] bg-no-repeat bg-blend-darken bg-[#FFF8E0] absolute top-[1.5rem] left-[16.5rem]" />
+          <div className="relative w-full text-[#F25D24] text-center text-[2.4rem] font-bold">
             Step 2
           </div>
           <div className="text-center text-[2.8rem] font-bold mt-[2rem]">
             카카오톡 프로필로 자랑하기
           </div>
-          <div className="mt-[5rem] mb-[5.5rem]">
-            <Image
-              className="mx-auto w-[35rem] h-[45.1rem]"
-              src="/profile_guide.png"
-              alt="프로필 가이드"
-              width={350}
-              height={451}
-            />
+          <div className="relative">
+            <div className="w-[36rem] h-[36rem] absolute top-[9rem] left-[50%] translate-x-[-50%] bg-[#FFE695] rounded-[18rem]" />
+            <div className="mt-[3.4rem]">
+              <ProfileCarousel>
+                <div>
+                  <Image
+                    className="w-[20.3rem] h-[43.9rem] mx-auto"
+                    src="/guide_1.png"
+                    alt="카카오톡 프로필 변경 항목을 클릭해주세요."
+                    width={203}
+                    height={439}
+                  />
+                  <div className="mt-[3.6rem] text-[1.8rem] text-center">
+                    카카오톡 프로필 변경 항목을 클릭해주세요.
+                  </div>
+                  <Image
+                    className="w-[2.3rem] h-[4.7rem] absolute bottom-[6rem] left-[24rem] animate-bounce"
+                    src="/hand.png"
+                    alt="클릭하세요."
+                    width={23}
+                    height={47}
+                  />
+                </div>
+
+                <div>
+                  <Image
+                    className="w-[20.4rem] h-[43.9rem] mx-auto"
+                    src="/guide_2.png"
+                    alt="카카오톡 프로필 변경 항목을 클릭해주세요."
+                    width={204}
+                    height={439}
+                  />
+                  <div className="mt-[3.6rem] text-[1.8rem] text-center">
+                    서약서 URL 주소를 복사 한 뒤<br />
+                    카카오톡에서 링크 아이콘을 클릭해주세요.
+                  </div>
+                  <Image
+                    className="w-[2.3rem] h-[4.7rem] absolute bottom-[5rem] left-[29.2rem] animate-bounce"
+                    src="/hand.png"
+                    alt="클릭하세요."
+                    width={23}
+                    height={47}
+                  />
+                </div>
+
+                <div>
+                  <Image
+                    className="w-[20.5rem] h-[43.9rem] mx-auto"
+                    src="/guide_3.png"
+                    alt="카카오톡 프로필 변경 항목을 클릭해주세요."
+                    width={205}
+                    height={439}
+                  />
+                  <div className="mt-[3.6rem] text-[1.8rem] text-center">
+                    주황색 영역에 URL 주소를 넣으신 뒤<br />
+                    완료버튼을 클릭해주세요.
+                  </div>
+                  <Image
+                    className="w-[2.3rem] h-[4.7rem] absolute top-[3.5rem] left-[33rem] animate-bounce"
+                    src="/hand.png"
+                    alt="클릭하세요."
+                    width={23}
+                    height={47}
+                  />
+                </div>
+
+                <div>
+                  <Image
+                    className="w-[20.5rem] h-[43.9rem] mx-auto"
+                    src="/guide_4.png"
+                    alt="카카오톡 프로필 변경 항목을 클릭해주세요."
+                    width={203}
+                    height={439}
+                  />
+                  <div className="mt-[3.6rem] text-[1.8rem] text-center">
+                    프로필 링크 적용이 완료되었습니다.
+                  </div>
+                </div>
+              </ProfileCarousel>
+            </div>
           </div>
           <button
             onClick={() => {
@@ -130,6 +205,9 @@ export default function Page() {
           <div className="text-center text-[2.8rem] font-bold mt-[2rem]">
             이용후기 남기기
           </div>
+          <div className="text-center mt-[1.4rem] text-[1.8rem]">
+            후기를 남겨주시면 더 좋은 서비스로 찾아올게요!
+          </div>
           <textarea
             placeholder="텍스트를 입력해주세요."
             rows={6}
@@ -142,7 +220,7 @@ export default function Page() {
           ></textarea>
           <button
             onClick={postReview}
-            className="mt-[2rem] mb-[4.6rem] bg-[#F9E9B3] text-[1.8rem] w-[14rem] h-[6rem] block mx-auto rounded-[2rem]"
+            className="mt-[2rem] mb-[4.6rem] bg-[#F25D24] text-[2.1rem] text-white w-[20rem] h-[6rem] block mx-auto rounded-[2rem]"
           >
             제출하기
           </button>
@@ -165,17 +243,16 @@ export default function Page() {
                 url={window?.location.origin}
               />
             )}
-            {OpenToast && <Toast text="클립보드에 저장되었습니다." />}
             <div
               className="text-center"
               onClick={() => {
                 copyURL(window?.location.origin), setOpenToast(true);
               }}
             >
-              <div className="bg-[#f6f7f9] rounded-[8rem] w-[8rem] h-[8rem] text-[4rem] flex justify-center items-center">
-                🔗
+              <div className="w-[6rem] h-[6rem] flex justify-center items-center">
+                <Image src="/link.png" alt="URL 복사" width={60} height={60} />
               </div>
-              <span className="block mt-[0.8rem]">
+              <span className="block mt-[0.8rem] text-[1.6rem]">
                 URL
                 <br />
                 복사
@@ -183,6 +260,7 @@ export default function Page() {
             </div>
           </div>
         </div>
+        {OpenToast && <Toast text="클립보드에 저장되었습니다." />}
       </div>
     </div>
   );

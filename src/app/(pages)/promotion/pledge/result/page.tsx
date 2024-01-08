@@ -69,7 +69,7 @@ export default function Page() {
               <div className="w-[6rem] h-[6rem] flex justify-center items-center">
                 <Image src="/link.png" alt="URL 복사" width={60} height={60} />
               </div>
-              <span className="block mt-[0.8rem] text-[1.4rem]">
+              <span className="block mt-[0.8rem] text-[1.6rem]">
                 URL
                 <br />
                 복사
