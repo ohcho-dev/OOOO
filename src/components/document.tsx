@@ -94,6 +94,9 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
         ref={elementRef}
         className="bg-[url(/paper_bg.png)] w-[52rem] h-[190.7rem] bg-cover bg-center p-[3rem] leading-[2.8rem]"
       >
+        {/* 출처 <a href="https://kr.freepik.com/free-vector/hand-drawn-doodle-pattern_31194738.htm#query=baby%20pattern&position=1&from_view=search&track=ais&uuid=3e5c0b1c-f6b4-4c54-b071-1a01d40423dc">Freepik</a> */}
+        {/* 출처 <a href="https://kr.freepik.com/free-vector/pack-of-hand-drawn-baby-items_978632.htm#query=toy%20line&position=13&from_view=search&track=ais&uuid=05ca6458-5159-4250-b46d-6b267a0e120d">Freepik</a> */}
+        {/* <a href="https://kr.freepik.com/free-vector/father-mother-backpacking-to-take-her-daughter-out-for-a-trip_13575796.htm#page=3&query=%EA%B0%80%EC%A1%B1&position=36&from_view=search&track=sph&uuid=c75d9118-9140-4932-a5b6-dcd7e648cfbd">작가 jcomp</a> 출처 Freepik */}
         <div className="text-[2rem] font-bold pt-[5.8rem] ml-[6.7rem]">
           {newAnswerUser1[7]?.sv}네 서약서
         </div>

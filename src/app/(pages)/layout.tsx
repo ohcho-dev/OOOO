@@ -6,6 +6,7 @@ import { Metadata } from "next";
 import RecoilRootWrapper from "@/context/RecoilContext";
 import Script from "next/script";
 import Toast from "@/components/Toast";
+import Head from "next/head";
 // import KakaoAdfit from "@/util/KakaoAdfit";
 
 const NotoSansKR = Noto_Sans_KR({ subsets: ["latin"] });
@@ -31,6 +32,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko-KR" className={NotoSansKR.className}>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <body suppressHydrationWarning={true}>
         <Script
           src="https://developers.kakao.com/sdk/js/kakao.js"

@@ -29,6 +29,13 @@ export default function Page() {
     }
   }, [answerUser1]);
 
+  const handleRoute = () => {
+    if (
+      !window.confirm("저장한 값이 초기화됩니다.\n처음으로 돌아가시겠습니까?")
+    )
+      return;
+    router.push("/promotion/pledge/form/first");
+  };
   if (!answerUser1[7]?.sv) return <div>Loading...</div>;
 
   return (
@@ -41,7 +48,7 @@ export default function Page() {
       </div>
       <div
         className="fixed w-full max-w-[52rem] text-center bottom-[10rem] text-[1.8rem] underline"
-        onClick={() => router.push("/promotion/pledge/form/first")}
+        onClick={handleRoute}
       >
         다시 만들고 싶으세요?
       </div>

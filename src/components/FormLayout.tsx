@@ -63,6 +63,9 @@ export default function FormLayout(survey: SurveyType) {
   }, [formStep]);
 
   const HandleMixData = (sv: string) => {
+    if (sv.length > 6) {
+      return;
+    }
     setMixData({
       ...mixData,
       sv: sv,
@@ -70,6 +73,9 @@ export default function FormLayout(survey: SurveyType) {
   };
 
   const HandleNextStepBtn = () => {
+    if (formStep > 5 && !mixData.c_id) {
+      return alert("성별을 선택해주세요.");
+    }
     if (CheckInput(mixData.sv)) {
       return alert(CheckInput(mixData.sv));
     }

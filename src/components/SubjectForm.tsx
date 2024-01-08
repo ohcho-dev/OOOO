@@ -22,15 +22,23 @@ export default function SubjectForm({
       <div className="text-[2.4rem]">{question}</div>
       <input
         className="w-full border-b-[0.1rem] border-black h-[6rem] mt-[1.5rem] text-[3.5rem]"
+        placeholder={
+          question === "아이의 별명(또는 이름)을 입력해주세요."
+            ? "예 : 희망이, 소울이, 황금이"
+            : ""
+        }
         type="text"
         value={mixData.sv}
         onChange={(e: ChangeEvent<HTMLInputElement>) => {
           handleMixData(e.target.value);
         }}
       />
+      <div className="mt-[1.8rem] text-[1.8rem]">
+        * 최대 6자까지 입력할 수 있어요
+      </div>
       {useResetButton && (
         <div
-          className="absolute bottom-[2rem] right-0"
+          className="absolute bottom-[6.5rem] right-[1rem]"
           onClick={() => handleMixData("")}
         >
           <Image src="/reset.png" alt="초기화" width={20} height={20} />

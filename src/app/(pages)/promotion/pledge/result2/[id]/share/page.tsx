@@ -52,10 +52,10 @@ export default function Page() {
             height={366}
           />
           {/* <a href="https://www.freepik.com/free-vector/big-isolated-cartoon-young-girl-boy-love-couple-sharing-caring-love-3d-illustration_12953857.htm#page=3&query=share&position=39&from_view=search&track=sph&uuid=349ea626-ab1a-4e9a-a9c4-4844e0aa0aed">Image by jcomp</a> on Freepik */}
-          <div className="text-[1.8rem] text-center mt-[3rem] font-bold leading-[4rem]">
+          <div className="text-[2.1rem] text-center mt-[3rem] font-bold leading-[4rem]">
             배우자에게 전송한 링크에 접속해서
             <br />
-            함께 서약서를 확인해보세요!
+            함께 서약서를 읽어보세요!
           </div>
         </div>
       </div>
@@ -63,27 +63,32 @@ export default function Page() {
         toggle={toggle}
         handleToggle={() => setToggle(!toggle)}
       >
-        <div className="flex justify-around text-[1.6rem] p-[3rem] cursor-pointer">
-          <KakaoShareButton
-            description="우리 가족 서약서가 도착했어요!"
-            url={`https://${url}`}
-          />
-          {openToast && <Toast text="클립보드에 저장되었습니다." />}
-          <div
-            className="text-center"
-            onClick={() => {
-              copyURL(`https://${url}`);
-              setOpenToast(true);
-            }}
-          >
-            <div className="bg-[#f6f7f9] rounded-[8rem] w-[8rem] h-[8rem] text-[4rem] flex justify-center items-center">
-              🔗
+        <div className="px-[3.4rem] py-[4rem]">
+          <div className="text-[2.8rem] font-bold mb-[5rem]">
+            공유하실 방법을 선택해주세요.
+          </div>
+          <div className="flex justify-evenly text-[1.6rem] cursor-pointer">
+            <KakaoShareButton
+              description="사랑하는 나의 배우자가 육아 서약서 캠페인 참여를 요청하셨습니다."
+              url={`https://${url}`}
+            />
+            {openToast && <Toast text="클립보드에 저장되었습니다." />}
+            <div
+              className="text-center"
+              onClick={() => {
+                copyURL(`https://${url}`);
+                setOpenToast(true);
+              }}
+            >
+              <div className="w-[6rem] h-[6rem] flex justify-center items-center">
+                <Image src="/link.png" alt="URL 복사" width={60} height={60} />
+              </div>
+              <span className="block mt-[0.8rem] text-[1.6rem]">
+                URL
+                <br />
+                복사
+              </span>
             </div>
-            <span className="block mt-[0.8rem]">
-              URL
-              <br />
-              복사
-            </span>
           </div>
         </div>
       </CustomBottomModal>
