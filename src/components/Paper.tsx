@@ -53,22 +53,30 @@ export default function PaperPage({ data, survey1, survey2 }: PaperPageProps) {
   useEffect(() => {
     if (answerUser1[2]?.c_id) {
       const answerArray = survey1[2].choiceAnswer;
-      const text = answerArray[answerUser1[2].c_id].answer_value;
+      const text = answerArray.filter(
+        (item) => item.answer_id === answerUser1[2].c_id
+      )[0].answer_value;
       setAnswerMood1(text);
     }
     if (answerUser2[2]?.c_id) {
       const answerArray = survey2[2].choiceAnswer;
-      const text = answerArray[answerUser2[2].c_id].answer_value;
+      const text = answerArray.filter(
+        (item) => item.answer_id === answerUser2[2].c_id
+      )[0].answer_value;
       setAnswerMood2(text);
     }
     if (answerUser1[0]?.c_id) {
       const answerArray = survey1[0].choiceAnswer;
-      const text = answerArray[answerUser1[0].c_id].answer_value;
+      const text = answerArray.filter(
+        (item) => item.answer_id === answerUser1[0].c_id
+      )[0].answer_value;
       setAnswerUser1Mood(text);
     }
     if (answerUser2[0]?.c_id) {
       const answerArray = survey2[0].choiceAnswer;
-      const text = answerArray[answerUser2[0].c_id].answer_value;
+      const text = answerArray.filter(
+        (item) => item.answer_id === answerUser2[0].c_id
+      )[0].answer_value;
       setAnswerUser2Mood(text);
     }
   }, [answerUser1, answerUser2]);
