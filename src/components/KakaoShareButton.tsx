@@ -32,11 +32,11 @@ const KakaoShareButton = ({ url, description }: KakaoShareButtonProps) => {
   return (
     <div className="text-center" onClick={handleShare}>
       <img
-        className="w-[8rem] h-[8rem]"
+        className="w-[6rem] h-[6rem]"
         src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
         alt="카카오톡 공유 보내기 버튼"
       />
-      <span className="block mt-[0.8rem]">
+      <span className="block mt-[0.8rem] text-[1.8rem]">
         카카오톡
         <br />
         공유하기

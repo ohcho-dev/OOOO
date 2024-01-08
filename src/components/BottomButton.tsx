@@ -18,7 +18,7 @@ export default function BottomButton({
   return (
     <button
       className={`w-[100vw] max-w-[518px] h-[8rem] text-[2.4rem] fixed bottom-0 ${
-        status ? "bg-[#F9E9B3] text-black" : "bg-[#cccccc] text-white"
+        status ? "bg-[#F9E9B3]" : "bg-[#cccccc] text-white"
       }`}
       onClick={onClick ? onClick : () => router.push(url)}
       disabled={!status}

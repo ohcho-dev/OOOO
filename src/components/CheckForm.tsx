@@ -92,13 +92,13 @@ export default function CheckForm({ survey1 }: CheckFormProps) {
       </div>
       <div className="absolute bottom-0 flex">
         <button
-          className="w-[26rem] max-w-[518px] h-[8rem] text-[2.4rem] bg-[#cccccc] text-white"
+          className="w-[26rem] max-w-[518px] h-[8rem] text-[2.4rem] bg-[#cccccc]"
           onClick={() => router.push("/promotion/pledge/form/first")}
         >
           다시 하기
         </button>
         <button
-          className="w-[26rem] max-w-[518px] h-[8rem] text-[2.4rem] bg-[#F9E9B3] text-black"
+          className="w-[26rem] max-w-[518px] h-[8rem] text-[2.4rem] bg-[#F9E9B3]"
           onClick={() => setLoading(true)}
         >
           서약서 생성

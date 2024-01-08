@@ -48,9 +48,7 @@ export default function PaperPage({ data, survey1, survey2 }: PaperPageProps) {
         />
       </div>
       <div className="text-center text-[2.4rem] mt-[4rem]">
-        <b>우리 가족 서약서</b>가
-        <br />
-        도착했어요.
+        <b>우리 가족 서약서</b>가 도착했어요!
       </div>
       <PledgeCardWrap name={data.baby_name} />
     </div>

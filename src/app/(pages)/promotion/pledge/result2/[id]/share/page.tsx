@@ -28,31 +28,36 @@ export default function Page() {
 
   return (
     <div>
-      <div className="py-[1rem]">
-        <Image
-          className="mx-auto w-[12rem] "
-          src="/logo.png"
-          alt="육아응원"
-          width={162}
-          height={81}
-        />
-      </div>
-      <div className="text-center text-[2.4rem] mt-[4rem] mb-[5rem]">
-        <b>우리 가족 서약서 완성!</b>
-        <br />
-        배우자가 완성된 서약서를 기다리고 있어요.
-      </div>
-      <Image
-        className="mx-auto w-[36rem]"
-        src="/share.png"
-        alt="공유해보세요"
-        width={366}
-        height={366}
-      />
-      <div className="text-[1.8rem] text-center mt-[3rem] font-bold leading-[4rem]">
-        배우자에게 전송한 링크에 접속해서
-        <br />
-        함께 서약서를 확인해보세요!
+      <div className="w-full h-[100svh] max-h-calcResultPage flex flex-col justify-center">
+        <div>
+          <div className="py-[1rem]">
+            <Image
+              className="mx-auto w-[12rem] "
+              src="/logo.png"
+              alt="육아응원"
+              width={162}
+              height={81}
+            />
+          </div>
+          <div className="text-center text-[2.4rem] mt-[6rem] mb-[5rem]">
+            <b>우리 가족 서약서 완성!</b>
+            <br />
+            배우자가 완성된 서약서를 기다리고 있어요.
+          </div>
+          <Image
+            className="mx-auto w-[36rem]"
+            src="/share.png"
+            alt="공유해보세요"
+            width={366}
+            height={366}
+          />
+          {/* <a href="https://www.freepik.com/free-vector/big-isolated-cartoon-young-girl-boy-love-couple-sharing-caring-love-3d-illustration_12953857.htm#page=3&query=share&position=39&from_view=search&track=sph&uuid=349ea626-ab1a-4e9a-a9c4-4844e0aa0aed">Image by jcomp</a> on Freepik */}
+          <div className="text-[1.8rem] text-center mt-[3rem] font-bold leading-[4rem]">
+            배우자에게 전송한 링크에 접속해서
+            <br />
+            함께 서약서를 확인해보세요!
+          </div>
+        </div>
       </div>
       <CustomBottomModal
         toggle={toggle}

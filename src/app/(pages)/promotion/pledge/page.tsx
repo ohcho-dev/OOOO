@@ -46,7 +46,7 @@ export default function PledgeMainPage() {
           height={24}
         />
         <h4 className="text-[2rem] mt-[2rem]">
-          <b>아이의 목소리</b>로 쓰여진 우리 <b>가족 서약서</b>
+          <b>아이의 목소리</b>를 담은 우리 <b>가족 서약서</b>
         </h4>
 
         <Image
@@ -64,12 +64,10 @@ export default function PledgeMainPage() {
           height={127}
         />
         {searchParams && (
-          <h2 className="text-[3.6rem] font-bold mt-[5rem] text-center">
-            사랑하는 나의 배우자가
+          <h2 className="text-[2.4rem] mt-[8rem] text-center">
+            <b>배우자가 당신의 참여</b>를 기다리고 있습니다.
             <br />
-            육아 서약서 캠페인 참여를
-            <br />
-            요청하셨습니다.
+            <b>우리 가족 서약서</b>를 함께 만들어보세요!
           </h2>
         )}
         {!searchParams && <MainPledgeCard />}

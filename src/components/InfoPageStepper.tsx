@@ -13,9 +13,9 @@ const STEPS_1 = [
     id: 0,
     title: (
       <h1>
-        우리 가족을 생각하면
+        우리 가족, 배우자, 내 아리를 떠올리며
         <br />
-        <b>가장 먼저 떠오르는 단어</b>를 골라주세요!
+        <b>가장 어울리는 단어</b>를 골라주세요!
       </h1>
     ),
     image: "/info1.png",
@@ -25,7 +25,7 @@ const STEPS_1 = [
     id: 1,
     title: (
       <h1>
-        <b>내 배우자에게 공유</b>하여
+        내 <b>배우자에게 공유</b>하여
         <br />
         서약서의 반쪽을 채워주세요!
       </h1>
@@ -37,7 +37,7 @@ const STEPS_1 = [
     id: 2,
     title: (
       <h1>
-        <b>아이의 목소리</b>로 변환된
+        <b>아이의 목소리</b>를 담은
         <br />
         따뜻한 <b>가족 서약서</b>가 탄생합니다!
       </h1>
@@ -51,9 +51,9 @@ const STEPS_2 = [
     id: 0,
     title: (
       <h1>
-        우리 가족을 생각하면
+        우리 가족, 배우자, 내 아이를 떠올리며
         <br />
-        <b>가장 먼저 떠오르는 단어</b>를 골라주세요!
+        <b>가장 어울리는 단어</b>를 골라주세요!
       </h1>
     ),
     image: "/info1.png",
@@ -62,7 +62,7 @@ const STEPS_2 = [
     id: 1,
     title: (
       <h1>
-        <b>아이의 목소리</b>로 변환된
+        <b>아이의 목소리</b>를 담은
         <br />
         따뜻한 <b>가족 서약서</b>가 탄생합니다!
       </h1>
@@ -118,11 +118,14 @@ export default function InfoPageStepper() {
                     <Image
                       className="mt-[7rem] max-w-[42.5rem]"
                       src={contents.image}
-                      alt="참여방법"
+                      alt="참여 방법"
                       width={403}
                       height={403}
                     />
                   )}
+                  {/* <a href="https://www.freepik.com/free-vector/curiosity-people-concept-illustration_30576696.htm#page=4&query=choose&position=1&from_view=search&track=sph&uuid=d8125466-63e9-4585-be47-303bb6d57545">Image by storyset</a> on Freepik */}
+                  {/* Image by <a href="https://www.freepik.com/free-vector/flat-design-characters-chatting-dating-app_5380865.htm#page=2&query=profile&position=12&from_view=search&track=sph&uuid=8c04433a-082f-48f1-8188-d49e54678510">Freepik</a> */}
+                  {/* Image by <a href="https://www.freepik.com/free-vector/dating-app-concept-flat-design_5230633.htm#page=3&query=share&position=0&from_view=search&track=sph&uuid=f35b7d49-ee79-4ccc-aaff-af823e188214">Freepik</a> */}
                   {!contents.image && <InfoPledgeCard />}
                 </div>
               );
@@ -146,7 +149,7 @@ export default function InfoPageStepper() {
                     <Image
                       className="mt-[7rem] max-w-[42.5rem]"
                       src={contents.image}
-                      alt="참여방법"
+                      alt="참여 방법"
                       width={403}
                       height={403}
                     />
@@ -221,7 +224,7 @@ export default function InfoPageStepper() {
 
         <button
           className={`w-full h-[8rem] text-[2.4rem] ${
-            !agree ? "bg-[#cccccc] text-white" : "bg-[#F9E9B3] text-black"
+            !agree ? "bg-[#cccccc] text-white" : "bg-[#F9E9B3]"
           }`}
           onClick={() =>
             agree &&
