@@ -2,10 +2,19 @@ import React, { useEffect } from "react";
 
 type KakaoShareButtonProps = {
   url: string;
+  image: string;
+  title: string;
   description: string;
+  btnName: string;
 };
 
-const KakaoShareButton = ({ url, description }: KakaoShareButtonProps) => {
+const KakaoShareButton = ({
+  url,
+  image,
+  title,
+  description,
+  btnName,
+}: KakaoShareButtonProps) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const { Kakao } = window;
@@ -20,12 +29,25 @@ const KakaoShareButton = ({ url, description }: KakaoShareButtonProps) => {
     const { Kakao } = window;
 
     Kakao.Share.sendDefault({
-      objectType: "text",
-      text: description,
-      link: {
-        mobileWebUrl: url,
-        webUrl: url,
+      objectType: "feed",
+      content: {
+        title: title,
+        description: description,
+        imageUrl: image,
+        link: {
+          mobileWebUrl: url,
+          webUrl: url,
+        },
       },
+      buttons: [
+        {
+          title: btnName,
+          link: {
+            mobileWebUrl: url,
+            webUrl: url,
+          },
+        },
+      ],
     });
   };
 

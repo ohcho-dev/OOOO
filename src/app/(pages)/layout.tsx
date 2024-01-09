@@ -5,18 +5,40 @@ import SWRConfigContext from "@/context/SWRConfigContext";
 import { Metadata } from "next";
 import RecoilRootWrapper from "@/context/RecoilContext";
 import Script from "next/script";
-import Toast from "@/components/Toast";
 import Head from "next/head";
 // import KakaoAdfit from "@/util/KakaoAdfit";
 
 const NotoSansKR = Noto_Sans_KR({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Instantgram",
-    template: "Instantgram | %s",
+  title:
+    "우리 가족 서약서(공동 육아 서약서):: 아이의 목소리로 쓰여진 가족의 약속",
+  description:
+    "아이의 목소리로 변환된 따뜻한 '공동육아 서약서'를 만들어보세요. 간단한 키워드만으로 아이의 입장에서 쓰여진 유쾌하고 따뜻한 서약서가 완성됩니다.",
+  openGraph: {
+    title:
+      "우리 가족 서약서(공동 육아 서약서) - 아이의 목소리로 쓰여진 가족의 약속",
+    description: "가족을 향한 진심을 서약서에 담아보세요!",
+    url: "https://oooo-pi.vercel.app",
+    images: [
+      "https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_image.png",
+    ],
+    type: "website",
+    siteName: "육아응원 :: 우리 가족 서약서",
+    locale: "ko_KR",
   },
-  description: "Instantgram Photos",
+  applicationName: "육아응원",
+  keywords: [
+    "공동육아",
+    "서약서",
+    "가족",
+    "아이의 목소리",
+    "따뜻한 메시지",
+    "가족의 약속",
+    "유아",
+    "가족 선물",
+    "육아응원",
+  ],
 };
 
 declare global {
