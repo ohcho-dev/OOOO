@@ -31,7 +31,9 @@ export default function Page() {
 
   const handleRoute = () => {
     if (
-      !window.confirm("저장한 값이 초기화됩니다.\n처음으로 돌아가시겠습니까?")
+      !window.confirm(
+        "확인을 누를 경우 처음부터 다시 진행해야 합니다.\n처음으로 돌아가시겠습니까?"
+      )
     )
       return;
     router.push("/promotion/pledge/form/first");

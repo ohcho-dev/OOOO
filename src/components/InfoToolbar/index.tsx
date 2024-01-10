@@ -60,7 +60,7 @@ export default function InfoToolbar({ title }: InfoToolbarProps) {
       </div>
       <h1 className="text-[2.1rem] flex items-center font-bold">{title}</h1>
 
-      <div className="w-[2.4rem]"></div>
+      <div className="w-[6.3rem]"></div>
     </header>
   );
 }

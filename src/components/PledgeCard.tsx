@@ -21,7 +21,7 @@ export default function PledgeCard({ name }: PledgeCardProps) {
         setCard((prev) => !prev);
       }}
     >
-      <div className="absolute z-10 top-[30rem] left-[50%] translate-x-[-50%] animate-[click_5s_ease-in-out_infinite]">
+      <div className="absolute z-10 top-[30rem] left-[50%] translate-x-[-50%] animate-[click_4s_ease-in-out_infinite]">
         {!card && <Click />}
       </div>
       <div className={`card ${card ? "rotate" : ""}`}>

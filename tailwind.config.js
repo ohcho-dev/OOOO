@@ -210,19 +210,22 @@ module.exports = {
         },
         click: {
           "0%": {
-            opacity: 0,
+            opacity: 0.2,
           },
-          "25%": {
-            opacity: 0,
-          },
-          "50%": {
-            opacity: 0,
-          },
-          "75%": {
+          "10%": {
             opacity: 1,
           },
-          "100%": {
+          "60%": {
+            opacity: 1,
+          },
+          "70%": {
             opacity: 0,
+          },
+          "90%": {
+            opacity: 0,
+          },
+          "100%": {
+            opacity: 0.2,
           },
         },
       },

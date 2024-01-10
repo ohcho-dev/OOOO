@@ -8,7 +8,7 @@ export default function Click() {
       speed={1}
       animationData={LottieLetterJson}
       play
-      style={{ width: "15rem", height: "15rem", margin: " 0 auto" }}
+      style={{ width: "20rem", height: "20rem", margin: " 0 auto" }}
     />
   );
 }

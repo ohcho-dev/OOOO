@@ -58,7 +58,7 @@ export default function Toolbar({ title }: ToolbarProps) {
       </div>
       <h1 className="flex items-center text-[2.1rem]">{title}</h1>
 
-      <div className="w-[2.4rem]"></div>
+      <div className="w-[6.3rem]"></div>
     </header>
   );
 }

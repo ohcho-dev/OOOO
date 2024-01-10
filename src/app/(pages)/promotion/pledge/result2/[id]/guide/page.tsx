@@ -13,7 +13,7 @@ import { copyURL } from "@/util/CopyUrl";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 
 export default function Page() {
@@ -62,7 +62,17 @@ export default function Page() {
     link.click();
   };
 
+  const handleContent = (evt: ChangeEvent<HTMLTextAreaElement>) => {
+    const { value } = evt.target;
+    if (value.length > 300)
+      return alert("이용 후기는 300자 이상 입력이 불가능합니다.");
+    setContent(value);
+  };
+
   const postReview = async () => {
+    if (content.length > 300) {
+      return;
+    }
     const param = {
       page_id: Number(params.id),
       contents: content,
@@ -212,13 +222,17 @@ export default function Page() {
           <textarea
             placeholder="텍스트를 입력해주세요."
             rows={6}
+            maxLength={300}
             value={content}
-            onChange={(evt) => {
-              const { value } = evt.target;
-              setContent(value);
-            }}
+            onChange={(evt) => handleContent(evt)}
             className="block mx-auto w-[44rem] border mt-[5rem] text-[1.6rem] p-[2rem]"
           ></textarea>
+          <div className="text-right pr-[3rem] pt-[1rem] text-[1.6rem]">
+            <span className={content.length >= 300 ? "text-[#F25D24]" : ""}>
+              {content.length}
+            </span>{" "}
+            / 300
+          </div>
           <button
             onClick={postReview}
             className="mt-[2rem] mb-[4.6rem] bg-[#F25D24] text-[2.1rem] text-white w-[20rem] h-[6rem] block mx-auto rounded-[2rem]"

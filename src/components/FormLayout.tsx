@@ -76,6 +76,9 @@ export default function FormLayout(survey: SurveyType) {
     if (formStep > 5 && !mixData.c_id) {
       return alert("성별을 선택해주세요.");
     }
+    if (formStep > 5 && !mixData.sv) {
+      return alert("이름을 입력해주세요.");
+    }
     if (CheckInput(mixData.sv)) {
       return alert(CheckInput(mixData.sv));
     }

@@ -37,7 +37,11 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
     const element = elementRef.current;
 
     if (element) {
-      const canvas = await html2canvas(element);
+      const canvas = await html2canvas(element, {
+        scale: 32,
+        width: 390,
+        height: 624,
+      });
       const imageDataUrl = canvas.toDataURL("image/png");
       setCapturedCard(imageDataUrl);
     }
@@ -54,7 +58,17 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
         <div className="absolute top-[0] left-[0] w-full text-center">
           {pathname.id && (
             <>
-              <div className="text-[1.8rem] font-bold leading-[3rem] text-center mt-[24rem]">
+              <div className="text-[2.4rem] font-bold mt-[10rem]">
+                <span className="text-[#F65B5b]">{name}네</span> 서약서
+              </div>
+              <img
+                src="/paper_bg_text.png"
+                alt="엄마 아빠 함께 약속해요!"
+                width={268}
+                height={64.5}
+                className="w-[26.8rem] mx-auto mt-[0.6rem]"
+              />
+              <div className="text-[1.8rem] font-bold leading-[3rem] text-center mt-[2rem]">
                 우리 가족은{" "}
                 <span className="text-[#F65B5B] text-[3rem]">
                   {answerMood1}
@@ -99,7 +113,17 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
         <div className="absolute top-[0] left-[0] w-full text-center">
           {pathname.id ? (
             <>
-              <div className="text-[1.8rem] font-bold leading-[3rem] text-center mt-[23rem]">
+              <div className="text-[2.4rem] font-bold mt-[10rem]">
+                <span className="text-[#F65B5b]">{name}네</span> 서약서
+              </div>
+              <img
+                src="/paper_bg_text.png"
+                alt="엄마 아빠 함께 약속해요!"
+                width={268}
+                height={64.5}
+                className="w-[26.8rem] mx-auto mt-[0.6rem]"
+              />
+              <div className="text-[1.8rem] font-bold leading-[3rem] text-center mt-[2rem]">
                 우리 가족은{" "}
                 <span className="text-[#F65B5B] text-[3rem]">
                   {answerMood1}
