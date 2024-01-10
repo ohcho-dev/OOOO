@@ -1,9 +1,12 @@
 "use client";
 import {
+  AnswerBabyNameState,
   AnswerMood1State,
   AnswerMood2State,
   AnswerUser1MoodState,
+  AnswerUser1NameState,
   AnswerUser2MoodState,
+  AnswerUser2NameState,
   CapturedCardState,
 } from "@/store/atom";
 import useInterval from "@/util/useInterval";
@@ -25,6 +28,9 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
   const answerMood2 = useRecoilValue(AnswerMood2State);
   const answerUser1Mood = useRecoilValue(AnswerUser1MoodState);
   const answerUser2Mood = useRecoilValue(AnswerUser2MoodState);
+  const answerUser1Name = useRecoilValue(AnswerUser1NameState);
+  const answerUser2Name = useRecoilValue(AnswerUser2NameState);
+  const answerBabyName = useRecoilValue(AnswerBabyNameState);
   const elementRef = useRef<HTMLDivElement>(null);
 
   useInterval(() => {
@@ -49,7 +55,7 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
     <div>
       <div
         ref={elementRef}
-        className={`absolute z-5 w-[39rem] h-[62.4rem] mx-auto bg-[url(/paper.webp)] bg-cover shadow-md rounded-[2rem]`}
+        className={`absolute z-10 w-[39rem] h-[62.4rem] mx-auto bg-[url(/paper.webp)] bg-cover shadow-md rounded-[2rem]`}
       >
         {/* <a href="https://kr.freepik.com/free-vector/hand-painted-watercolor-floral-background_17437651.htm#query=%EA%BD%83&position=23&from_view=search&track=sph&uuid=d1a3578f-7621-42d0-83a1-6369c306975a">작가 coolvector</a> 출처 Freepik
          */}
@@ -85,17 +91,17 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
                 <span className="inline-block pl-[1rem] ml-[-1rem] bg-[url(/bg_blur1.webp)] bg-cover bg-repeat font-bold">
                   {answerUser1Mood}{" "}
                 </span>{" "}
-                엄마 아무개
+                우리 {answerUser2Name.gender} {answerUser2Name.name}
                 <br />
                 <span className="inline-block pl-[1rem] ml-[-1rem] bg-[url(/bg_blur1.webp)] bg-cover bg-repeat font-bold">
                   {answerUser2Mood}{" "}
                 </span>{" "}
-                아빠 홍길동
+                우리 {answerUser1Name.gender} {answerUser1Name.name}
                 <br />
                 <span className="inline-block pl-[1rem] ml-[-1rem] bg-[url(/bg_blur1.webp)] bg-cover bg-repeat font-bold">
                   세상에 하나뿐인{" "}
                 </span>{" "}
-                아들 희망이
+                {answerBabyName.gender} {answerBabyName.name}
               </div>
             </>
           )}

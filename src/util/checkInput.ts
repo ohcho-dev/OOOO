@@ -1,5 +1,5 @@
 export default function CheckInput(text: string = "") {
-  const regex = /^[가-힣a-zA-Z\s/g]+$/;
+  const regex = /^[가-힣\s/g]+$/;
   let status = "";
 
   if (!text) {
@@ -7,11 +7,11 @@ export default function CheckInput(text: string = "") {
     return status;
   }
   if (!regex.test(text)) {
-    status = "한글과 영어만 입력 가능합니다.";
+    status = "한글만 입력 가능합니다.";
     return status;
   }
   if (text.length < 1 || text.length > 6) {
-    status = "1글자 이상 10글자 이하로 입력해주세요.";
+    status = "1글자 이상 6글자 이하로 입력해주세요.";
     return status;
   }
   return status;

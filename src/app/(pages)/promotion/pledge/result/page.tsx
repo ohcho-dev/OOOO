@@ -42,14 +42,18 @@ export default function Page() {
 
   return (
     <div>
-      <div className="text-[2.4rem] text-center font-bold mt-[4rem]">
-        배우자에게 보낼 준비가 되었어요!
-      </div>
+      <Image
+        className="mx-auto w-[11.2rem] mt-[1.3rem]"
+        src="/logo.webp"
+        alt="육아응원"
+        width={112}
+        height={41.75}
+      />
       <div>
         <PledgeCardWrap name={answerUser1[7].sv} />
       </div>
       <div
-        className="fixed w-full max-w-[52rem] text-center bottom-[10rem] text-[1.8rem] underline"
+        className="relative z-30 w-full max-w-[52rem] text-center mt-[-10rem] text-[1.8rem] underline"
         onClick={handleRoute}
       >
         다시 만들고 싶으세요?

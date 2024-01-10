@@ -52,16 +52,14 @@ export default function PledgeCard({ name }: PledgeCardProps) {
             )}
             {!params.id ? (
               <>
-                <div className="mt-[13rem] text-[2.1rem] text-center leading-[3.6rem] font-bold">
-                  두근두근!
+                <div className="mt-[14rem] text-[2.1rem] text-center leading-[3.6rem] font-bold">
+                  배우자에게 공유하여
                   <br />
-                  배우자에게 공유하면
-                  <br />
-                  어떤 서약서가 만들어질까요?
+                  가족 서약서 참여를 요청해주세요!
                 </div>
 
-                <div className="mt-[5rem] text-[1.6rem] text-center">
-                  2024.01.05
+                <div className="mt-[5rem] text-[2.1rem] text-center font-bold">
+                  어떤 서약서가 탄생할까요?
                 </div>
               </>
             ) : (

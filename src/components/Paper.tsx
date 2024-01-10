@@ -2,11 +2,14 @@
 import PledgeCardWrap from "@/components/PledgeCardWrap";
 import { ResultDataType, SurveyListType } from "@/model/survey";
 import {
+  AnswerBabyNameState,
   AnswerMood1State,
   AnswerMood2State,
   AnswerUser1MoodState,
+  AnswerUser1NameState,
   AnswerUser1State,
   AnswerUser2MoodState,
+  AnswerUser2NameState,
   AnswerUser2State,
 } from "@/store/atom";
 import { useRecoilState } from "recoil";
@@ -29,6 +32,12 @@ export default function PaperPage({ data, survey1, survey2 }: PaperPageProps) {
     useRecoilState(AnswerUser1MoodState);
   const [answerUser2Mood, setAnswerUser2Mood] =
     useRecoilState(AnswerUser2MoodState);
+  const [answerUser1Name, setAnswerUser1Name] =
+    useRecoilState(AnswerUser1NameState);
+  const [answerUser2Name, setAnswerUser2Name] =
+    useRecoilState(AnswerUser2NameState);
+  const [answerBabyName, setAnswerBabyName] =
+    useRecoilState(AnswerBabyNameState);
 
   useEffect(() => {
     const url = window?.location.href;
@@ -78,6 +87,36 @@ export default function PaperPage({ data, survey1, survey2 }: PaperPageProps) {
         (item) => item.answer_id === answerUser2[0].c_id
       )[0].answer_value;
       setAnswerUser2Mood(text);
+    }
+    if (answerUser1[6]?.c_id && answerUser1[6]?.sv) {
+      const answerArray = survey1[6].choiceAnswer;
+      const text = answerArray.filter(
+        (item) => item.answer_id === answerUser1[6].c_id
+      )[0].answer_value;
+      setAnswerUser1Name({
+        gender: text,
+        name: answerUser1[6].sv,
+      });
+    }
+    if (answerUser2[6]?.c_id && answerUser2[6]?.sv) {
+      const answerArray = survey2[6].choiceAnswer;
+      const text = answerArray.filter(
+        (item) => item.answer_id === answerUser2[6].c_id
+      )[0].answer_value;
+      setAnswerUser2Name({
+        gender: text,
+        name: answerUser2[6].sv,
+      });
+    }
+    if (answerUser1[7]?.c_id && answerUser1[7]?.sv) {
+      const answerArray = survey1[7].choiceAnswer;
+      const text = answerArray.filter(
+        (item) => item.answer_id === answerUser1[7].c_id
+      )[0].answer_value;
+      setAnswerBabyName({
+        gender: text,
+        name: answerUser1[7].sv,
+      });
     }
   }, [answerUser1, answerUser2]);
 

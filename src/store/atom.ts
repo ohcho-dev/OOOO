@@ -56,3 +56,18 @@ export const AnswerUser2MoodState = atom({
   key: "AnswerUser2MoodState",
   default: "" as string,
 });
+export const AnswerUser1NameState = atom({
+  key: "AnswerUser1NameState",
+  default: {
+    gender: "",
+    name: "",
+  },
+});
+export const AnswerUser2NameState = atom({
+  key: "AnswerUser2NameState",
+  default: { gender: "", name: "" },
+});
+export const AnswerBabyNameState = atom({
+  key: "AnswerBabyNameState",
+  default: { gender: "", name: "" },
+});
