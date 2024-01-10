@@ -25,7 +25,7 @@ export default function MainPledgeCard() {
         <div className="card-front w-[12rem] h-[19.2rem]">
           <div className="relative w-[12rem] h-[19.2rem]">
             <Image
-              src="/card_main_bg.png"
+              src="/card_main_bg.webp"
               alt="서약서 카드"
               width="120"
               height="192"
@@ -47,7 +47,7 @@ export default function MainPledgeCard() {
         <div className="card-back w-[12rem]">
           <div className="relative w-[12rem] h-[19.2rem]">
             <Image
-              src="/card_main_bg.png"
+              src="/card_main_bg.webp"
               alt="서약서 카드"
               width="120"
               height="192"

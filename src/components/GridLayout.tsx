@@ -40,7 +40,7 @@ export default function GridLayout({
 
       {width && width < 521 && scroll && (
         <div className="relative left-[88vw] bottom-[8rem] w-[4.2rem] h-[4.2rem] animate-bounce">
-          <Image src="/scroll.png" alt="스크롤하세요" width={42} height={42} />
+          <Image src="/scroll.webp" alt="스크롤하세요" width={42} height={42} />
         </div>
       )}
     </>

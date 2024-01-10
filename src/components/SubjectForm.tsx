@@ -41,7 +41,7 @@ export default function SubjectForm({
           className="absolute bottom-[6.5rem] right-[1rem]"
           onClick={() => handleMixData("")}
         >
-          <Image src="/reset.png" alt="초기화" width={20} height={20} />
+          <Image src="/reset.webp" alt="초기화" width={20} height={20} />
         </div>
       )}
     </section>

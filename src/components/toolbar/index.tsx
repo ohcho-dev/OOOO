@@ -49,7 +49,7 @@ export default function Toolbar({ title }: ToolbarProps) {
     >
       <div onClick={handleBackButton} className="px-[1.8rem] py-[1.6rem]">
         <Image
-          src="/back.png"
+          src="/back.webp"
           alt="뒤로가기"
           width={27}
           height={15}

@@ -92,7 +92,7 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
     <div className="relative overflow-y-scroll overflow-x-hidden w-[52rem] h-[100svh] max-h-calcDocumentPage text-[2rem] leading-[2.8rem]">
       <div
         ref={elementRef}
-        className="absolute top-[0] z-10 bg-[url(/paper_bg.png)] w-[52rem] h-[190.7rem] bg-cover bg-center p-[3rem] leading-[2.8rem]"
+        className="absolute top-[0] z-10 bg-[url(/paper_bg.webp)] w-[52rem] h-[190.7rem] bg-cover bg-center p-[3rem] leading-[2.8rem]"
       >
         {/* 출처 <a href="https://kr.freepik.com/free-vector/hand-drawn-doodle-pattern_31194738.htm#query=baby%20pattern&position=1&from_view=search&track=ais&uuid=3e5c0b1c-f6b4-4c54-b071-1a01d40423dc">Freepik</a> */}
         {/* 출처 <a href="https://kr.freepik.com/free-vector/pack-of-hand-drawn-baby-items_978632.htm#query=toy%20line&position=13&from_view=search&track=ais&uuid=05ca6458-5159-4250-b46d-6b267a0e120d">Freepik</a> */}
@@ -109,19 +109,19 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
           {/* 세상에서 가장 ~~한 우리 ~~ */}
           <div className="mt-[20.4rem] text-[2.2rem] font-bold leading-[3.6rem]">
             <div>
-              <span className="bg-[url(/bg_blur2.png)] bg-repeat pl-[1rem] ml-[-1rem]">
+              <span className="bg-[url(/bg_blur2.webp)] bg-repeat pl-[1rem] ml-[-1rem]">
                 {newAnswerUser1[0].c_value}{" "}
               </span>
               우리 {newAnswerUser2[6].c_value} {newAnswerUser2[6].sv || ""}
             </div>
             <div>
-              <span className="bg-[url(/bg_blur2.png)] bg-repeat pl-[1rem] ml-[-1rem]">
+              <span className="bg-[url(/bg_blur2.webp)] bg-repeat pl-[1rem] ml-[-1rem]">
                 {newAnswerUser2[0].c_value}{" "}
               </span>
               우리 {newAnswerUser1[6].c_value} {newAnswerUser1[6].sv || ""}
             </div>
             <div>
-              <span className="bg-[url(/bg_blur2.png)] bg-repeat pl-[1rem] ml-[-1rem]">
+              <span className="bg-[url(/bg_blur2.webp)] bg-repeat pl-[1rem] ml-[-1rem]">
                 세상에 하나뿐인{" "}
               </span>
               {newAnswerUser1[7].c_value} {newAnswerUser1[7].sv || ""}
@@ -248,7 +248,7 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
           </div>
         </div>
       </div>
-      <div className="absolute top-[0] z-20 bg-[url(/paper_bg.png)] w-[52rem] h-[190.7rem] bg-cover bg-center p-[3rem] leading-[2.8rem]">
+      <div className="absolute top-[0] z-20 bg-[url(/paper_bg.webp)] w-[52rem] h-[190.7rem] bg-cover bg-center p-[3rem] leading-[2.8rem]">
         {/* 출처 <a href="https://kr.freepik.com/free-vector/hand-drawn-doodle-pattern_31194738.htm#query=baby%20pattern&position=1&from_view=search&track=ais&uuid=3e5c0b1c-f6b4-4c54-b071-1a01d40423dc">Freepik</a> */}
         {/* 출처 <a href="https://kr.freepik.com/free-vector/pack-of-hand-drawn-baby-items_978632.htm#query=toy%20line&position=13&from_view=search&track=ais&uuid=05ca6458-5159-4250-b46d-6b267a0e120d">Freepik</a> */}
         {/* <a href="https://kr.freepik.com/free-vector/father-mother-backpacking-to-take-her-daughter-out-for-a-trip_13575796.htm#page=3&query=%EA%B0%80%EC%A1%B1&position=36&from_view=search&track=sph&uuid=c75d9118-9140-4932-a5b6-dcd7e648cfbd">작가 jcomp</a> 출처 Freepik */}
@@ -264,19 +264,19 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
           {/* 세상에서 가장 ~~한 우리 ~~ */}
           <div className="mt-[20.4rem] text-[2.2rem] font-bold leading-[3.6rem]">
             <div>
-              <span className="bg-[url(/bg_blur2.png)] bg-repeat pl-[1rem] ml-[-1rem]">
+              <span className="bg-[url(/bg_blur2.webp)] bg-repeat pl-[1rem] ml-[-1rem]">
                 {newAnswerUser1[0].c_value}{" "}
               </span>
               우리 {newAnswerUser2[6].c_value} {newAnswerUser2[6].sv || ""}
             </div>
             <div>
-              <span className="bg-[url(/bg_blur2.png)] bg-repeat pl-[1rem] ml-[-1rem]">
+              <span className="bg-[url(/bg_blur2.webp)] bg-repeat pl-[1rem] ml-[-1rem]">
                 {newAnswerUser2[0].c_value}{" "}
               </span>
               우리 {newAnswerUser1[6].c_value} {newAnswerUser1[6].sv || ""}
             </div>
             <div>
-              <span className="bg-[url(/bg_blur2.png)] bg-repeat pl-[1rem] ml-[-1rem]">
+              <span className="bg-[url(/bg_blur2.webp)] bg-repeat pl-[1rem] ml-[-1rem]">
                 세상에 하나뿐인{" "}
               </span>
               {newAnswerUser1[7].c_value} {newAnswerUser1[7].sv || ""}

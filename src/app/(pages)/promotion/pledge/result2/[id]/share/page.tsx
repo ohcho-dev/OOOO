@@ -33,7 +33,7 @@ export default function Page() {
           <div className="py-[1rem]">
             <Image
               className="mx-auto w-[12rem] "
-              src="/logo.png"
+              src="/logo.webp"
               alt="육아응원"
               width={162}
               height={81}
@@ -46,7 +46,7 @@ export default function Page() {
           </div>
           <Image
             className="mx-auto w-[36rem]"
-            src="/share.png"
+            src="/share.webp"
             alt="공유해보세요"
             width={366}
             height={366}
@@ -72,7 +72,7 @@ export default function Page() {
               title="우리 가족 서약서 도착! 지금 바로 확인하세요!"
               description="육아응원 :: 가족 공동 서약서"
               btnName="읽어보기"
-              image="https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_user2.png"
+              image="https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_user2.webp"
               url={`https://${url}`}
             />
             {openToast && <Toast text="클립보드에 저장되었습니다." />}
@@ -84,7 +84,7 @@ export default function Page() {
               }}
             >
               <div className="w-[6rem] h-[6rem] flex justify-center items-center">
-                <Image src="/link.png" alt="URL 복사" width={60} height={60} />
+                <Image src="/link.webp" alt="URL 복사" width={60} height={60} />
               </div>
               <span className="block mt-[0.8rem] text-[1.6rem]">
                 URL

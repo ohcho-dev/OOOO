@@ -55,7 +55,7 @@ const ImgUploader: React.FC<ImgUploaderProp> = ({
         src={
           fileURL
             ? fileURL
-            : "https://cdn-icons-png.flaticon.com/512/1555/1555492.png"
+            : "https://cdn-icons-png.flaticon.com/512/1555/1555492.webp"
         }
         alt=""
         onClick={(event) => {

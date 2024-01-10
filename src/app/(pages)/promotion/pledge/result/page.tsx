@@ -67,7 +67,7 @@ export default function Page() {
               title="배우자님이 우리 가족 서약서 캠페인 참여를 요청하였습니다."
               description="육아응원 :: 가족 공동 서약서"
               btnName="함께 참여하기"
-              image="https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_user_1.png"
+              image="https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_user_1.webp"
               url={`https://${url}`}
             />
             {openToast && <Toast text="클립보드에 저장되었습니다." />}
@@ -79,7 +79,7 @@ export default function Page() {
               }}
             >
               <div className="w-[6rem] h-[6rem] flex justify-center items-center">
-                <Image src="/link.png" alt="URL 복사" width={60} height={60} />
+                <Image src="/link.webp" alt="URL 복사" width={60} height={60} />
               </div>
               <span className="block mt-[0.8rem] text-[1.6rem]">
                 URL

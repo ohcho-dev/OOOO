@@ -86,7 +86,7 @@ export default function PaperPage({ data, survey1, survey2 }: PaperPageProps) {
       <div className="py-[1rem]">
         <Image
           className="mx-auto w-[12rem] "
-          src="/logo.png"
+          src="/logo.webp"
           alt="육아응원"
           width={162}
           height={81}

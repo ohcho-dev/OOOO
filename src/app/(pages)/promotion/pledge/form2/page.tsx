@@ -18,7 +18,7 @@ export default function Page() {
       </h1>
       <Image
         className="mx-auto mt-[6.9rem] w-[33.1rem] h-[33.7rem]"
-        src="/info1.png"
+        src="/info1.webp"
         alt="mock-up"
         width={331}
         height={337}

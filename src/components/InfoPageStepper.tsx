@@ -18,7 +18,7 @@ const STEPS_1 = [
         <b>가장 어울리는 단어</b>를 골라주세요!
       </h1>
     ),
-    image: "/info1.png",
+    image: "/info1.webp",
     left: "left-[0]",
   },
   {
@@ -29,7 +29,7 @@ const STEPS_1 = [
         <br />내 <b>배우자에게 공유</b>해주세요!
       </h1>
     ),
-    image: "/info2.png",
+    image: "/info2.webp",
     left: "left-[33.3%]",
   },
   {
@@ -55,7 +55,7 @@ const STEPS_2 = [
         <b>가장 어울리는 단어</b>를 골라주세요!
       </h1>
     ),
-    image: "/info1.png",
+    image: "/info1.webp",
   },
   {
     id: 1,
@@ -77,7 +77,7 @@ const STEPS_2 = [
         함께 서약서를 읽어보세요!
       </h1>
     ),
-    image: "/info3.png",
+    image: "/info3.webp",
   },
 ];
 export default function InfoPageStepper() {
@@ -191,7 +191,7 @@ export default function InfoPageStepper() {
             <div className="flex" onClick={() => setAgree(!agree)}>
               <div className="w-[3rem] h-[3rem]">
                 <Image
-                  src={agree ? "/check_on.png" : "/check_off.png"}
+                  src={agree ? "/check_on.webp" : "/check_off.webp"}
                   alt="개인정보 동의"
                   width={30}
                   height={30}
@@ -212,7 +212,7 @@ export default function InfoPageStepper() {
             >
               <Image
                 className="rotate-180"
-                src="/back.png"
+                src="/back.webp"
                 alt="자세히 보기"
                 width={18}
                 height={24}

@@ -25,7 +25,7 @@ export default function InfoPledgeCard() {
         <div className="card-front w-[24.4rem] h-[39.2rem]">
           <div className="relative w-[24.4rem] h-[39.2rem]">
             <Image
-              src="/card_main_bg.png"
+              src="/card_main_bg.webp"
               alt="서약서 카드"
               width="244"
               height="392"
@@ -47,7 +47,7 @@ export default function InfoPledgeCard() {
         <div className="card-back w-[24.4rem]">
           <div className="relative w-[24.4rem] h-[39.2rem]">
             <Image
-              src="/card_main_bg.png"
+              src="/card_main_bg.webp"
               alt="서약서 카드"
               width="244"
               height="392"

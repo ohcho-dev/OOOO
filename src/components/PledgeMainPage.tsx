@@ -33,14 +33,14 @@ export default function PledgeMainPage({ count = 0 }) {
       <div className="flex flex-col items-center justify-center h-full">
         <Image
           className="w-[16.2rem] h-[5.6rem]"
-          src="/logo.png"
+          src="/logo.webp"
           alt="육아응원"
           width={162}
           height={56}
         />
         <Image
           className="w-[2.4rem] h-[2.4rem] mt-[2rem]"
-          src="/icon_x.png"
+          src="/icon_x.webp"
           alt="colaboration"
           width={24}
           height={24}
@@ -51,7 +51,7 @@ export default function PledgeMainPage({ count = 0 }) {
 
         <Image
           className="w-[29.8rem] h-[26.7rem] mt-[1.5rem]"
-          src="/text_heart.png"
+          src="/text_heart.webp"
           alt="마음을알려줘"
           width={298}
           height={267}

@@ -27,7 +27,7 @@ export default function FormButton({
     >
       <Image
         loading="lazy"
-        src={`${status ? "/check_on.png" : "/check_off.png"}`}
+        src={`${status ? "/check_on.webp" : "/check_off.webp"}`}
         alt="checkbox"
         className="aspect-square object-contain object-center w-[3rem] fill-stone-300 overflow-hidden shrink-0 max-w-full"
         width={30}

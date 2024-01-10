@@ -104,7 +104,7 @@ export default function Page() {
         </div>
 
         <div className="bg-[#FFF8E0] pt-[4.3rem] pb-[5.9rem] relative">
-          <div className="w-[5.7rem] h-[5.1rem] bg-[url(/star.png)] bg-no-repeat bg-blend-darken bg-[#FFF8E0] absolute top-[1.5rem] left-[16.5rem]" />
+          <div className="w-[5.7rem] h-[5.1rem] bg-[url(/star.webp)] bg-no-repeat bg-blend-darken bg-[#FFF8E0] absolute top-[1.5rem] left-[16.5rem]" />
           {/* Image by <a href="https://www.freepik.com/free-vector/hand-drawn-sparkling-stars-collection_16139383.htm#query=%EB%B3%84%ED%91%9C&position=23&from_view=search&track=ais&uuid=051eef59-fe08-4721-adf4-1c1e77749091">Freepik</a> */}
           <div className="relative w-full text-[#F25D24] text-center text-[2.4rem] font-bold">
             Step 2
@@ -119,7 +119,7 @@ export default function Page() {
                 <div>
                   <Image
                     className="w-[20.3rem] h-[43.9rem] mx-auto"
-                    src="/guide_1.png"
+                    src="/guide_1.webp"
                     alt="카카오톡 프로필 변경 항목을 클릭해주세요."
                     width={203}
                     height={439}
@@ -129,7 +129,7 @@ export default function Page() {
                   </div>
                   <Image
                     className="w-[2.3rem] h-[4.7rem] absolute bottom-[6rem] left-[24rem] animate-bounce"
-                    src="/hand.png"
+                    src="/hand.webp"
                     alt="클릭하세요."
                     width={23}
                     height={47}
@@ -139,7 +139,7 @@ export default function Page() {
                 <div>
                   <Image
                     className="w-[20.4rem] h-[43.9rem] mx-auto"
-                    src="/guide_2.png"
+                    src="/guide_2.webp"
                     alt="카카오톡 프로필 변경 항목을 클릭해주세요."
                     width={204}
                     height={439}
@@ -150,7 +150,7 @@ export default function Page() {
                   </div>
                   <Image
                     className="w-[2.3rem] h-[4.7rem] absolute bottom-[5rem] left-[29.2rem] animate-bounce"
-                    src="/hand.png"
+                    src="/hand.webp"
                     alt="클릭하세요."
                     width={23}
                     height={47}
@@ -160,7 +160,7 @@ export default function Page() {
                 <div>
                   <Image
                     className="w-[20.5rem] h-[43.9rem] mx-auto"
-                    src="/guide_3.png"
+                    src="/guide_3.webp"
                     alt="카카오톡 프로필 변경 항목을 클릭해주세요."
                     width={205}
                     height={439}
@@ -171,7 +171,7 @@ export default function Page() {
                   </div>
                   <Image
                     className="w-[2.3rem] h-[4.7rem] absolute top-[3.5rem] left-[33rem] animate-bounce"
-                    src="/hand.png"
+                    src="/hand.webp"
                     alt="클릭하세요."
                     width={23}
                     height={47}
@@ -181,7 +181,7 @@ export default function Page() {
                 <div>
                   <Image
                     className="w-[20.5rem] h-[43.9rem] mx-auto"
-                    src="/guide_4.png"
+                    src="/guide_4.webp"
                     alt="카카오톡 프로필 변경 항목을 클릭해주세요."
                     width={203}
                     height={439}
@@ -257,7 +257,7 @@ export default function Page() {
                 title="우리 가족만의 서약서를 만들어보세요!"
                 description="육아응원 :: 가족 공동 서약서"
                 btnName="서약서 만들기"
-                image="https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_main.png"
+                image="https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_main.webp"
                 url={window?.location.origin}
               />
             )}
@@ -268,7 +268,7 @@ export default function Page() {
               }}
             >
               <div className="w-[6rem] h-[6rem] flex justify-center items-center">
-                <Image src="/link.png" alt="URL 복사" width={60} height={60} />
+                <Image src="/link.webp" alt="URL 복사" width={60} height={60} />
               </div>
               <span className="block mt-[0.8rem] text-[1.6rem]">
                 URL

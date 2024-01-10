@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: "가족을 향한 진심을 서약서에 담아보세요!",
     url: "https://oooo-pi.vercel.app",
     images: [
-      "https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_image.png",
+      "https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_image.webp",
     ],
     type: "website",
     siteName: "육아응원 :: 우리 가족 서약서",
@@ -56,40 +56,40 @@ export default function RootLayout({
     <html lang="ko-KR" className={NotoSansKR.className}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preload" href="/logo_white.png" as="image" />
-        <link rel="preload" href="/logo.png" as="image" />
-        <link rel="preload" href="/logo1.png" as="image" />
-        <link rel="preload" href="/logo3.png" as="image" />
-        <link rel="preload" href="/logo3_1.png" as="image" />
-        <link rel="preload" href="/logo4.png" as="image" />
+        <link rel="preload" href="/logo_white.webp" as="image" />
+        <link rel="preload" href="/logo.webp" as="image" />
+        <link rel="preload" href="/logo1.webp" as="image" />
+        <link rel="preload" href="/logo3.webp" as="image" />
+        <link rel="preload" href="/logo3_1.webp" as="image" />
+        <link rel="preload" href="/logo4.webp" as="image" />
 
-        <link rel="preload" href="/text_heart.png" as="image" />
-        <link rel="preload" href="/text_mother_father.png" as="image" />
-        <link rel="preload" href="/bg_blur1.png" as="image" />
-        <link rel="preload" href="/bg_blur2.png" as="image" />
-        <link rel="preload" href="/bg.png" as="image" />
-        <link rel="preload" href="/card_main_bg.png" as="image" />
-        <link rel="preload" href="/card1.png" as="image" />
+        <link rel="preload" href="/text_heart.webp" as="image" />
+        <link rel="preload" href="/text_mother_father.webp" as="image" />
+        <link rel="preload" href="/bg_blur1.webp" as="image" />
+        <link rel="preload" href="/bg_blur2.webp" as="image" />
+        <link rel="preload" href="/bg.webp" as="image" />
+        <link rel="preload" href="/card_main_bg.webp" as="image" />
+        <link rel="preload" href="/card1.webp" as="image" />
         <link rel="preload" href="/card2.svg" as="image" />
-        <link rel="preload" href="/check_off.png" as="image" />
-        <link rel="preload" href="/check_on.png" as="image" />
-        <link rel="preload" href="/guide_1.png" as="image" />
-        <link rel="preload" href="/guide_2.png" as="image" />
-        <link rel="preload" href="/guide_3.png" as="image" />
-        <link rel="preload" href="/guide_4.png" as="image" />
-        <link rel="preload" href="/hand.png" as="image" />
-        <link rel="preload" href="/info1.png" as="image" />
-        <link rel="preload" href="/info2.png" as="image" />
-        <link rel="preload" href="/info3.png" as="image" />
-        <link rel="preload" href="/letter_bg.png" as="image" />
+        <link rel="preload" href="/check_off.webp" as="image" />
+        <link rel="preload" href="/check_on.webp" as="image" />
+        <link rel="preload" href="/guide_1.webp" as="image" />
+        <link rel="preload" href="/guide_2.webp" as="image" />
+        <link rel="preload" href="/guide_3.webp" as="image" />
+        <link rel="preload" href="/guide_4.webp" as="image" />
+        <link rel="preload" href="/hand.webp" as="image" />
+        <link rel="preload" href="/info1.webp" as="image" />
+        <link rel="preload" href="/info2.webp" as="image" />
+        <link rel="preload" href="/info3.webp" as="image" />
+        <link rel="preload" href="/letter_bg.webp" as="image" />
 
-        <link rel="preload" href="/paper_bg.png" as="image" />
-        <link rel="preload" href="/paper.png" as="image" />
-        <link rel="preload" href="/profile_guid.png" as="image" />
-        <link rel="preload" href="/receiver_bg.png" as="image" />
-        <link rel="preload" href="/result_bg.png" as="image" />
-        <link rel="preload" href="/share.png" as="image" />
-        <link rel="preload" href="/star.png" as="image" />
+        <link rel="preload" href="/paper_bg.webp" as="image" />
+        <link rel="preload" href="/paper.webp" as="image" />
+        <link rel="preload" href="/profile_guid.webp" as="image" />
+        <link rel="preload" href="/receiver_bg.webp" as="image" />
+        <link rel="preload" href="/result_bg.webp" as="image" />
+        <link rel="preload" href="/share.webp" as="image" />
+        <link rel="preload" href="/star.webp" as="image" />
       </Head>
       <body suppressHydrationWarning={true}>
         <Script

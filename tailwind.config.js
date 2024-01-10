@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "info-bg": "url('/info_bg.png')",
+        "info-bg": "url('/info_bg.webp')",
       },
       dropShadow: {
         red: "0 0 0.5rem rgba(242, 160, 153, 1)",

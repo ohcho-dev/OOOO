@@ -49,7 +49,7 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
     <div>
       <div
         ref={elementRef}
-        className={`absolute z-5 w-[39rem] h-[62.4rem] mx-auto bg-[url(/paper.png)] bg-cover shadow-md rounded-[2rem]`}
+        className={`absolute z-5 w-[39rem] h-[62.4rem] mx-auto bg-[url(/paper.webp)] bg-cover shadow-md rounded-[2rem]`}
       >
         {/* <a href="https://kr.freepik.com/free-vector/hand-painted-watercolor-floral-background_17437651.htm#query=%EA%BD%83&position=23&from_view=search&track=sph&uuid=d1a3578f-7621-42d0-83a1-6369c306975a">작가 coolvector</a> 출처 Freepik
          */}
@@ -60,7 +60,7 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
                 <span className="text-[#F65B5b]">{name}네</span> 서약서
               </div>
               <img
-                src="/paper_bg_text.png"
+                src="/paper_bg_text.webp"
                 alt="엄마 아빠 함께 약속해요!"
                 width={268}
                 height={64.5}
@@ -82,17 +82,17 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
                 아래와 같이 서약합니다.
               </div>
               <div className="text-[2.2rem] leading-[3.6rem] text-center mt-[15.5rem]">
-                <span className="inline-block pl-[1rem] ml-[-1rem] bg-[url(/bg_blur1.png)] bg-cover bg-repeat font-bold">
+                <span className="inline-block pl-[1rem] ml-[-1rem] bg-[url(/bg_blur1.webp)] bg-cover bg-repeat font-bold">
                   {answerUser1Mood}{" "}
                 </span>{" "}
                 엄마 아무개
                 <br />
-                <span className="inline-block pl-[1rem] ml-[-1rem] bg-[url(/bg_blur1.png)] bg-cover bg-repeat font-bold">
+                <span className="inline-block pl-[1rem] ml-[-1rem] bg-[url(/bg_blur1.webp)] bg-cover bg-repeat font-bold">
                   {answerUser2Mood}{" "}
                 </span>{" "}
                 아빠 홍길동
                 <br />
-                <span className="inline-block pl-[1rem] ml-[-1rem] bg-[url(/bg_blur1.png)] bg-cover bg-repeat font-bold">
+                <span className="inline-block pl-[1rem] ml-[-1rem] bg-[url(/bg_blur1.webp)] bg-cover bg-repeat font-bold">
                   세상에 하나뿐인{" "}
                 </span>{" "}
                 아들 희망이
@@ -104,7 +104,7 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
       </div>
 
       <div
-        className={`relative z-10 w-[39rem] h-[62.4rem] mx-auto bg-[url(/paper.png)] bg-cover shadow-md rounded-[2rem]`}
+        className={`relative z-10 w-[39rem] h-[62.4rem] mx-auto bg-[url(/paper.webp)] bg-cover shadow-md rounded-[2rem]`}
       >
         {/* <a href="https://kr.freepik.com/free-vector/hand-painted-watercolor-floral-background_17437651.htm#query=%EA%BD%83&position=23&from_view=search&track=sph&uuid=d1a3578f-7621-42d0-83a1-6369c306975a">작가 coolvector</a> 출처 Freepik
          */}
@@ -115,7 +115,7 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
                 <span className="text-[#F65B5b]">{name}네</span> 서약서
               </div>
               <img
-                src="/paper_bg_text.png"
+                src="/paper_bg_text.webp"
                 alt="엄마 아빠 함께 약속해요!"
                 width={268}
                 height={64.5}
@@ -155,7 +155,7 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
                 <span className="text-[#F65B5b]">{name}네</span> 서약서
               </div>
               <img
-                src="/paper_bg_text.png"
+                src="/paper_bg_text.webp"
                 alt="엄마 아빠 함께 약속해요!"
                 width={268}
                 height={64.5}
@@ -168,7 +168,7 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
               </div>
               <Image
                 className="mt-[4rem] mx-auto w-[9rem] h-[6.5rem]"
-                src="/card1.png"
+                src="/card1.webp"
                 alt="서약서"
                 width={90}
                 height={65}

@@ -26,9 +26,9 @@ export default function PledgeCard({ name }: PledgeCardProps) {
       </div>
       <div className={`card ${card ? "rotate" : ""}`}>
         <div className="card-front">
-          <div className="pb-[2rem] relative w-[39rem] h-[62.4rem] mx-auto bg-[url(/letter_bg.png)] bg-cover shadow-md rounded-[2rem] z-30">
+          <div className="pb-[2rem] relative w-[39rem] h-[62.4rem] mx-auto bg-[url(/letter_bg.webp)] bg-cover shadow-md rounded-[2rem] z-30">
             <Image
-              src="/logo_white.png"
+              src="/logo_white.webp"
               alt="육아응원"
               className="pt-[2rem] w-[6rem] mx-auto mt-[2.4rem]"
               width={162}
