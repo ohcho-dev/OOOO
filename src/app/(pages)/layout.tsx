@@ -70,7 +70,7 @@ export default function RootLayout({
         <link rel="preload" href="/bg.webp" as="image" />
         <link rel="preload" href="/card_main_bg.webp" as="image" />
         <link rel="preload" href="/card1.webp" as="image" />
-        <link rel="preload" href="/card2.svg" as="image" />
+        <link rel="preload" href="/card2.webp" as="image" />
         <link rel="preload" href="/check_off.webp" as="image" />
         <link rel="preload" href="/check_on.webp" as="image" />
         <link rel="preload" href="/guide_1.webp" as="image" />

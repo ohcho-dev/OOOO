@@ -147,7 +147,7 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
               >
                 서약서 보기
               </button>
-              <div className="bg-[#F9E9B3] w-[14.5rem] h-[14.5rem] bg-[url(/card2.svg)] bg-no-repeat bg-cover mx-auto mt-[5rem] bg-blend-darken" />
+              <div className="bg-[#F9E9B3] w-[14.5rem] h-[14.5rem] bg-[url(/card2.webp)] bg-no-repeat bg-cover mx-auto mt-[5rem] bg-blend-darken" />
             </>
           ) : (
             <>
@@ -173,7 +173,7 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
                 width={90}
                 height={65}
               />
-              <div className="bg-[#F9E9B3] w-[14.5rem] h-[14.5rem] bg-[url(/card2.svg)] bg-no-repeat bg-cover mx-auto mt-[7rem] bg-blend-darken" />
+              <div className="bg-[#F9E9B3] w-[14.5rem] h-[14.5rem] bg-[url(/card2.webp)] bg-no-repeat bg-cover mx-auto mt-[7rem] bg-blend-darken" />
             </>
           )}
           {/* <a href="https://kr.freepik.com/free-vector/father-mother-backpacking-to-take-her-daughter-out-for-a-trip_13575796.htm#page=3&query=%EA%B0%80%EC%A1%B1&position=36&from_view=search&track=sph&uuid=c75d9118-9140-4932-a5b6-dcd7e648cfbd">작가 jcomp</a> 출처 Freepik */}
