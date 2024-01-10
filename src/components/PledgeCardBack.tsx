@@ -153,7 +153,17 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
             </>
           ) : (
             <>
-              <div className="text-[2rem] font-bold leading-[3.5rem] mt-[23rem]">
+              <div className="text-[2.4rem] font-bold mt-[10rem]">
+                <span className="text-[#F65B5b]">{name}네</span> 서약서
+              </div>
+              <img
+                src="/paper_bg_text.png"
+                alt="엄마 아빠 함께 약속해요!"
+                width={268}
+                height={64.5}
+                className="w-[26.8rem] mx-auto mt-[0.6rem]"
+              />
+              <div className="text-[2rem] font-bold leading-[3.5rem] mt-[2rem]">
                 화목한 가정을 만들기 위해
                 <br />
                 아래와 같이 서약합니다.
