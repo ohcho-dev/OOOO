@@ -78,7 +78,7 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
     router.push(`/promotion/pledge/form2/first?${searchParams}`);
   };
   return (
-    <div className="w-full h-[100svh]">
+    <div className="w-full h-[100dvh]">
       <div className="pt-[8rem]">
         <div className="overflow-y-auto max-h-calcResultPage pb-[10rem]">
           {survey2.map((survey) => (

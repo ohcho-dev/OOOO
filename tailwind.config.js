@@ -18,9 +18,9 @@ module.exports = {
         red: "0 0 0.5rem rgba(242, 160, 153, 1)",
       },
       maxHeight: {
-        calc: "calc(100svh - 32.1rem)",
-        calcResultPage: "calc(100svh - 8rem)",
-        calcDocumentPage: "calc(100svh - 8rem - 6.7rem)",
+        calc: "calc(100dvh - 32.1rem)",
+        calcResultPage: "calc(100dvh - 8rem)",
+        calcDocumentPage: "calc(100dvh - 8rem - 6.7rem)",
       },
       keyframes: {
         fadeIn: {

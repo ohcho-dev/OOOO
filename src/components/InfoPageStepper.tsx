@@ -98,14 +98,14 @@ export default function InfoPageStepper() {
   };
 
   return (
-    <div className="h-[100svh] flex flex-col justify-between items-center">
+    <div className="h-[100dvh] flex flex-col justify-between items-center">
       <div className="w-full h-full ">
         {searchParams && (
           <>
             {STEPS_2.map((contents) => {
               return (
                 <div
-                  className={`w-full h-[90svh] bg-white mx-auto flex flex-col justify-center items-center absolute ${
+                  className={`w-full h-[90dvh] bg-white mx-auto flex flex-col justify-center items-center absolute ${
                     infoStep === contents.id ? "z-10" : ""
                   }`}
                   key={contents.id}
@@ -136,7 +136,7 @@ export default function InfoPageStepper() {
             {STEPS_1.map((contents) => {
               return (
                 <div
-                  className={`w-full h-[90svh] bg-white mx-auto flex flex-col justify-center items-center absolute ${
+                  className={`w-full h-[90dvh] bg-white mx-auto flex flex-col justify-center items-center absolute ${
                     infoStep === contents.id ? "z-10" : ""
                   }`}
                   key={contents.id}

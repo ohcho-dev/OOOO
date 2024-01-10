@@ -28,7 +28,7 @@ export default function Page() {
 
   return (
     <div>
-      <div className="w-full h-[100svh] max-h-calcResultPage flex flex-col justify-center">
+      <div className="w-full h-[100dvh] max-h-calcResultPage flex flex-col justify-center">
         <div>
           <div className="py-[1rem]">
             <Image

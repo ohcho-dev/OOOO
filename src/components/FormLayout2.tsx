@@ -158,7 +158,7 @@ export default function FormLayout(survey: SurveyType) {
     <div
       className={`flex max-[520px]:w-[${
         100 * survey.survey.length
-      }vw] h-[100svh] absolute left-0 top-0 transition-all`}
+      }vw] h-[100dvh] absolute left-0 top-0 transition-all`}
       ref={pageRef}
     >
       {survey.survey.map((surveyItems: SurveyListType) => (

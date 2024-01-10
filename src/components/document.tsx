@@ -89,7 +89,7 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
     return <div>Loading...</div>;
 
   return (
-    <div className="relative overflow-y-scroll overflow-x-hidden w-[52rem] h-[100svh] max-h-calcDocumentPage text-[2rem] leading-[2.8rem]">
+    <div className="relative overflow-y-scroll overflow-x-hidden w-[52rem] h-[100dvh] max-h-calcDocumentPage text-[2rem] leading-[2.8rem]">
       <div
         ref={elementRef}
         className="absolute top-[0] z-10 bg-[url(/paper_bg.webp)] w-[52rem] h-[190.7rem] bg-cover bg-center p-[3rem] leading-[2.8rem]"

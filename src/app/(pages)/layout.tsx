@@ -98,7 +98,7 @@ export default function RootLayout({
         <RecoilRootWrapper>
           <SWRConfigContext>
             <div className="responsive_layout">
-              <main className="overflow-hidden w-full h-[100svh]">
+              <main className="overflow-hidden w-full h-[100dvh]">
                 {children}
               </main>
               <div id="bottom_por tal" />

@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative h-[99svh]">
+    <div className="relative h-[99dvh]">
       <div>
         <Toolbar title="" />
         {children}

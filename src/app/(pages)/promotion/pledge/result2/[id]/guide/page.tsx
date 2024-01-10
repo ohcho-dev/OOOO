@@ -87,7 +87,7 @@ export default function Page() {
   return (
     <div className="">
       <InfoToolbar title="서약서 활용하기" />
-      <div className="overflow-x-hidden overflow-y-scroll h-[100svh]">
+      <div className="overflow-x-hidden overflow-y-scroll h-[100dvh]">
         <div className=" bg-white mt-[10rem] ">
           <div className="w-full text-[#F25D24] text-center text-[2.4rem] font-bold">
             Step 1

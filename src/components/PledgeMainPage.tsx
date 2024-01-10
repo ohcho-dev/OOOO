@@ -29,7 +29,7 @@ export default function PledgeMainPage({ count = 0 }) {
   }, [searchParams]);
 
   return (
-    <section className="w-full max-w-[52rem] h-[100svh] flex justify-between flex-col">
+    <section className="w-full max-w-[52rem] h-[100dvh] flex justify-between flex-col">
       <div className="flex flex-col items-center justify-center h-full">
         <Image
           className="w-[16.2rem] h-[5.6rem]"
