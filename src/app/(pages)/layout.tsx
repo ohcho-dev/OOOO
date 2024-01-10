@@ -80,6 +80,7 @@ export default function RootLayout({
         <link rel="preload" href="/info1.webp" as="image" />
         <link rel="preload" href="/info2.webp" as="image" />
         <link rel="preload" href="/info3.webp" as="image" />
+        <link rel="preload" href="/info4.webp" as="image" />
         <link rel="preload" href="/letter_bg.webp" as="image" />
 
         <link rel="preload" href="/paper_bg.webp" as="image" />

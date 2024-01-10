@@ -38,7 +38,7 @@ const STEPS_1 = [
         </h2>
       </div>
     ),
-    image: "/info2.webp",
+    image: "/info4.webp",
     width: "42.5",
     height: "39.5",
     left: "left-[33.3%]",
@@ -91,7 +91,7 @@ const STEPS_2 = [
         </h2>
       </div>
     ),
-    image: "/info4.webp",
+    image: "/info2.webp",
     width: "42.5",
     height: "39.5",
     left: "left-[33.3%]",
