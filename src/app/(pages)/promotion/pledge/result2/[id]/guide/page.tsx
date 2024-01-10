@@ -123,6 +123,7 @@ export default function Page() {
                     alt="카카오톡 프로필 변경 항목을 클릭해주세요."
                     width={203}
                     height={439}
+                    priority
                   />
                   <div className="mt-[3.6rem] text-[1.8rem] text-center">
                     카카오톡 프로필 변경 항목을 클릭해주세요.
@@ -143,6 +144,7 @@ export default function Page() {
                     alt="카카오톡 프로필 변경 항목을 클릭해주세요."
                     width={204}
                     height={439}
+                    priority
                   />
                   <div className="mt-[3.6rem] text-[1.8rem] text-center">
                     서약서 URL 주소를 복사 한 뒤<br />
@@ -164,6 +166,7 @@ export default function Page() {
                     alt="카카오톡 프로필 변경 항목을 클릭해주세요."
                     width={205}
                     height={439}
+                    priority
                   />
                   <div className="mt-[3.6rem] text-[1.8rem] text-center">
                     주황색 영역에 URL 주소를 넣으신 뒤<br />
@@ -185,6 +188,7 @@ export default function Page() {
                     alt="카카오톡 프로필 변경 항목을 클릭해주세요."
                     width={203}
                     height={439}
+                    priority
                   />
                   <div className="mt-[3.6rem] text-[1.8rem] text-center">
                     프로필 링크 적용이 완료되었습니다.
