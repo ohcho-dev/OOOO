@@ -50,18 +50,11 @@ export default function PledgeMainPage({ count = 0 }) {
         </h4>
 
         <Image
-          className="w-[19.2rem] h-[5rem] mt-[2rem]"
-          src="/text_mother_father.png"
-          alt="엄마&아빠"
-          width={192}
-          height={50}
-        />
-        <Image
-          className="w-[20.3rem] h-[12.7rem] mt-[1.5rem]"
+          className="w-[29.8rem] h-[26.7rem] mt-[1.5rem]"
           src="/text_heart.png"
           alt="마음을알려줘"
-          width={203}
-          height={127}
+          width={298}
+          height={267}
         />
         {searchParams && (
           <h2 className="text-[2.4rem] mt-[8rem] text-center">
