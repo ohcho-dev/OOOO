@@ -98,7 +98,7 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
         {/* 출처 <a href="https://kr.freepik.com/free-vector/pack-of-hand-drawn-baby-items_978632.htm#query=toy%20line&position=13&from_view=search&track=ais&uuid=05ca6458-5159-4250-b46d-6b267a0e120d">Freepik</a> */}
         {/* <a href="https://kr.freepik.com/free-vector/father-mother-backpacking-to-take-her-daughter-out-for-a-trip_13575796.htm#page=3&query=%EA%B0%80%EC%A1%B1&position=36&from_view=search&track=sph&uuid=c75d9118-9140-4932-a5b6-dcd7e648cfbd">작가 jcomp</a> 출처 Freepik */}
         <div className="text-[2rem] font-bold pt-[5.8rem] ml-[6.7rem]">
-          {newAnswerUser1[7]?.sv}네 서약서asdasd
+          {newAnswerUser1[7]?.sv}네 서약서
         </div>
         <div className="text-[2.8rem] leading-[4rem] mt-[0.9rem] ml-[6.7rem]">
           엄마 ♥️ 아빠!
@@ -142,7 +142,7 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
           </div>
 
           {/* user1 약속 */}
-          <div className="mt-[4.2rem]">
+          <div className="mt-[4rem]">
             <div className="text-[2.2rem]">
               <b>
                 <span className="text-[#F25D24] text-[3rem]">

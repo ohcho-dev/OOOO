@@ -16,7 +16,7 @@ export default function MainPledgeCard() {
     setCard(true);
     const timer = setInterval(() => {
       setCard((current) => !current);
-    }, 3000);
+    }, 5000);
     return () => clearInterval(timer);
   }, []);
 

@@ -32,7 +32,7 @@ export default function InfoToolbar({ title }: InfoToolbarProps) {
   const handleBackButton = () => {
     if (infoStep > 0) {
       setInfoStep(infoStep - 1);
-    } else if (searchParams) {
+    } else if (searchParams && pathname.indexOf("check") !== -1) {
       if (
         !window.confirm(
           "확인을 누를 경우 처음부터 다시 진행해야 합니다.\n처음으로 돌아가시겠습니까?"
@@ -40,7 +40,7 @@ export default function InfoToolbar({ title }: InfoToolbarProps) {
       )
         return;
       router.push(`/promotion/pledge/form2/first?${searchParams}`);
-    } else if (pathname.indexOf("check") !== -1) {
+    } else if (!searchParams && pathname.indexOf("check") !== -1) {
       if (
         !window.confirm(
           "확인을 누를 경우 처음부터 다시 진행해야 합니다.\n처음으로 돌아가시겠습니까?"

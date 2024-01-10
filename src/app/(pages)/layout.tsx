@@ -63,11 +63,11 @@ export default function RootLayout({
         <link rel="preload" href="/logo4.webp" as="image" />
 
         <link rel="preload" href="/text_heart.webp" as="image" />
-        <link rel="preload" href="/text_mother_father.webp" as="image" />
         <link rel="preload" href="/bg_blur1.webp" as="image" />
         <link rel="preload" href="/bg_blur2.webp" as="image" />
         <link rel="preload" href="/bg.webp" as="image" />
         <link rel="preload" href="/card_main_bg.webp" as="image" />
+        <link rel="preload" href="/card_main_bg2.webp" as="image" />
         <link rel="preload" href="/card1.webp" as="image" />
         <link rel="preload" href="/card2.webp" as="image" />
         <link rel="preload" href="/check_off.webp" as="image" />

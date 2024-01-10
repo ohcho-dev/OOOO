@@ -99,7 +99,7 @@ body {
   margin-top: 3rem;
   z-index: 50;
   transition-property: transform(rotateX);
-  transition-duration: 3s;
+  transition-duration: 5s;
   transform-style: preserve-3d;
 }
 
