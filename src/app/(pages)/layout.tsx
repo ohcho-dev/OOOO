@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: "가족을 향한 진심을 서약서에 담아보세요!",
     url: "https://oooo-pi.vercel.app",
     images: [
-      "https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_image.webp",
+      "https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_image.png",
     ],
     type: "website",
     siteName: "육아응원 :: 우리 가족 서약서",
