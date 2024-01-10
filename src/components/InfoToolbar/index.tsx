@@ -9,7 +9,7 @@ import {
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { useRecoilState, useSetRecoilState } from "recoil";
 
@@ -24,9 +24,30 @@ export default function InfoToolbar({ title }: InfoToolbarProps) {
   const setAnswerUser1 = useSetRecoilState(AnswerUser1State);
   const setAnswerUser2 = useSetRecoilState(AnswerUser2State);
 
+  const [searchParams, setSearchParams] = useState("");
+  useEffect(() => {
+    setSearchParams(window.location.search.substring(1));
+  }, []);
+
   const handleBackButton = () => {
     if (infoStep > 0) {
       setInfoStep(infoStep - 1);
+    } else if (searchParams) {
+      if (
+        !window.confirm(
+          "확인을 누를 경우 처음부터 다시 진행해야 합니다.\n처음으로 돌아가시겠습니까?"
+        )
+      )
+        return;
+      router.push(`/promotion/pledge/form2/first?${searchParams}`);
+    } else if (pathname.indexOf("check") !== -1) {
+      if (
+        !window.confirm(
+          "확인을 누를 경우 처음부터 다시 진행해야 합니다.\n처음으로 돌아가시겠습니까?"
+        )
+      )
+        return;
+      router.push("/promotion/pledge/form/first");
     } else {
       setFormStep(0);
       router.back();

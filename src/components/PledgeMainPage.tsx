@@ -39,20 +39,20 @@ export default function PledgeMainPage({ count = 0 }) {
           height={56}
         />
         <Image
-          className="w-[2.4rem] h-[2.4rem] mt-[2rem]"
+          className="w-[4.3rem] h-[4.3rem] mt-[1.7rem]"
           src="/icon_x.webp"
           alt="colaboration"
-          width={24}
-          height={24}
+          width={43}
+          height={43}
         />
-        <h4 className="text-[2rem] mt-[2rem]">
+        <h4 className="text-[2.2rem] mt-[0.8rem] leading-[2.8rem]">
           <b>아이의 목소리</b>를 담은 우리 <b>가족 서약서</b>
         </h4>
 
         <Image
-          className="w-[29.8rem] h-[26.7rem] mt-[1.5rem]"
+          className="w-[29.8rem] h-[26.7rem] mt-[2rem]"
           src="/text_heart.webp"
-          alt="마음을알려줘"
+          alt="엄마 아빠 마음을 알려줘"
           width={298}
           height={267}
         />

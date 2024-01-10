@@ -10,8 +10,8 @@ export default function CheckInput(text: string = "") {
     status = "한글과 영어만 입력 가능합니다.";
     return status;
   }
-  if (text.length < 2 || text.length > 6) {
-    status = "2글자 이상 10글자 이하로 입력해주세요.";
+  if (text.length < 1 || text.length > 6) {
+    status = "1글자 이상 10글자 이하로 입력해주세요.";
     return status;
   }
   return status;

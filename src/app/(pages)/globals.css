@@ -99,12 +99,12 @@ body {
   margin-top: 3rem;
   z-index: 50;
   transition-property: transform(rotateX);
-  transition-duration: 1.8s;
+  transition-duration: 3s;
   transform-style: preserve-3d;
 }
 
 .card-wrap-main .card.rotate {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 
 .card-wrap-main .card > div {

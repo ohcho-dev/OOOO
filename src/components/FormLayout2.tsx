@@ -91,7 +91,7 @@ export default function FormLayout(survey: SurveyType) {
         }
         setFormStep(formStep + 1);
         setMixData(DEFAULT_MIX_DATA);
-      }, 200);
+      }, 0);
     }
     setAnswerUser2([...answerUser2, mixData]);
     setMixData(DEFAULT_MIX_DATA);
@@ -118,7 +118,7 @@ export default function FormLayout(survey: SurveyType) {
 
         return setTimeout(() => {
           setFormStep(formStep + 1);
-        }, 200);
+        }, 100);
       }
       if (type === "mix") {
       }
@@ -151,7 +151,7 @@ export default function FormLayout(survey: SurveyType) {
     setSelectValue(c_id);
     setTimeout(() => {
       setFormStep(formStep + 1);
-    }, 200);
+    }, 0);
   };
 
   return (

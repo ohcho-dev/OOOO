@@ -6,7 +6,6 @@ import { Metadata } from "next";
 import RecoilRootWrapper from "@/context/RecoilContext";
 import Script from "next/script";
 import Head from "next/head";
-// import KakaoAdfit from "@/util/KakaoAdfit";
 
 const NotoSansKR = Noto_Sans_KR({ subsets: ["latin"] });
 

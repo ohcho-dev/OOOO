@@ -68,7 +68,15 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
       });
     }
   };
-
+  const handleRoute = () => {
+    if (
+      !window.confirm(
+        "확인을 누를 경우 처음부터 다시 진행해야 합니다.\n처음으로 돌아가시겠습니까?"
+      )
+    )
+      return;
+    router.push(`/promotion/pledge/form2/first?${searchParams}`);
+  };
   return (
     <div className="w-full h-[100svh]">
       <div className="pt-[8rem]">
@@ -127,9 +135,7 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
       <div className="absolute bottom-0 flex">
         <button
           className="w-[26rem] max-w-[518px] h-[8rem] text-[2.4rem] bg-[#cccccc]"
-          onClick={() =>
-            router.push(`/promotion/pledge/form2/first?${searchParams}`)
-          }
+          onClick={handleRoute}
         >
           다시 하기
         </button>
