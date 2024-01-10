@@ -38,9 +38,7 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
 
     if (element) {
       const canvas = await html2canvas(element, {
-        scale: 32,
-        width: 390,
-        height: 624,
+        scale: 16,
       });
       const imageDataUrl = canvas.toDataURL("image/png");
       setCapturedCard(imageDataUrl);
