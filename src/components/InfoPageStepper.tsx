@@ -12,36 +12,52 @@ const STEPS_1 = [
   {
     id: 0,
     title: (
-      <h1>
-        우리 가족, 배우자, 내 아이를 떠올리며
-        <br />
-        <b>가장 어울리는 단어</b>를 골라주세요!
-      </h1>
+      <div>
+        <h1 className="font-bold text-[2.4rem] leading-[4rem]">
+          나의 마음 입력하기
+        </h1>
+        <h2 className="text-[2.4rem] leading-[4rem]">
+          질문을 읽고 떠오르는 단어를 선택합니다.
+        </h2>
+      </div>
     ),
     image: "/info1.webp",
+    width: "44.2",
+    height: "37.232",
     left: "left-[0]",
   },
   {
     id: 1,
     title: (
-      <h1>
-        서약서를 완성할 수 있도록
-        <br />내 <b>배우자에게 공유</b>해주세요!
-      </h1>
+      <div>
+        <h1 className="font-bold text-[2.4rem] leading-[4rem]">
+          배우자에게 참여 요청하기
+        </h1>
+        <h2 className="text-[2.4rem] leading-[4rem]">
+          링크를 공유하고 배우자의 입력을 기다립니다.
+        </h2>
+      </div>
     ),
     image: "/info2.webp",
+    width: "42.5",
+    height: "39.5",
     left: "left-[33.3%]",
   },
   {
     id: 2,
     title: (
-      <h1>
-        <b>아이의 목소리</b>를 담은
-        <br />
-        따뜻한 <b>가족 서약서</b>가 탄생합니다!
-      </h1>
+      <div>
+        <h1 className="font-bold text-[2.4rem] leading-[4rem]">
+          완성된 서약서 함께 열어보기
+        </h1>
+        <h2 className="text-[2.4rem] leading-[4rem]">
+          배우자가 입력을 마치면 서약서가 도착합니다.
+        </h2>
+      </div>
     ),
-    image: "",
+    image: "/info3.webp",
+    width: "25.3",
+    height: "39.6",
     left: "left-[66.7%]",
   },
 ];
@@ -49,35 +65,54 @@ const STEPS_2 = [
   {
     id: 0,
     title: (
-      <h1>
-        우리 가족, 배우자, 내 아이를 떠올리며
-        <br />
-        <b>가장 어울리는 단어</b>를 골라주세요!
-      </h1>
+      <div>
+        <h1 className="font-bold text-[2.4rem] leading-[4rem]">
+          나의 마음 입력하기
+        </h1>
+        <h2 className="text-[2.4rem] leading-[4rem]">
+          질문을 읽고 떠오르는 단어를 선택합니다.
+        </h2>
+      </div>
     ),
     image: "/info1.webp",
+    width: "44.2",
+    height: "37.232",
+    left: "0",
   },
   {
     id: 1,
     title: (
-      <h1>
-        <b>아이의 목소리</b>를 담은
-        <br />
-        따뜻한 <b>가족 서약서</b>가 탄생합니다!
-      </h1>
+      <div>
+        <h1 className="font-bold text-[2.4rem] leading-[4rem]">
+          배우자에게 공유하기
+        </h1>
+        <h2 className="text-[2.4rem] leading-[4rem]">
+          답변을 마친 후 배우자에게 공유해주세요!
+        </h2>
+      </div>
     ),
-    image: "",
+    image: "/info4.webp",
+    width: "42.5",
+    height: "39.5",
+    left: "left-[33.3%]",
   },
   {
     id: 2,
     title: (
-      <h1>
-        완성된 서약서를 <b>배우자에게 공유</b>하고
-        <br />
-        함께 서약서를 읽어보세요!
-      </h1>
+      <div>
+        <h1 className="font-bold text-[2.4rem] leading-[4rem]">
+          서약서 함께 열어보기
+        </h1>
+        <h2 className="text-[2.4rem] leading-[4rem]">
+          공유한 링크에서 완성된 서약서를 열어보세요.
+        </h2>
+      </div>
     ),
     image: "/info3.webp",
+
+    width: "25.3",
+    height: "39.6",
+    left: "left-[66.7%]",
   },
 ];
 export default function InfoPageStepper() {
@@ -115,17 +150,32 @@ export default function InfoPageStepper() {
                   </div>
                   {contents.image && (
                     <Image
-                      className="mt-[7rem] max-w-[42.5rem]"
+                      className={`mt-[4.5rem]
+                      ${
+                        contents.id === 0
+                          ? "w-[44.2rem]"
+                          : contents.id === 1
+                          ? "w-[42.5rem]"
+                          : "w-[25.3rem]"
+                      }
+                      `}
                       src={contents.image}
                       alt="참여 방법"
-                      width={403}
-                      height={403}
+                      width={
+                        contents.id === 0 ? 442 : contents.id === 1 ? 425 : 253
+                      }
+                      height={
+                        contents.id === 0
+                          ? 372.3
+                          : contents.id === 1
+                          ? 395
+                          : 396
+                      }
                     />
                   )}
                   {/* <a href="https://www.freepik.com/free-vector/curiosity-people-concept-illustration_30576696.htm#page=4&query=choose&position=1&from_view=search&track=sph&uuid=d8125466-63e9-4585-be47-303bb6d57545">Image by storyset</a> on Freepik */}
                   {/* Image by <a href="https://www.freepik.com/free-vector/flat-design-characters-chatting-dating-app_5380865.htm#page=2&query=profile&position=12&from_view=search&track=sph&uuid=8c04433a-082f-48f1-8188-d49e54678510">Freepik</a> */}
                   {/* Image by <a href="https://www.freepik.com/free-vector/dating-app-concept-flat-design_5230633.htm#page=3&query=share&position=0&from_view=search&track=sph&uuid=f35b7d49-ee79-4ccc-aaff-af823e188214">Freepik</a> */}
-                  {!contents.image && <InfoPledgeCard />}
                 </div>
               );
             })}
@@ -146,14 +196,29 @@ export default function InfoPageStepper() {
                   </div>
                   {contents.image && (
                     <Image
-                      className="mt-[7rem] max-w-[42.5rem]"
+                      className={`mt-[4.5rem]
+                      ${
+                        contents.id === 0
+                          ? "w-[44.2rem]"
+                          : contents.id === 1
+                          ? "w-[42.5rem]"
+                          : "w-[25.3rem]"
+                      }
+                      `}
                       src={contents.image}
                       alt="참여 방법"
-                      width={403}
-                      height={403}
+                      width={
+                        contents.id === 0 ? 442 : contents.id === 1 ? 425 : 253
+                      }
+                      height={
+                        contents.id === 0
+                          ? 372.3
+                          : contents.id === 1
+                          ? 395
+                          : 396
+                      }
                     />
                   )}
-                  {!contents.image && <InfoPledgeCard />}
                 </div>
               );
             })}
@@ -163,7 +228,7 @@ export default function InfoPageStepper() {
       <div className="absolute z-10 w-[30rem] h-[1rem] left-[50%] translate-x-[-50%] bottom-[13rem] mx-auto">
         <div className="absolute w-[30rem] h-[1rem] rounded-[1rem] bg-[#D9D9D9]" />
         <div
-          className={`absolute w-[10rem] h-[1rem] rounded-[1rem] bg-[#F25D24] transition-all duration-300 ${
+          className={`absolute w-[10rem] h-[1rem] rounded-[1rem] bg-[#333] transition-all duration-300 ${
             infoStep === 0
               ? "left-0"
               : infoStep === 1

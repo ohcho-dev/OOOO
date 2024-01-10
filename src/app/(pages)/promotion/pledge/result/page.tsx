@@ -95,7 +95,7 @@ export default function Page() {
         </div>
       </CustomBottomModal>
       <BottomButton
-        label="배우자에게 공유하기"
+        label="배우자에게 참여 요청하기"
         status={true}
         onClick={() => setToggle(!toggle)}
       />

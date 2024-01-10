@@ -58,9 +58,9 @@ export default function PledgeMainPage({ count = 0 }) {
         />
         {searchParams && (
           <h2 className="text-[2.4rem] mt-[8rem] text-center">
-            <b>배우자가 당신의 참여</b>를 기다리고 있습니다.
+            <b>배우자와 함께 가족 서약서</b>를 만들어보세요!
             <br />
-            <b>우리 가족 서약서</b>를 함께 만들어보세요!
+            먼저 참여한 배우자가 <b>당신을 기다리고 있어요!</b>
           </h2>
         )}
         {!searchParams && <MainPledgeCard />}

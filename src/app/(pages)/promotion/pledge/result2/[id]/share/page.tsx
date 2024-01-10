@@ -39,10 +39,10 @@ export default function Page() {
               height={81}
             />
           </div>
-          <div className="text-center text-[2.4rem] mt-[6rem] mb-[5rem]">
-            <b>우리 가족 서약서 완성!</b>
+          <div className="font-bold text-center text-[2.4rem] mt-[4.6rem] mb-[5rem] leading-[4rem]">
+            배우자에게 공유하고
             <br />
-            배우자가 완성된 서약서를 기다리고 있어요.
+            완성된 서약서를 확인해보세요!
           </div>
           <Image
             className="mx-auto w-[36rem]"
@@ -53,9 +53,7 @@ export default function Page() {
           />
           {/* <a href="https://www.freepik.com/free-vector/big-isolated-cartoon-young-girl-boy-love-couple-sharing-caring-love-3d-illustration_12953857.htm#page=3&query=share&position=39&from_view=search&track=sph&uuid=349ea626-ab1a-4e9a-a9c4-4844e0aa0aed">Image by jcomp</a> on Freepik */}
           <div className="text-[2.1rem] text-center mt-[3rem] font-bold leading-[4rem]">
-            배우자에게 전송한 링크에 접속해서
-            <br />
-            함께 서약서를 읽어보세요!
+            어떤 서약서가 기다리고 있을까요?
           </div>
         </div>
       </div>
