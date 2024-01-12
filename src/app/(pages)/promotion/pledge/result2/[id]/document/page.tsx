@@ -24,7 +24,13 @@ export async function generateMetadata({
   const a = await getPage(id);
 
   return {
-    title: `육아응원 가족 서약서 ${id}`,
-    description: `육아응원 가족 서약서 ${id}`,
+    openGraph: {
+      title: "우리 가족 서약서가 도착했어요!!",
+      description: "아이의 목소리를 담은 유쾌한 약속",
+      images: [
+        "https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/meta_image_user_2.png",
+      ],
+      url: "https://oooo-pi.vercel.app/promotion/pledge/result2/" + id,
+    },
   };
 }

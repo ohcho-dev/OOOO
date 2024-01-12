@@ -258,8 +258,8 @@ export default function Page() {
           <div className="mt-[3.8rem] flex justify-evenly">
             {count > 0 && (
               <KakaoShareButton
-                title="우리 가족만의 서약서를 만들어보세요!"
-                description="육아응원 :: 가족 공동 서약서"
+                title="우리 가족 서약서: 아이의 목소리를 담은 유쾌한 약속"
+                description="키워드 입력만으로 소중한 서약서 만들기♥️"
                 btnName="서약서 만들기"
                 image="https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_main.png"
                 url={window?.location.origin}

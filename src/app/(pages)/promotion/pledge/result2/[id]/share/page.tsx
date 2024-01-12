@@ -67,9 +67,9 @@ export default function Page() {
           </div>
           <div className="flex justify-evenly text-[1.6rem] cursor-pointer">
             <KakaoShareButton
-              title="우리 가족 서약서 도착! 지금 바로 확인하세요!"
-              description="육아응원 :: 가족 공동 서약서"
-              btnName="읽어보기"
+              title="우리 가족 서약서: 아이의 목소리를 담은 유쾌한 약속"
+              description="우리 가족 서약서가 도착했어요!!"
+              btnName="서약서 읽어보기"
               image="https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_user2.png"
               url={`https://${url}`}
             />

@@ -1,13 +1,7 @@
 import Toolbar from "@/components/toolbar";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: {
-    default: "Instantgram",
-    template: "Instantgram | %s",
-  },
-  description: "Instantgram Photos",
-};
+export const metadata: Metadata = {};
 
 export default function RootLayout({
   children,

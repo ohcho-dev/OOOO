@@ -15,18 +15,17 @@ export const metadata: Metadata = {
   description:
     "아이의 목소리로 변환된 따뜻한 '공동육아 서약서'를 만들어보세요. 간단한 키워드만으로 아이의 입장에서 쓰여진 유쾌하고 따뜻한 서약서가 완성됩니다.",
   openGraph: {
-    title:
-      "우리 가족 서약서(공동 육아 서약서) - 아이의 목소리로 쓰여진 가족의 약속",
-    description: "가족을 향한 진심을 서약서에 담아보세요!",
+    title: "우리 가족 서약서 : 키워드 입력만으로 소중한 서약서 만들기️❤️",
+    description: "아이의 목소리를 담은 유쾌한 약속",
     url: "https://oooo-pi.vercel.app",
     images: [
-      "https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_image.png",
+      "https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/meta_image_main.png",
     ],
     type: "website",
-    siteName: "육아응원 :: 우리 가족 서약서",
+    siteName: "육아응원 | 우리 가족 서약서",
     locale: "ko_KR",
   },
-  applicationName: "육아응원",
+  applicationName: "육아응원 | 우리 가족 서약서",
   keywords: [
     "공동육아",
     "서약서",
