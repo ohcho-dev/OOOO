@@ -70,7 +70,7 @@ export default function Page() {
               title="우리 가족 서약서: 아이의 목소리를 담은 유쾌한 약속"
               description="우리 가족 서약서가 도착했어요!!"
               btnName="서약서 읽어보기"
-              image="https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_user2.png"
+              image="https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_user_2_v2.png"
               url={`https://${url}`}
             />
             {openToast && <Toast text="클립보드에 저장되었습니다." />}
