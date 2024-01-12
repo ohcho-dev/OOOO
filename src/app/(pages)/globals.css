@@ -24,13 +24,22 @@ body {
   height: 100dvh;
   background: #fff;
   overflow-y: auto;
-
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
 }
 
+.responsive_layout {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+}
+
+.responsive_layout * {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+}
 .responsive_layout::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
+  display: none !important; /* Chrome, Safari, Opera*/
+}
+.responsive_layout *::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Opera*/
 }
 
 .drop_shadow {

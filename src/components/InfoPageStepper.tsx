@@ -124,7 +124,7 @@ export default function InfoPageStepper() {
   const [searchParams, setSearchParams] = useState("");
 
   useEffect(() => {
-    setInfoStep(0);
+    // setInfoStep(0);
     setSearchParams(window.location.search.substring(1));
   }, []);
 

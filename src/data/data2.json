@@ -274,7 +274,7 @@
       "id": 7,
       "reuse": true,
       "type": "mix",
-      "choiceQuestion": "당신에 대해\n알려주세요.",
+      "choiceQuestion": "당신에 대해 알려주세요.\n",
       "choiceAnswer": [
         {
           "answer_id": 1,

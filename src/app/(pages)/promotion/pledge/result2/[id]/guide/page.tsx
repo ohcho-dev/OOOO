@@ -129,7 +129,7 @@ export default function Page() {
                     카카오톡 프로필 변경 항목을 클릭해주세요.
                   </div>
                   <Image
-                    className="w-[2.3rem] h-[4.7rem] absolute bottom-[6rem] left-[24rem] animate-bounce"
+                    className="w-[2.3rem] h-[4.7rem] absolute bottom-[6rem] left-[25rem] animate-bounce"
                     src="/hand.webp"
                     alt="클릭하세요."
                     width={23}
@@ -151,7 +151,7 @@ export default function Page() {
                     카카오톡에서 링크 아이콘을 클릭해주세요.
                   </div>
                   <Image
-                    className="w-[2.3rem] h-[4.7rem] absolute bottom-[5rem] left-[29.2rem] animate-bounce"
+                    className="w-[2.3rem] h-[4.7rem] absolute bottom-[5rem] left-[30rem] animate-bounce"
                     src="/hand.webp"
                     alt="클릭하세요."
                     width={23}
@@ -173,7 +173,7 @@ export default function Page() {
                     완료버튼을 클릭해주세요.
                   </div>
                   <Image
-                    className="w-[2.3rem] h-[4.7rem] absolute top-[3.5rem] left-[33rem] animate-bounce"
+                    className="w-[2.3rem] h-[4.7rem] absolute top-[14.5rem] left-[25rem] animate-bounce"
                     src="/hand.webp"
                     alt="클릭하세요."
                     width={23}
