@@ -29,7 +29,6 @@ export default function Page() {
       setUrl(url);
     }
   }, [answerUser1]);
-
   const handleRoute = () => {
     if (
       !window.confirm(
