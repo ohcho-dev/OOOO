@@ -34,8 +34,8 @@ export default function SubjectForm({
         }}
       />
       <div className="mt-[1.8rem] text-[1.8rem]">
-        * 최대 6자까지 입력할 수 있어요.
-        <br />* 한글만 작성 가능합니다.
+        * 한글 최대 6자까지 입력할 수 있어요.
+        <br />* 작성하신 이름은 서약서 생성에 사용됩니다.
       </div>
       {useResetButton && (
         <div

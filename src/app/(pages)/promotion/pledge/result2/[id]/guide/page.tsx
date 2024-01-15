@@ -198,6 +198,14 @@ export default function Page() {
                     <br />
                     프로필 배경화면 설정까지 마치면 자랑 완료!!!!
                   </div>
+
+                  <Image
+                    className="w-[2.3rem] h-[4.7rem] absolute top-[28.5rem] left-[25rem] animate-bounce"
+                    src="/hand.webp"
+                    alt="클릭하세요."
+                    width={23}
+                    height={47}
+                  />
                 </div>
               </ProfileCarousel>
             </div>

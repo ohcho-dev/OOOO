@@ -22,13 +22,11 @@ export default function ProfileCarousel({
       responsive={responsive}
       additionalTransfrom={0}
       arrows
-      autoPlaySpeed={3000}
       centerMode={false}
       className=""
       dotListClass=""
       draggable
       focusOnSelect={false}
-      infinite
       itemClass=""
       keyBoardControl
       minimumTouchDrag={80}
