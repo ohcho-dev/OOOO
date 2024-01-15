@@ -121,13 +121,15 @@ export default function Page() {
                   <Image
                     className="w-[20.3rem] h-[43.9rem] mx-auto"
                     src="/guide_1.webp"
-                    alt="카카오톡 프로필 변경 항목을 클릭해주세요."
+                    alt="아래 [서약서 URL 복사하기] 누른 다음 카카오톡 [프로필 편집]을 클릭해주세요."
                     width={203}
                     height={439}
                     priority
                   />
-                  <div className="mt-[3.6rem] text-[1.8rem] text-center">
-                    카카오톡 프로필 변경 항목을 클릭해주세요.
+                  <div className="mt-[3.6rem] text-[2.1rem] leading-[3rem] text-center">
+                    아래 [서약서 URL 복사하기] 누른 다음
+                    <br />
+                    카카오톡 [프로필 편집]을 클릭해주세요.
                   </div>
                   <Image
                     className="w-[2.3rem] h-[4.7rem] absolute bottom-[6rem] left-[25rem] animate-bounce"
@@ -142,14 +144,13 @@ export default function Page() {
                   <Image
                     className="w-[20.4rem] h-[43.9rem] mx-auto"
                     src="/guide_2.webp"
-                    alt="카카오톡 프로필 변경 항목을 클릭해주세요."
+                    alt="하단의 링크 아이콘을 클릭해주세요."
                     width={204}
                     height={439}
                     priority
                   />
-                  <div className="mt-[3.6rem] text-[1.8rem] text-center">
-                    서약서 URL 주소를 복사 한 뒤<br />
-                    카카오톡에서 링크 아이콘을 클릭해주세요.
+                  <div className="mt-[3.6rem] text-[2.1rem] leading-[3rem] text-center">
+                    하단의 링크 아이콘을 클릭해주세요.
                   </div>
                   <Image
                     className="w-[2.3rem] h-[4.7rem] absolute bottom-[5rem] left-[30rem] animate-bounce"
@@ -170,8 +171,9 @@ export default function Page() {
                     priority
                   />
                   <div className="mt-[3.6rem] text-[1.8rem] text-center">
-                    주황색 영역에 URL 주소를 넣으신 뒤<br />
-                    완료버튼을 클릭해주세요.
+                    입력창에 복사한 URL을 붙여넣고
+                    <br />
+                    확인을 클릭해주세요.
                   </div>
                   <Image
                     className="w-[2.3rem] h-[4.7rem] absolute top-[14.5rem] left-[25rem] animate-bounce"
@@ -192,7 +194,9 @@ export default function Page() {
                     priority
                   />
                   <div className="mt-[3.6rem] text-[1.8rem] text-center">
-                    프로필 링크 적용이 완료되었습니다.
+                    링크가 적용되면 아이콘이 나타납니다.
+                    <br />
+                    프로필 배경화면 설정까지 마치면 자랑 완료!!!!
                   </div>
                 </div>
               </ProfileCarousel>
@@ -240,7 +244,7 @@ export default function Page() {
           </div>
           <button
             onClick={postReview}
-            className="mt-[2rem] mb-[4.6rem] bg-[#F25D24] text-[2.1rem] text-white w-[20rem] h-[6rem] block mx-auto rounded-[2rem]"
+            className="mt-[2rem] mb-[4.6rem] bg-[#F9E9B3] text-[1.8rem] w-[20rem] h-[6rem] block mx-auto rounded-[2rem]"
           >
             제출하기
           </button>
@@ -259,7 +263,7 @@ export default function Page() {
           <div className="mt-[3.8rem] flex justify-evenly">
             {count > 0 && (
               <KakaoShareButton
-                title="우리 가족 서약서: 아이의 목소리를 담은 유쾌한 약속"
+                title="우리 가족 서약서: 아이의 목소리를 담은 따뜻한 약속"
                 description="키워드 입력만으로 소중한 서약서 만들기♥️"
                 btnName="서약서 만들기"
                 image="https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_main_v2.png"

@@ -63,31 +63,27 @@ export default function PledgeCardBack({ name, card }: PledgeCardBackProps) {
           {pathname.id && (
             <>
               <div className="text-[2.4rem] font-bold mt-[10rem]">
-                <span className="text-[#F65B5b]">{name}네</span> 서약서
+                <span className="text-[#F65B5b]">{name}네</span> 서약서!
               </div>
               <img
-                src="/paper_bg_text.webp"
+                src="/paper_bg_text2.webp"
                 alt="엄마 아빠 함께 약속해요!"
-                width={268}
-                height={64.5}
-                className="w-[26.8rem] mx-auto mt-[0.6rem]"
+                width={200}
+                height={84.5}
+                className="w-[20rem] mx-auto mt-[1.5rem]"
               />
-              <div className="text-[1.8rem] font-bold leading-[3rem] text-center mt-[2rem]">
-                우리 가족은{" "}
-                <span className="text-[#F65B5B] text-[3rem]">
-                  {answerMood1}
-                </span>
-                과{" "}
-                <span className="text-[#F65B5B] text-[3rem]">
-                  {answerMood2}
-                </span>
+              <div className="text-[1.5rem] font-bold leading-[3rem] text-center mt-[1.7rem]">
+                우리 가족은
+                <br />
+                <span className="text-[#F65B5B]">{answerMood1}</span>과{" "}
+                <span className="text-[#F65B5B]">{answerMood2}</span>
                 이 넘치는
                 <br />
                 화목한 가정을 만들기 위해
                 <br />
                 아래와 같이 서약합니다.
               </div>
-              <div className="text-[2.2rem] leading-[3.6rem] text-center mt-[15.5rem]">
+              <div className="text-[1.5rem] leading-[3rem] text-center mt-[14rem]">
                 <span className="inline-block pl-[1rem] ml-[-1rem] bg-[url(/bg_blur1.webp)] bg-cover bg-repeat font-bold">
                   {answerUser1Mood}{" "}
                 </span>{" "}

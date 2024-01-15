@@ -4,9 +4,7 @@ import { infoStepState } from "@/store/atom";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
-import CustomBottomModal from "./CustomBottomModal";
 import { useRouter } from "next/navigation";
-import InfoPledgeCard from "./InfoPledgeCard";
 
 const STEPS_1 = [
   {
@@ -14,7 +12,7 @@ const STEPS_1 = [
     title: (
       <div>
         <h1 className="font-bold text-[2.4rem] leading-[4rem]">
-          나의 마음 입력하기
+          나의 마음 선택하기
         </h1>
         <h2 className="text-[2.4rem] leading-[4rem]">
           질문을 읽고 떠오르는 단어를 선택합니다.
@@ -34,7 +32,7 @@ const STEPS_1 = [
           배우자에게 참여 요청하기
         </h1>
         <h2 className="text-[2.4rem] leading-[4rem]">
-          링크를 공유하고 배우자의 입력을 기다립니다.
+          링크를 공유하고 배우자의 선택을 기다립니다.
         </h2>
       </div>
     ),
@@ -51,7 +49,7 @@ const STEPS_1 = [
           완성된 서약서 함께 열어보기
         </h1>
         <h2 className="text-[2.4rem] leading-[4rem]">
-          배우자가 입력을 마치면 서약서가 도착합니다.
+          배우자가 선택을 마치면 서약서가 도착합니다.
         </h2>
       </div>
     ),
@@ -67,7 +65,7 @@ const STEPS_2 = [
     title: (
       <div>
         <h1 className="font-bold text-[2.4rem] leading-[4rem]">
-          나의 마음 입력하기
+          나의 마음 선택하기
         </h1>
         <h2 className="text-[2.4rem] leading-[4rem]">
           질문을 읽고 떠오르는 단어를 선택합니다.
@@ -87,7 +85,7 @@ const STEPS_2 = [
           배우자에게 공유하기
         </h1>
         <h2 className="text-[2.4rem] leading-[4rem]">
-          답변을 마친 후 배우자에게 공유해주세요!
+          선택을 마친 후 배우자에게 공유해주세요!
         </h2>
       </div>
     ),
@@ -238,69 +236,17 @@ export default function InfoPageStepper() {
         />
       </div>
       <button
-        onClick={() => (infoStep === 2 ? setToggle(true) : handleNext())}
+        onClick={() =>
+          infoStep === 2
+            ? searchParams
+              ? router.push(`/promotion/pledge/form2/first?${searchParams}`)
+              : router.push(`/promotion/pledge/form/first`)
+            : handleNext()
+        }
         className="bg-[#F9E9B3] min-h-[8rem] w-full text-[2.1rem]"
       >
         {infoStep === 2 ? "시작하기" : "다음으로"}
       </button>
-
-      <CustomBottomModal
-        toggle={toggle}
-        handleToggle={() => setToggle(!toggle)}
-      >
-        <div className="p-[3rem] cursor-pointer">
-          <div className="w-full text-[2.8rem] font-bold">
-            잠깐! 서비스 약관에 동의해주세요.
-          </div>
-          <div className="flex justify-between mt-[3.4rem] align-top">
-            <div className="flex" onClick={() => setAgree(!agree)}>
-              <div className="w-[3rem] h-[3rem]">
-                <Image
-                  src={agree ? "/check_on.webp" : "/check_off.webp"}
-                  alt="개인정보 동의"
-                  width={30}
-                  height={30}
-                />
-              </div>
-              <div className="ml-[2.6rem]">
-                <div className="text-[2.1rem]">
-                  개인정보 수집 및 이용 동의(필수)
-                </div>
-                <div className="mt-[1.5rem] text-[1.5rem]">
-                  약관 비동의 시 서비스 이용이 불가합니다.
-                </div>
-              </div>
-            </div>
-            <div
-              className="w-[2.4rem] h-[2.4rem] mt-[1rem]"
-              onClick={() => router.push("/promotion/pledge/agree")}
-            >
-              <Image
-                className="rotate-180"
-                src="/back.webp"
-                alt="자세히 보기"
-                width={18}
-                height={24}
-              />
-            </div>
-          </div>
-        </div>
-
-        <button
-          className={`w-full h-[8rem] text-[2.4rem] ${
-            !agree ? "bg-[#cccccc] text-white" : "bg-[#F9E9B3]"
-          }`}
-          onClick={() =>
-            agree &&
-            (searchParams
-              ? router.push(`/promotion/pledge/form2/first?${searchParams}`)
-              : router.push(`/promotion/pledge/form/first`))
-          }
-          disabled={!agree}
-        >
-          네, 동의할게요!
-        </button>
-      </CustomBottomModal>
     </div>
   );
 }

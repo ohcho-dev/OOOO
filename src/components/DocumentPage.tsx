@@ -22,7 +22,7 @@ export default function DocumentPage({
       <div className="w-full h-[6.7rem] " />
       <Document survey1={survey1} survey2={survey2} />
       <BottomButton
-        label="서약서를 소장하고 싶다면?"
+        label="서약서를 간직하고 싶다면?"
         status={true}
         onClick={() => router.push(`/promotion/pledge/result2/${id}/guide`)}
       />
