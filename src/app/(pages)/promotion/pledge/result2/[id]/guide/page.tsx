@@ -29,7 +29,8 @@ export default function Page() {
 
   useEffect(() => {
     const id = params.id;
-    const url = window?.location.host + "/promotion/pledge/result2/" + id;
+    const url =
+      process.env.NEXT_PUBLIC_HOST + "/promotion/pledge/result2/" + id;
     if (params.id) {
       setUrl(url);
     }
@@ -262,13 +263,13 @@ export default function Page() {
                 description="키워드 입력만으로 소중한 서약서 만들기♥️"
                 btnName="서약서 만들기"
                 image="https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_main_v2.png"
-                url={window?.location.origin}
+                url={process.env.NEXT_PUBLIC_HOST || ""}
               />
             )}
             <div
               className="text-center"
               onClick={() => {
-                copyURL(window?.location.origin), setOpenToast(true);
+                copyURL(process.env.NEXT_PUBLIC_HOST || ""), setOpenToast(true);
               }}
             >
               <div className="w-[6rem] h-[6rem] flex justify-center items-center">

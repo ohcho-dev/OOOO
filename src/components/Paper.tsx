@@ -22,8 +22,6 @@ interface PaperPageProps {
   survey2: SurveyListType[];
 }
 export default function PaperPage({ data, survey1, survey2 }: PaperPageProps) {
-  const [url, setUrl] = useState("");
-  const [count, setCount] = useState(0);
   const [answerUser1, setAnswerUser1] = useRecoilState(AnswerUser1State);
   const [answerUser2, setAnswerUser2] = useRecoilState(AnswerUser2State);
   const [answerMood1, setAnswerMood1] = useRecoilState(AnswerMood1State);
@@ -38,19 +36,6 @@ export default function PaperPage({ data, survey1, survey2 }: PaperPageProps) {
     useRecoilState(AnswerUser2NameState);
   const [answerBabyName, setAnswerBabyName] =
     useRecoilState(AnswerBabyNameState);
-
-  useEffect(() => {
-    const url = window?.location.href;
-    setUrl(url);
-
-    const timer = setInterval(() => {
-      setCount(1);
-    }, 200);
-
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
 
   useEffect(() => {
     if (data) {

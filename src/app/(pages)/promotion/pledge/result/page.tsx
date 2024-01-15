@@ -24,7 +24,8 @@ export default function Page() {
   useEffect(() => {
     if (answerUser1) {
       const compress = CompressedString(answerUser1);
-      const url = window?.location.host + "/promotion/pledge?" + compress;
+      const url =
+        process.env.NEXT_PUBLIC_HOST + "/promotion/pledge?" + compress;
       setUrl(url);
     }
   }, [answerUser1]);
@@ -72,13 +73,13 @@ export default function Page() {
               description="키워드 입력만으로 소중한 서약서 만들기♥️"
               btnName="함께 만들기"
               image="https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_user_1_v2.png"
-              url={`https://${url}`}
+              url={`${url}`}
             />
             {openToast && <Toast text="클립보드에 저장되었습니다." />}
             <div
               className="text-center"
               onClick={() => {
-                copyURL(`https://${url}`);
+                copyURL(`${url}`);
                 setOpenToast(true);
               }}
             >
