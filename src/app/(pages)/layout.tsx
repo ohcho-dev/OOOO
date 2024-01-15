@@ -43,6 +43,10 @@ export const metadata: Metadata = {
       "naver-site-verification": "7b8d6a069b66378c1e6c95c04dfc95a647ff458b",
     },
   },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 declare global {

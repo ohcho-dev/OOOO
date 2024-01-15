@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /promotion/pledge/result2/
+
+Sitemap: https://withmamapapa.net/sitemap.xml
