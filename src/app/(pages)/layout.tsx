@@ -6,7 +6,7 @@ import { Metadata } from "next";
 import RecoilRootWrapper from "@/context/RecoilContext";
 import Script from "next/script";
 import Head from "next/head";
-import GoogleAnalytics from "@/util/GoogleAnalytics";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const NotoSansKR = Noto_Sans_KR({ subsets: ["latin"] });
 
@@ -101,9 +101,9 @@ export default function RootLayout({
         <link rel="preload" href="/star.webp" as="image" />
       </Head>
       <body suppressHydrationWarning={true}>
-        {process.env.NODE_ENV === "production" &&
-        process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
-          <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        {/* process.env.NODE_ENV === "production" && */}
+        {process.env.NEXT_PUBLIC_GTM_ID ? (
+          <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
         ) : null}
         <Script
           src="https://developers.kakao.com/sdk/js/kakao.js"

@@ -2,6 +2,7 @@
 
 import MainPledgeCard from "@/components/MainPledgeCard";
 import { AnswerUser1State } from "@/store/atom";
+import { sendGTMEvent } from "@next/third-parties/google";
 import DecompressedString from "@/util/decompressedString";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -69,14 +70,15 @@ export default function PledgeMainPage({ count = 0 }) {
         </div>
       </div>
       <button
-        onClick={() =>
+        onClick={async () => {
+          sendGTMEvent({ event: "buttonClicked", value: "참여하기" });
           router.push(
             searchParams
               ? `/promotion/pledge/info?${searchParams}`
               : "/promotion/pledge/info"
-          )
-        }
-        className="w-full min-h-[8rem] bg-[#F9E9B3] text-[2.1rem]"
+          );
+        }}
+        className="w-full min-h-[8rem] bg-[#F9E9B3] text-[2.1rem] ga-event"
       >
         참여하기
       </button>
