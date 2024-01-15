@@ -114,7 +114,7 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8705192313361669"
           crossOrigin="anonymous"
         />
-        <ins
+        {/* <ins
           className="kakao_ad_area"
           style={{ display: "none" }}
           data-ad-unit="DAN-uG8I6ARkjTaTT1pz"
@@ -137,7 +137,7 @@ export default function RootLayout({
           type="text/javascript"
           src="//t1.daumcdn.net/kas/static/ba.min.js"
           async
-        />
+        /> */}
         <RecoilRootWrapper>
           <SWRConfigContext>
             <div className="responsive_layout">
