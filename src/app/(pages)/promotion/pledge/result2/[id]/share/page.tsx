@@ -21,7 +21,7 @@ export default function Page() {
   useEffect(() => {
     if (params.id) {
       const url =
-        window?.location.host + "/promotion/pledge/result2/" + params.id;
+        process.env.NEXT_PUBLIC_HOST + "/promotion/pledge/result2/" + params.id;
       setUrl(url);
     }
   }, [params]);
@@ -71,13 +71,13 @@ export default function Page() {
               description="우리 가족 서약서가 도착했어요!!"
               btnName="서약서 읽어보기"
               image="https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_user_2_v2.png"
-              url={`https://${url}`}
+              url={`${url}`}
             />
             {openToast && <Toast text="클립보드에 저장되었습니다." />}
             <div
               className="text-center"
               onClick={() => {
-                copyURL(`https://${url}`);
+                copyURL(`${url}`);
                 setOpenToast(true);
               }}
             >

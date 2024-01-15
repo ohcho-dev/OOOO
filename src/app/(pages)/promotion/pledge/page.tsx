@@ -28,7 +28,7 @@ export async function generateMetadata({
       images: [
         "https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/meta_image_user_1.png",
       ],
-      url: "https://oooo-pi.vercel.app/promotion/pledge",
+      url: process.env.NEXT_PUBLIC_HOST + "/promotion/pledge",
     },
   };
 }
