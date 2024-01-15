@@ -15,13 +15,13 @@ export default function PledgeCard({ name }: PledgeCardProps) {
   const [card, setCard] = useState(false);
 
   const today = new Date();
-  const formattedDate = `${today.getFullYear()}. ${
+  const formattedDate = `${today.getFullYear()}/${
     today.getMonth() + 1
-  }. ${today.getDate()}`;
+  }/${today.getDate()}`;
 
   return (
     <div
-      className="card-wrap relative"
+      className="relative card-wrap"
       onClick={(e) => {
         e.preventDefault();
         setCard((prev) => !prev);

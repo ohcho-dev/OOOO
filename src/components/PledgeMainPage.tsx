@@ -13,10 +13,6 @@ export default function PledgeMainPage({ count = 0 }) {
   const router = useRouter();
   const setAnswerUser1 = useSetRecoilState(AnswerUser1State);
   const [searchParams, setSearchParams] = useState("");
-  const today = new Date();
-  const formattedDate = `${today.getFullYear()}. ${
-    today.getMonth() + 1
-  }. ${today.getDate()}`;
 
   useEffect(() => {
     setSearchParams(window.location.search.substring(1));

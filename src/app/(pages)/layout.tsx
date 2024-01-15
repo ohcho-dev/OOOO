@@ -7,8 +7,20 @@ import RecoilRootWrapper from "@/context/RecoilContext";
 import Script from "next/script";
 import Head from "next/head";
 import { GoogleTagManager } from "@next/third-parties/google";
+import type { Viewport } from "next";
 
 const NotoSansKR = Noto_Sans_KR({ subsets: ["latin"] });
+
+export const viewport: Viewport = {
+  themeColor: "white",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  minimumScale: 1,
+  userScalable: false,
+  viewportFit: "auto",
+  interactiveWidget: "resizes-content",
+};
 
 export const metadata: Metadata = {
   title:

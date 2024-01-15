@@ -8,9 +8,9 @@ export default function InfoPledgeCard() {
   const [card, setCard] = useState(false);
 
   const today = new Date();
-  const formattedDate = `${today.getFullYear()}. ${
+  const formattedDate = `${today.getFullYear()}/${
     today.getMonth() + 1
-  }. ${today.getDate()}`;
+  }/${today.getDate()}`;
 
   useEffect(() => {
     setCard(true);

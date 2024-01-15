@@ -22,6 +22,7 @@
     "next": "14.0.4",
     "next-usequerystate": "^1.13.2",
     "react": "^18",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^18",
     "react-lottie-player": "^1.5.5",
     "react-multi-carousel": "^2.8.4",

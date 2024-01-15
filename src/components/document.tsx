@@ -6,6 +6,7 @@ import {
   AnswerUser2State,
   CapturedDocumentState,
 } from "@/store/atom";
+import { getDate } from "@/util/getDateTime";
 import useTypingWords from "@/util/useTypingWords";
 import html2canvas from "html2canvas";
 import { useEffect, useRef, useState } from "react";
@@ -22,9 +23,9 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
 
   const elementRef = useRef<HTMLDivElement>(null);
   const today = new Date();
-  const formattedDate = `${today.getFullYear()}. ${
+  const formattedDate = `${today.getFullYear()}/${
     today.getMonth() + 1
-  }. ${today.getDate()}`;
+  }/${today.getDate()}`;
   const [capturedDocument, setCapturedDocument] = useRecoilState(
     CapturedDocumentState
   );
@@ -244,7 +245,7 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
             </div>
           </div>
           <div className="text-center mt-[8rem] text-[2rem]">
-            {formattedDate}
+            {getDate(formattedDate)}
           </div>
         </div>
       </div>
@@ -399,7 +400,7 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
             </div>
           </div>
           <div className="text-center mt-[8rem] text-[2rem]">
-            {formattedDate}
+            {getDate(formattedDate)}
           </div>
         </div>
       </div>
