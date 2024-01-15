@@ -37,6 +37,12 @@ export const metadata: Metadata = {
     "가족 선물",
     "육아응원",
   ],
+  verification: {
+    google: "3dR9GjCoXOG9jeYBGrIFOvKtOPPJr0_WGlpyxFB7EvE",
+    other: {
+      "naver-site-verification": "7b8d6a069b66378c1e6c95c04dfc95a647ff458b",
+    },
+  },
 };
 
 declare global {
@@ -53,16 +59,6 @@ export default function RootLayout({
   return (
     <html lang="ko-KR" className={NotoSansKR.className}>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-          name="naver-site-verification"
-          content="7b8d6a069b66378c1e6c95c04dfc95a647ff458b"
-        />
-        <meta
-          name="google-site-verification"
-          content="3dR9GjCoXOG9jeYBGrIFOvKtOPPJr0_WGlpyxFB7EvE"
-        />
-        <meta name="123123" />
         <link rel="preload" href="/logo_white.webp" as="image" />
         <link rel="preload" href="/logo.webp" as="image" />
         <link rel="preload" href="/logo1.webp" as="image" />
