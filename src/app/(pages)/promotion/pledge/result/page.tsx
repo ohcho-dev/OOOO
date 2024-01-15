@@ -22,7 +22,7 @@ export default function Page() {
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
-    if (answerUser1 && process.env.NEXT_PUBLIC_HOST) {
+    if (answerUser1) {
       const compress = CompressedString(answerUser1);
       const url =
         process.env.NEXT_PUBLIC_HOST + "/promotion/pledge?" + compress;
