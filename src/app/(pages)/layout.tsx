@@ -114,6 +114,30 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8705192313361669"
           crossOrigin="anonymous"
         />
+        <ins
+          className="kakao_ad_area"
+          style={{ display: "none" }}
+          data-ad-unit="DAN-uG8I6ARkjTaTT1pz"
+          data-ad-width="320"
+          data-ad-height="100"
+        ></ins>
+        <Script
+          type="text/javascript"
+          src="//t1.daumcdn.net/kas/static/ba.min.js"
+          async
+        />
+        <ins
+          className="kakao_ad_area"
+          style={{ display: "none" }}
+          data-ad-unit="DAN-BNLZxCDbAnQpoXGu"
+          data-ad-width="160"
+          data-ad-height="600"
+        ></ins>
+        <Script
+          type="text/javascript"
+          src="//t1.daumcdn.net/kas/static/ba.min.js"
+          async
+        />
         <RecoilRootWrapper>
           <SWRConfigContext>
             <div className="responsive_layout">
