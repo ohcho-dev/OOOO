@@ -73,13 +73,13 @@ export default function Page() {
               description="키워드 입력만으로 소중한 서약서 만들기♥️"
               btnName="함께 만들기"
               image="https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_user_1_v2.png"
-              url={`${url}`}
+              url={url}
             />
             {openToast && <Toast text="클립보드에 저장되었습니다." />}
             <div
               className="text-center"
               onClick={() => {
-                copyURL(`${url}`);
+                copyURL(url);
                 setOpenToast(true);
               }}
             >
