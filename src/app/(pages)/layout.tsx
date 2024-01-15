@@ -109,6 +109,11 @@ export default function RootLayout({
           src="https://developers.kakao.com/sdk/js/kakao.js"
           strategy="afterInteractive"
         />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8705192313361669"
+          crossOrigin="anonymous"
+        />
         <RecoilRootWrapper>
           <SWRConfigContext>
             <div className="responsive_layout">
