@@ -11,7 +11,6 @@ import {
 } from "@/store/atom";
 import { copyURL } from "@/util/CopyUrl";
 import Image from "next/image";
-import Link from "next/link";
 import { useParams } from "next/navigation";
 import { ChangeEvent, useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
@@ -170,7 +169,7 @@ export default function Page() {
                     height={439}
                     priority
                   />
-                  <div className="mt-[3.6rem] text-[1.8rem] text-center">
+                  <div className="mt-[3.6rem] text-[2.1rem] leading-[3rem] text-center">
                     입력창에 복사한 URL을 붙여넣고
                     <br />
                     확인을 클릭해주세요.
@@ -193,7 +192,7 @@ export default function Page() {
                     height={439}
                     priority
                   />
-                  <div className="mt-[3.6rem] text-[1.8rem] text-center">
+                  <div className="mt-[3.6rem] text-[2.1rem] leading-[3rem] text-center">
                     링크가 적용되면 아이콘이 나타납니다.
                     <br />
                     프로필 배경화면 설정까지 마치면 자랑 완료!!!!

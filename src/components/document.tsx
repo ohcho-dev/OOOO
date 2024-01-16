@@ -227,8 +227,8 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
             </div>
             <div className="leading-[3rem] text-[2rem] mt-[4.3rem]">
               <div>
-                하나, {newAnswerUser1[6].c_value}의{" "}
-                <b>{newAnswerUser1[1].c_value}</b>과 {newAnswerUser2[6].c_value}
+                하나, {newAnswerUser2[6].c_value}의{" "}
+                <b>{newAnswerUser1[1].c_value}</b>과 {newAnswerUser1[6].c_value}
                 의 <b>{newAnswerUser2[1].c_value}</b>을<br />
                 배우고 닮아갈게요!
               </div>
@@ -382,8 +382,8 @@ export default function Document({ survey1, survey2 }: DocumentProps) {
             </div>
             <div className="leading-[3rem] text-[2rem] mt-[4.3rem]">
               <div>
-                하나, {newAnswerUser1[6].c_value}의{" "}
-                <b>{newAnswerUser1[1].c_value}</b>과 {newAnswerUser2[6].c_value}
+                하나, {newAnswerUser2[6].c_value}의{" "}
+                <b>{newAnswerUser1[1].c_value}</b>과 {newAnswerUser1[6].c_value}
                 의 <b>{newAnswerUser2[1].c_value}</b>을<br />
                 배우고 닮아갈게요!
               </div>
