@@ -81,13 +81,13 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
   return (
     <div className="w-full h-[100dvh]">
       <div className="pt-[8rem]">
-        <div className="mb-[2rem]">
+        <div className="mb-[2rem] w-full">
           <ins
             className="kakao_ad_area"
             style={{ display: "none" }}
-            data-ad-unit="DAN-y2D6EQJCiGdcSImB"
-            data-ad-width="300"
-            data-ad-height="250"
+            data-ad-unit="DAN-Gcetgi93xV2G0D9x"
+            data-ad-width="320"
+            data-ad-height="50"
           />
           <Script
             type="text/javascript"
@@ -95,7 +95,7 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
             async
           />
         </div>
-        <div className="overflow-y-auto max-h-calcResultPage pb-[10rem]">
+        <div className="overflow-y-auto max-h-calcResultPage pb-[20rem]">
           {survey2.map((survey) => (
             <div
               className={`text-[5rem] mx-[3.5rem] mb-[3rem] px-[3rem] py-[2rem] border rounded-2xl`}

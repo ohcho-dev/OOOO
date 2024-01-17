@@ -63,7 +63,7 @@ export default function Page() {
         toggle={toggle}
         handleToggle={() => setToggle(!toggle)}
       >
-        <div className="px-[3.4rem] py-[4rem]">
+        <div className="px-[3.4rem] py-[4rem] mb-[40px]">
           <div className="text-[2.8rem] font-bold mb-[5rem]">
             공유하실 방법을 선택해주세요.
           </div>
@@ -94,7 +94,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className="w-full h-[50px]">
+        <div className="fixed bottom-0 w-full h-[50px]">
           <ins
             className="kakao_ad_area"
             style={{ display: "none" }}
