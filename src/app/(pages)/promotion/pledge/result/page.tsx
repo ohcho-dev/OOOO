@@ -13,6 +13,7 @@ import PledgeCardWrap from "@/components/PledgeCardWrap";
 import Toast from "@/components/Toast";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Script from "next/script";
 
 export default function Page() {
   const router = useRouter();
@@ -92,6 +93,20 @@ export default function Page() {
               </span>
             </div>
           </div>
+        </div>
+        <div className="w-full h-[50px]">
+          <ins
+            className="kakao_ad_area"
+            style={{ display: "none" }}
+            data-ad-unit="DAN-Gcetgi93xV2G0D9x"
+            data-ad-width="320"
+            data-ad-height="50"
+          />
+          <Script
+            type="text/javascript"
+            src="//t1.daumcdn.net/kas/static/ba.min.js"
+            async
+          />
         </div>
       </CustomBottomModal>
       <BottomButton

@@ -15,6 +15,7 @@ import {
 import { useRecoilState } from "recoil";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Script from "next/script";
 
 interface PaperPageProps {
   data: ResultDataType;
@@ -128,6 +129,21 @@ export default function PaperPage({ data, survey1, survey2 }: PaperPageProps) {
       {answerMood1 && answerMood2 && answerUser1Mood && answerUser2Mood && (
         <PledgeCardWrap name={data.baby_name} />
       )}
+
+      <div className="fixed bottom-0 left-0 w-full">
+        <ins
+          className="kakao_ad_area"
+          style={{ display: "none" }}
+          data-ad-unit="DAN-Gcetgi93xV2G0D9x"
+          data-ad-width="320"
+          data-ad-height="50"
+        />
+        <Script
+          type="text/javascript"
+          src="//t1.daumcdn.net/kas/static/ba.min.js"
+          async
+        />
+      </div>
     </div>
   );
 }

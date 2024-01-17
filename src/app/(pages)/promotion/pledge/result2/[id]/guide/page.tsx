@@ -12,6 +12,7 @@ import {
 import { copyURL } from "@/util/CopyUrl";
 import Image from "next/image";
 import { useParams } from "next/navigation";
+import Script from "next/script";
 import { ChangeEvent, useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 
@@ -102,7 +103,18 @@ export default function Page() {
             서약서 이미지 저장하기
           </button>
         </div>
-
+        <ins
+          className="kakao_ad_area"
+          style={{ display: "none" }}
+          data-ad-unit="DAN-UpjoRIZnDd5vw4gM"
+          data-ad-width="320"
+          data-ad-height="100"
+        />
+        <Script
+          type="text/javascript"
+          src="//t1.daumcdn.net/kas/static/ba.min.js"
+          async
+        />
         <div className="bg-[#FFF8E0] pt-[4.3rem] pb-[5.9rem] relative">
           <div className="w-[5.7rem] h-[5.1rem] bg-[url(/star.webp)] bg-no-repeat bg-blend-darken bg-[#FFF8E0] absolute top-[1.5rem] left-[16.5rem]" />
           {/* Image by <a href="https://www.freepik.com/free-vector/hand-drawn-sparkling-stars-collection_16139383.htm#query=%EB%B3%84%ED%91%9C&position=23&from_view=search&track=ais&uuid=051eef59-fe08-4721-adf4-1c1e77749091">Freepik</a> */}

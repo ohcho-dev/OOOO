@@ -9,6 +9,7 @@ import DecompressedString from "@/util/decompressedString";
 import { addResultPage } from "@/app/api/pages";
 import CustomBottomModal from "./CustomBottomModal";
 import Loading from "./Loading";
+import Script from "next/script";
 
 interface CheckFormProps {
   survey2: SurveyListType[];
@@ -80,6 +81,20 @@ export default function CheckForm({ survey2 }: CheckFormProps) {
   return (
     <div className="w-full h-[100dvh]">
       <div className="pt-[8rem]">
+        <div className="mb-[2rem]">
+          <ins
+            className="kakao_ad_area"
+            style={{ display: "none" }}
+            data-ad-unit="DAN-y2D6EQJCiGdcSImB"
+            data-ad-width="300"
+            data-ad-height="250"
+          />
+          <Script
+            type="text/javascript"
+            src="//t1.daumcdn.net/kas/static/ba.min.js"
+            async
+          />
+        </div>
         <div className="overflow-y-auto max-h-calcResultPage pb-[10rem]">
           {survey2.map((survey) => (
             <div

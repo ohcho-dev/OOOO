@@ -129,18 +129,6 @@ export default function RootLayout({
               </main>
               <div id="bottom_por tal" />
             </div>
-            <ins
-              className="kakao_ad_area"
-              style={{ display: "none" }}
-              data-ad-unit="DAN-Gcetgi93xV2G0D9x"
-              data-ad-width="320"
-              data-ad-height="50"
-            />
-            <Script
-              type="text/javascript"
-              src="//t1.daumcdn.net/kas/static/ba.min.js"
-              async
-            />
           </SWRConfigContext>
           <div id="portal" />
         </RecoilRootWrapper>
