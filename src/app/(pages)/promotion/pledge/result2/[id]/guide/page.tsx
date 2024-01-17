@@ -282,17 +282,19 @@ export default function Page() {
             가까운 지인들에게도 추천해주세요!
           </div>
           <div className="mt-[3.8rem] flex justify-evenly">
-            {count > 0 && (
-              <KakaoShareButton
-                title="우리 가족 서약서: 아이의 목소리를 담은 따뜻한 약속"
-                description="키워드 입력만으로 소중한 서약서 만들기♥️"
-                btnName="서약서 만들기"
-                image="https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_main_v2.png"
-                url={process.env.NEXT_PUBLIC_HOST || ""}
-              />
-            )}
+            <div className="ga-event-kakao">
+              {count > 0 && (
+                <KakaoShareButton
+                  title="우리 가족 서약서: 아이의 목소리를 담은 따뜻한 약속"
+                  description="키워드 입력만으로 소중한 서약서 만들기♥️"
+                  btnName="서약서 만들기"
+                  image="https://oooo-pledge.s3.ap-northeast-2.amazonaws.com/image/kakao_share_main_v2.png"
+                  url={process.env.NEXT_PUBLIC_HOST || ""}
+                />
+              )}
+            </div>
             <div
-              className="text-center"
+              className="text-center ga-event-url"
               onClick={() => {
                 copyURL(process.env.NEXT_PUBLIC_HOST || ""), setOpenToast(true);
               }}
