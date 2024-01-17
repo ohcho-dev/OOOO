@@ -121,19 +121,6 @@ export default function RootLayout({
           src="https://developers.kakao.com/sdk/js/kakao.js"
           strategy="afterInteractive"
         />
-        <ins
-          className="kakao_ad_area"
-          style={{ display: "none" }}
-          data-ad-unit="DAN-Gcetgi93xV2G0D9x"
-          data-ad-width="320"
-          data-ad-height="50"
-        ></ins>
-        <Script
-          type="text/javascript"
-          src="//t1.daumcdn.net/kas/static/ba.min.js"
-          async
-        />
-
         <RecoilRootWrapper>
           <SWRConfigContext>
             <div className="responsive_layout">
@@ -142,6 +129,18 @@ export default function RootLayout({
               </main>
               <div id="bottom_por tal" />
             </div>
+            <ins
+              className="kakao_ad_area"
+              style={{ display: "none" }}
+              data-ad-unit="DAN-Gcetgi93xV2G0D9x"
+              data-ad-width="320"
+              data-ad-height="50"
+            />
+            <Script
+              type="text/javascript"
+              src="//t1.daumcdn.net/kas/static/ba.min.js"
+              async
+            />
           </SWRConfigContext>
           <div id="portal" />
         </RecoilRootWrapper>
