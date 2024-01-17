@@ -282,7 +282,7 @@ export default function Page() {
             가까운 지인들에게도 추천해주세요!
           </div>
           <div className="mt-[3.8rem] flex justify-evenly">
-            <div className="ga-event-kakao">
+            <button className="ga-event-kakao">
               {count > 0 && (
                 <KakaoShareButton
                   title="우리 가족 서약서: 아이의 목소리를 담은 따뜻한 약속"
@@ -292,8 +292,8 @@ export default function Page() {
                   url={process.env.NEXT_PUBLIC_HOST || ""}
                 />
               )}
-            </div>
-            <div
+            </button>
+            <button
               className="text-center ga-event-url"
               onClick={() => {
                 copyURL(process.env.NEXT_PUBLIC_HOST || ""), setOpenToast(true);
@@ -307,7 +307,7 @@ export default function Page() {
                 <br />
                 복사
               </span>
-            </div>
+            </button>
           </div>
         </div>
         {OpenToast && <Toast text="클립보드에 저장되었습니다." />}

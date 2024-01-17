@@ -72,7 +72,7 @@ export default function PledgeMainPage({ count = 0 }) {
               : "/promotion/pledge/info"
           );
         }}
-        className="w-full min-h-[8rem] bg-[#F9E9B3] text-[2.1rem] ga-event"
+        className="w-full min-h-[8rem] bg-[#F9E9B3] text-[2.1rem]"
       >
         참여하기
       </button>
