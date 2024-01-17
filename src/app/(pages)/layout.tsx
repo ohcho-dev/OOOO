@@ -121,35 +121,19 @@ export default function RootLayout({
           src="https://developers.kakao.com/sdk/js/kakao.js"
           strategy="afterInteractive"
         />
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8705192313361669"
-          crossOrigin="anonymous"
-        />
-        {/* <ins
-          className="kakao_ad_area"
-          style={{ display: "none" }}
-          data-ad-unit="DAN-uG8I6ARkjTaTT1pz"
-          data-ad-width="320"
-          data-ad-height="100"
-        ></ins>
-        <Script
-          type="text/javascript"
-          src="//t1.daumcdn.net/kas/static/ba.min.js"
-          async
-        />
         <ins
           className="kakao_ad_area"
           style={{ display: "none" }}
-          data-ad-unit="DAN-BNLZxCDbAnQpoXGu"
-          data-ad-width="160"
-          data-ad-height="600"
+          data-ad-unit="DAN-Gcetgi93xV2G0D9x"
+          data-ad-width="320"
+          data-ad-height="50"
         ></ins>
         <Script
           type="text/javascript"
           src="//t1.daumcdn.net/kas/static/ba.min.js"
           async
-        /> */}
+        />
+
         <RecoilRootWrapper>
           <SWRConfigContext>
             <div className="responsive_layout">
