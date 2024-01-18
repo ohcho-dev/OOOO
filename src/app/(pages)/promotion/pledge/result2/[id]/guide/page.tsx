@@ -98,12 +98,12 @@ export default function Page() {
           </div>
           <button
             onClick={downloadDocumentImage}
-            className="mt-[3rem] mb-[4.6rem] bg-[#F9E9B3] text-[1.8rem] w-[30rem] h-[6rem] block mx-auto rounded-[2rem]"
+            className="mt-[3rem] mb-[4.6rem] bg-[#F9E9B3] text-[1.8rem] w-[30rem] h-[6rem] block mx-auto rounded-[2rem] ga-event-10"
           >
             서약서 이미지 저장하기
           </button>
         </div>
-        <div className="w-full height-[100px]">
+        <div className="w-full h-[100px]">
           <ins
             className="kakao_ad_area"
             style={{ display: "none" }}
@@ -227,13 +227,13 @@ export default function Page() {
             onClick={() => {
               copyURL(url), setOpenToast(true);
             }}
-            className="mt-[3rem] bg-[#F9E9B3] text-[1.8rem] w-[30rem] h-[6rem] block mx-auto rounded-[2rem]"
+            className="mt-[3rem] bg-[#F9E9B3] text-[1.8rem] w-[30rem] h-[6rem] block mx-auto rounded-[2rem] ga-event-20"
           >
             서약서 URL 복사하기
           </button>
           <button
             onClick={downloadCardImage}
-            className="mt-[1.4rem] mb-[4.6rem] bg-[#F9E9B3] text-[1.8rem] w-[30rem] h-[6rem] block mx-auto rounded-[2rem]"
+            className="mt-[1.4rem] mb-[4.6rem] bg-[#F9E9B3] text-[1.8rem] w-[30rem] h-[6rem] block mx-auto rounded-[2rem] ga-event-30"
           >
             프로필 배경화면 저장하기
           </button>
