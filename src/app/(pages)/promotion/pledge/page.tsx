@@ -10,6 +10,8 @@ type Props = {
   params: { id: string };
 };
 
+export const revalidate = 86400;
+
 const getCount = cache(async () => getResultCount());
 
 export default async function Page() {
